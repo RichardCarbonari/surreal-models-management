@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!model) return { title: "Modelo não encontrado" };
   return {
     title: `${model.name} | Surreal Models Management`,
-    description: `Conheça ${model.name} — ${model.measurements.altura}, ${model.nationality}.`,
+    description: `Conheça ${model.name} — ${model.nationality}.`,
   };
 }
 
