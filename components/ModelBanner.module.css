@@ -1,0 +1,272 @@
+.article {
+  padding-top: calc(var(--nav-h) + 40px);
+  padding-bottom: 120px;
+  min-height: 100vh;
+}
+
+/* ─── Breadcrumb ─── */
+.breadcrumb {
+  max-width: 1400px;
+  margin: 0 auto 40px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.back {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  transition: color var(--transition-fast);
+}
+
+.back:hover {
+  color: var(--black);
+}
+
+.breadDivider {
+  color: var(--gray-200);
+  font-weight: 200;
+}
+
+.breadCurrent {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+}
+
+/* ─── Layout ─── */
+.layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ─── Gallery ─── */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mainImage {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--gray-200);
+}
+
+.mainImg {
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.mainImage:hover .mainImg {
+  transform: scale(1.03);
+}
+
+.thumbs {
+  display: flex;
+  gap: 8px;
+}
+
+.thumb {
+  position: relative;
+  width: 80px;
+  height: 110px;
+  overflow: hidden;
+  background: var(--gray-200);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.thumb:hover,
+.thumbActive {
+  opacity: 1 !important;
+}
+
+.thumbActive::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid var(--olive);
+}
+
+.thumbImg {
+  object-fit: cover;
+}
+
+/* ─── Info ─── */
+.info {
+  position: sticky;
+  top: calc(var(--nav-h) + 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.infoTop {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--black);
+}
+
+.nationality {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--gray-400);
+  margin-top: 4px;
+}
+
+/* ─── Measurements ─── */
+.measurements {
+  border-top: 1px solid var(--gray-200);
+  padding-top: 32px;
+}
+
+.measureTitle {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 24px;
+}
+
+.measureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 32px;
+}
+
+.measureItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.measureLabel {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.measureValue {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: 0.04em;
+}
+
+/* ─── Actions ─── */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btnPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 32px;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.btnPrimary:hover {
+  background: var(--olive-dark);
+}
+
+.btnSecondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border: 1px solid var(--gray-200);
+  color: var(--gray-600);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btnSecondary:hover {
+  border-color: var(--olive);
+  color: var(--black);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .info {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .article {
+    padding-top: calc(var(--nav-h) + 24px);
+    padding-bottom: 80px;
+  }
+
+  .breadcrumb,
+  .layout {
+    padding: 0 24px;
+  }
+
+  .name {
+    font-size: 2.8rem;
+  }
+}
