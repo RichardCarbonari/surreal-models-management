@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Model } from "../../data/models";
+import { Model } from "@/data/models";
 import styles from "./ModelCard.module.css";
 
 interface Props {

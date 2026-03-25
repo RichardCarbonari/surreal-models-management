@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { models, ModelCategory } from "../../data/models";
+import { models, ModelCategory } from "@/data/models";
 import ModelCard from "./ModelCard";
 import styles from "./PortfolioGrid.module.css";
 

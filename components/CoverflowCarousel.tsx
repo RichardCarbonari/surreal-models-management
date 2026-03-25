@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { getFeaturedModels } from "../../data/models";
+import { getFeaturedModels } from "@/data/models";
 import styles from "./CoverflowCarousel.module.css";
 
 export default function CoverflowCarousel() {

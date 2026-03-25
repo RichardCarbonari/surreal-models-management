@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CoverflowCarousel from "@/components/CoverflowCarousel";
+import { getFeaturedModels } from "@/data/models";
 import styles from "./page.module.css";
 
 export default function Home() {

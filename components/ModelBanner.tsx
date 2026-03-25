@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Model } from "../../data/models";
+import { Model } from "@/data/models";
 import styles from "./ModelBanner.module.css";
 
 interface Props {
