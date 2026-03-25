@@ -1,5 +1,4 @@
 import PortfolioGrid from "@/components/PortfolioGrid";
-import { models } from "@/data/models";
 import styles from "./page.module.css";
 import type { Metadata } from "next";
 
@@ -25,7 +24,7 @@ export default function PortfolioPage() {
         <div className={styles.headerLine} />
       </div>
       <div className={styles.content}>
-        <PortfolioGrid models={models} />
+        <PortfolioGrid />
       </div>
     </div>
   );
