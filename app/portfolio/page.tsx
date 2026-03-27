@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import styles from "./page.module.css";
 import type { Metadata } from "next";
