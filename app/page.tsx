@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 import Link from "next/link";
 import CoverflowCarousel from "@/components/CoverflowCarousel";
 import styles from "./page.module.css";
+import ContactForm from "@/components/ContactForm";
 
 export default function HomePage() {
 
@@ -124,27 +125,7 @@ export default function HomePage() {
                 <a href="https://www.instagram.com/surrealmgmt/" target="_blank" rel="noopener noreferrer" className={styles.contatoLink}>@surrealmgmt</a>
               </div>
             </div>
-            <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Nome</label>
-                  <input type="text" className={styles.formInput} placeholder="Seu nome" />
-                </div>
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Email</label>
-                  <input type="email" className={styles.formInput} placeholder="seu@email.com" />
-                </div>
-              </div>
-              <div className={styles.formGroup}>
-                <label className={styles.formLabel}>Assunto</label>
-                <input type="text" className={styles.formInput} placeholder="Como podemos ajudar?" />
-              </div>
-              <div className={styles.formGroup}>
-                <label className={styles.formLabel}>Mensagem</label>
-                <textarea className={styles.formTextarea} placeholder="Sua mensagem..." rows={5} />
-              </div>
-              <button type="submit" className={styles.formSubmit}>Enviar mensagem</button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>
