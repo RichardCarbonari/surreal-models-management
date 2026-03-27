@@ -2,18 +2,13 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 1.5rem 2.5rem;
-  transition: background 0.5s ease, padding 0.4s ease, border-color 0.5s ease;
-  border-bottom: 1px solid transparent;
-}
-
-.scrolled {
-  background: rgba(250,249,247,0.95);
+  padding: 1.2rem 2.5rem;
+  background: rgba(250,249,247,0.97);
   backdrop-filter: blur(12px);
-  padding: 1rem 2.5rem;
-  border-bottom-color: var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  transition: padding 0.3s ease;
 }
-
+.scrolled { padding: 0.8rem 2.5rem; }
 .inner {
   display: flex;
   align-items: center;
@@ -21,91 +16,34 @@
   max-width: 1400px;
   margin: 0 auto;
 }
-
 .logo { display: flex; flex-direction: column; gap: 0.1rem; text-decoration: none; }
-.logoMain {
-  font-family: var(--font-display);
-  font-size: 1.3rem; font-weight: 400;
-  letter-spacing: 0.4em; color: var(--white);
-  transition: color 0.4s;
-}
-.logoSub {
-  font-family: var(--font-body);
-  font-size: 0.5rem; letter-spacing: 0.32em;
-  text-transform: uppercase; color: rgba(250,249,247,0.45);
-  transition: color 0.4s;
-}
-.scrolled .logoMain { color: var(--black); }
-.scrolled .logoSub { color: var(--olive); }
-
-.links {
-  display: flex;
-  list-style: none;
-  gap: 2.5rem;
-  align-items: center;
-}
+.logoMain { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; letter-spacing: 0.4em; color: var(--black); }
+.logoSub { font-family: var(--font-body); font-size: 0.5rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--olive); }
+.links { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
 .navLink {
-  font-family: var(--font-body);
-  font-size: 0.68rem; font-weight: 400;
-  letter-spacing: 0.2em; text-transform: uppercase;
-  color: rgba(250,249,247,0.7);
-  position: relative;
-  transition: color 0.3s;
+  font-family: var(--font-body); font-size: 0.68rem; font-weight: 400;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray-600);
+  position: relative; transition: color 0.3s;
 }
 .navLink::after {
-  content: '';
-  position: absolute;
-  bottom: -4px; left: 0;
-  width: 100%; height: 1px;
-  background: var(--olive);
-  transform: scaleX(0);
-  transform-origin: left;
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 100%; height: 1px; background: var(--olive);
+  transform: scaleX(0); transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.25,0.1,0.25,1);
 }
-.navLink:hover, .active { color: var(--white) !important; }
+.navLink:hover { color: var(--black); }
 .navLink:hover::after, .active::after { transform: scaleX(1); }
-.scrolled .navLink { color: var(--gray-600); }
-.scrolled .navLink:hover, .scrolled .active { color: var(--black) !important; }
-.ctaLink { color: var(--olive-light) !important; }
-.scrolled .ctaLink { color: var(--olive) !important; }
-
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  z-index: 101;
-}
-.burger span {
-  display: block;
-  width: 24px; height: 1px;
-  background: var(--white);
-  transition: transform 0.4s ease, opacity 0.3s ease;
-  transform-origin: center;
-}
-.scrolled .burger span { background: var(--black); }
+.active { color: var(--black) !important; }
+.ctaLink { color: var(--olive) !important; }
+.burger { display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 101; }
+.burger span { display: block; width: 24px; height: 1px; background: var(--black); transition: transform 0.4s ease, opacity 0.3s ease; transform-origin: center; }
 .burgerActive span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .burgerActive span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .burgerActive span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
 @media (max-width: 768px) {
-  .nav { padding: 1.2rem 1.5rem; }
+  .nav { padding: 1rem 1.5rem; }
   .burger { display: flex; }
-  .links {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--white);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-    z-index: 99;
-  }
+  .links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--white); flex-direction: column; justify-content: center; align-items: center; gap: 2.5rem; z-index: 99; }
   .links.open { display: flex; }
-  .navLink { color: var(--gray-600) !important; font-size: 0.85rem; }
-  .navLink:hover { color: var(--black) !important; }
+  .navLink { font-size: 0.85rem; }
 }
