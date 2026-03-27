@@ -1,5 +1,5 @@
+"use client";
 import Link from "next/link";
-import Image from "next/image";
 import { Model } from "@/data/models";
 import styles from "./ModelCard.module.css";
 
@@ -8,23 +8,28 @@ interface Props {
   priority?: boolean;
 }
 
-export default function ModelCard({ model, priority = false }: Props) {
+export default function ModelCard({ model }: Props) {
   return (
     <Link href={`/portfolio/${model.slug}`} className={styles.card}>
-      <div className={styles.imageWrap}>
-        <Image
-          src={model.coverImage}
-          alt={model.name}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className={styles.image}
-          priority={priority}
-        />
-        <div className={styles.overlay} />
-        <div className={styles.meta}>
-          <span className={styles.name}>{model.name}</span>
-          <span className={styles.height}>{model.height}</span>
+      <div className={styles.imageWrapper}>
+        <div style={{position:"relative",width:"100%",paddingTop:"133%"}}>
+          <img
+            src={model.coverImage}
+            alt={model.name}
+            className={styles.image}
+            loading="lazy"
+            style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"top center"}}
+          />
+          <div className={styles.overlay} />
+          <div className={styles.info}>
+            <span className={styles.name}>{model.name}</span>
+            <span className={styles.nationality}>{model.nationality}</span>
+          </div>
         </div>
+      </div>
+      <div className={styles.meta}>
+        <span className={styles.metaHeight}>{model.height}</span>
+        <span className={styles.metaArrow}>→</span>
       </div>
     </Link>
   );
