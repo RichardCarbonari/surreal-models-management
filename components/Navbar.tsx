@@ -10,14 +10,10 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
 
   const links = [
     { href: "/", label: "Home" },
@@ -27,43 +23,35 @@ export default function Navbar() {
   ];
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${menuOpen ? styles.menuActive : ""}`}>
+    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.inner}>
         <Link href="/" className={styles.logo}>
           <span className={styles.logoMain}>Surreal</span>
           <span className={styles.logoSub}>Models Management</span>
         </Link>
 
-        <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}>
+        <ul className={`${styles.links} ${menuOpen ? styles.open : ""}`}>
           {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={`${styles.navLink} ${pathname === l.href ? styles.active : ""}`}
-            >
-              {l.label}
-            </Link>
+            <li key={l.href}>
+              <Link
+                href={l.href}
+                className={`${styles.navLink} ${pathname === l.href ? styles.active : ""}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {l.label}
+              </Link>
+            </li>
           ))}
-          <a
-            href="https://www.instagram.com/surrealmgmt/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.navLink}
-          >
-            Instagram
-          </a>
-        </nav>
+        </ul>
 
         <button
-          className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ""}`}
-          onClick={() => setMenuOpen((o) => !o)}
+          className={`${styles.burger} ${menuOpen ? styles.burgerActive : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >
-          <span />
-          <span />
-          <span />
+          <span /><span /><span />
         </button>
       </div>
-    </header>
+    </nav>
   );
 }
