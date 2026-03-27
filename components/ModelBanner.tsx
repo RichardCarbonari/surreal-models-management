@@ -5,9 +5,7 @@ import Link from "next/link";
 import { Model } from "@/data/models";
 import styles from "./ModelBanner.module.css";
 
-interface Props {
-  model: Model;
-}
+interface Props { model: Model; }
 
 const CATEGORY_LABEL: Record<string, string> = {
   feminino: "Feminino",
@@ -16,36 +14,64 @@ const CATEGORY_LABEL: Record<string, string> = {
 };
 
 export default function ModelBanner({ model }: Props) {
+  const [activeTab, setActiveTab] = useState<"book" | "polaroids">("book");
   const [activeImg, setActiveImg] = useState(0);
+
+  const currentImages = activeTab === "book" ? model.images : model.polaroids;
+
+  const handleTabSwitch = (tab: "book" | "polaroids") => {
+    setActiveTab(tab);
+    setActiveImg(0);
+  };
 
   return (
     <article className={styles.article}>
-      {/* ─── Back ─── */}
-      <div className={styles.breadcrumb}>
-        <Link href="/portfolio" className={styles.back}>
-          ← Portfólio
-        </Link>
-        <span className={styles.breadDivider}>/</span>
-        <span className={styles.breadCurrent}>{model.name}</span>
-      </div>
-
       <div className={styles.layout}>
+
         {/* ─── Gallery ─── */}
-        <div className={styles.gallery}>
-          <div className={styles.mainImage}>
-            <Image
-              src={model.images[activeImg]}
-              alt={model.name}
-              fill
-              sizes="(max-width: 768px) 100vw, 60vw"
-              className={styles.mainImg}
-              priority
-            />
+        <div className={styles.galleryCol}>
+
+          {/* Tabs */}
+          <div className={styles.tabs}>
+            <button
+              className={`${styles.tab} ${activeTab === "book" ? styles.tabActive : ""}`}
+              onClick={() => handleTabSwitch("book")}
+            >
+              Book
+            </button>
+            {model.polaroids && model.polaroids.length > 0 && (
+              <button
+                className={`${styles.tab} ${activeTab === "polaroids" ? styles.tabActive : ""}`}
+                onClick={() => handleTabSwitch("polaroids")}
+              >
+                Polaroids
+              </button>
+            )}
           </div>
 
-          {model.images.length > 1 && (
+          {/* Main image */}
+          <div className={`${styles.mainImage} ${activeTab === "polaroids" ? styles.polaroidMode : ""}`}>
+            {currentImages && currentImages.length > 0 ? (
+              <Image
+                src={currentImages[activeImg]}
+                alt={`${model.name} ${activeImg + 1}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 55vw"
+                className={styles.mainImg}
+                priority
+              />
+            ) : (
+              <div className={styles.noImage}>Sem imagens</div>
+            )}
+            {activeTab === "polaroids" && (
+              <div className={styles.polaroidCorner}>Polaroid</div>
+            )}
+          </div>
+
+          {/* Thumbnails */}
+          {currentImages && currentImages.length > 1 && (
             <div className={styles.thumbs}>
-              {model.images.map((img, i) => (
+              {currentImages.map((img, i) => (
                 <button
                   key={i}
                   className={`${styles.thumb} ${i === activeImg ? styles.thumbActive : ""}`}
@@ -55,7 +81,7 @@ export default function ModelBanner({ model }: Props) {
                     src={img}
                     alt={`${model.name} ${i + 1}`}
                     fill
-                    sizes="80px"
+                    sizes="70px"
                     className={styles.thumbImg}
                   />
                 </button>
@@ -67,16 +93,11 @@ export default function ModelBanner({ model }: Props) {
         {/* ─── Info ─── */}
         <div className={styles.info}>
           <div className={styles.infoTop}>
-            <span className={styles.category}>
-              {CATEGORY_LABEL[model.category]}
-            </span>
+            <span className={styles.category}>{CATEGORY_LABEL[model.category]}</span>
             <h1 className={styles.name}>{model.name}</h1>
-            {model.nationality && (
-              <p className={styles.nationality}>{model.nationality}</p>
-            )}
+            {model.nationality && <p className={styles.nationality}>{model.nationality}</p>}
           </div>
 
-          {/* Measurements */}
           <div className={styles.measurements}>
             <h2 className={styles.measureTitle}>Medidas</h2>
             <div className={styles.measureGrid}>
@@ -87,29 +108,20 @@ export default function ModelBanner({ model }: Props) {
               <MeasureItem label="Calçado" value={model.shoes} />
               <MeasureItem label="Olhos" value={model.eyes} />
               <MeasureItem label="Cabelo" value={model.hair} />
-              {model.age && <MeasureItem label="Idade" value={String(model.age)} />}
+              {model.age && <MeasureItem label="Idade" value={`${model.age} anos`} />}
             </div>
           </div>
 
-          {/* Actions */}
           <div className={styles.actions}>
-            <button className={styles.btnPrimary}>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M7 1v8M3 6l4 4 4-4M1 12h12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              Download material
-            </button>
-
-            {model.instagram && (
-              <a
-                href={`https://instagram.com/${model.instagram.replace("@", "")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.btnSecondary}
-              >
-                {model.instagram}
-              </a>
-            )}
+            <a
+              href={`mailto:surrealmodelsmanagment@gmail.com?subject=Interesse em ${model.name}`}
+              className={styles.btnPrimary}
+            >
+              Solicitar Modelo
+            </a>
+            <Link href="/portfolio" className={styles.btnSecondary}>
+              ← Voltar ao Portfólio
+            </Link>
           </div>
         </div>
       </div>
