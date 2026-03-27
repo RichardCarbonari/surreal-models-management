@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { models, ModelCategory } from "@/data/models";
-import ModelCard from "./ModelCard";
 import styles from "./PortfolioGrid.module.css";
 
 const CATEGORIES: { value: ModelCategory | "todos"; label: string }[] = [
@@ -13,15 +13,12 @@ const CATEGORIES: { value: ModelCategory | "todos"; label: string }[] = [
 
 export default function PortfolioGrid() {
   const [active, setActive] = useState<ModelCategory | "todos">("todos");
-
-  const filtered =
-    active === "todos" ? models : models.filter((m) => m.category === active);
+  const filtered = active === "todos" ? models : models.filter(m => m.category === active);
 
   return (
-    <section className={styles.section}>
-      {/* Category filter */}
+    <div className={styles.wrapper}>
       <div className={styles.filters}>
-        {CATEGORIES.map((cat) => (
+        {CATEGORIES.map(cat => (
           <button
             key={cat.value}
             className={`${styles.filterBtn} ${active === cat.value ? styles.filterActive : ""}`}
@@ -31,23 +28,24 @@ export default function PortfolioGrid() {
           </button>
         ))}
       </div>
-
-      {/* Grid */}
       <div className={styles.grid}>
-        {filtered.map((model, i) => (
-          <div
-            key={model.id}
-            className={styles.item}
-            style={{ animationDelay: `${i * 0.06}s` }}
-          >
-            <ModelCard model={model} priority={i < 3} />
-          </div>
+        {filtered.map((model) => (
+          <Link key={model.id} href={`/portfolio/${model.slug}`} className={styles.card}>
+            <div className={styles.imgWrap}>
+              <img
+                src={model.coverImage}
+                alt={model.name}
+                className={styles.img}
+                loading="lazy"
+              />
+              <div className={styles.overlay}>
+                <span className={styles.name}>{model.name}</span>
+                <span className={styles.height}>{model.height}</span>
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
-
-      {filtered.length === 0 && (
-        <p className={styles.empty}>Nenhum modelo encontrado.</p>
-      )}
-    </section>
+    </div>
   );
 }
