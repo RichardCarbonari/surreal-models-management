@@ -30,6 +30,8 @@
   font-size: 0.48rem; letter-spacing: 0.28em;
   text-transform: uppercase; color: var(--olive);
 }
+
+/* Desktop — links visíveis, burger escondido */
 .links {
   display: flex;
   list-style: none;
@@ -56,7 +58,6 @@
 .navLink:hover::after, .active::after { transform: scaleX(1); }
 .active { color: var(--black) !important; }
 
-/* Burger — hidden on desktop */
 .burger {
   display: none;
   flex-direction: column;
@@ -77,20 +78,19 @@
 .burgerActive span:nth-child(2) { opacity: 0; }
 .burgerActive span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
 
-/* ── MOBILE ── */
+/* Mobile */
 @media (max-width: 768px) {
   .nav { padding: 1rem 1.5rem; }
 
+  /* Mostra burger */
   .burger { display: flex; }
 
-  /* Links hidden by default on mobile */
-  .links {
-    display: none;
-  }
+  /* Esconde links por padrão */
+  .links { display: none; }
 
-  /* Links shown when menu is open */
-  .links.open {
-    display: flex;
+  /* Mostra links quando aberto */
+  .open {
+    display: flex !important;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: var(--white);
@@ -99,6 +99,7 @@
     align-items: center;
     gap: 2.5rem;
     z-index: 150;
+    list-style: none;
   }
 
   .navLink {
@@ -106,5 +107,4 @@
     letter-spacing: 0.2em;
     color: var(--gray-600);
   }
-  .navLink:hover { color: var(--black); }
 }
