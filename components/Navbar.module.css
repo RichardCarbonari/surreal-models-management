@@ -23,8 +23,7 @@
 .logoMain {
   font-family: var(--font-display);
   font-size: 1.4rem; font-weight: 400;
-  letter-spacing: 0.1em; color: var(--black);
-  line-height: 1;
+  letter-spacing: 0.1em; color: var(--black); line-height: 1;
 }
 .logoSub {
   font-family: var(--font-body);
@@ -56,29 +55,56 @@
 .navLink:hover { color: var(--black); }
 .navLink:hover::after, .active::after { transform: scaleX(1); }
 .active { color: var(--black) !important; }
+
+/* Burger — hidden on desktop */
 .burger {
-  display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: 4px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 200;
 }
 .burger span {
-  display: block; width: 22px; height: 1px;
+  display: block; width: 22px; height: 1.5px;
   background: var(--black);
-  transition: transform 0.4s ease, opacity 0.3s ease;
+  transition: transform 0.35s ease, opacity 0.25s ease;
   transform-origin: center;
 }
-.burgerActive span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.burgerActive span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
 .burgerActive span:nth-child(2) { opacity: 0; }
-.burgerActive span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+.burgerActive span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+
+/* ── MOBILE ── */
 @media (max-width: 768px) {
   .nav { padding: 1rem 1.5rem; }
+
   .burger { display: flex; }
+
+  /* Links hidden by default on mobile */
   .links {
-    display: none; position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--white); flex-direction: column;
-    justify-content: center; align-items: center;
-    gap: 2.5rem; z-index: 99;
+    display: none;
   }
-  .links.open { display: flex; }
-  .navLink { font-size: 0.9rem; letter-spacing: 0.2em; }
+
+  /* Links shown when menu is open */
+  .links.open {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 150;
+  }
+
+  .navLink {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: var(--gray-600);
+  }
+  .navLink:hover { color: var(--black); }
 }
