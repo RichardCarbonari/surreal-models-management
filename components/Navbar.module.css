@@ -2,109 +2,41 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 1.3rem 2.5rem;
   background: rgba(250,249,247,0.97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--gray-200);
-  transition: padding 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
-.scrolled {
-  padding: 0.9rem 2.5rem;
-  box-shadow: 0 1px 20px rgba(0,0,0,0.06);
-}
+.scrolled { box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
 .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 1.2rem 2.5rem;
 }
 .logo { display: flex; flex-direction: column; gap: 0.1rem; text-decoration: none; }
-.logoMain {
-  font-family: var(--font-display);
-  font-size: 1.4rem; font-weight: 400;
-  letter-spacing: 0.1em; color: var(--black); line-height: 1;
-}
-.logoSub {
-  font-family: var(--font-body);
-  font-size: 0.48rem; letter-spacing: 0.28em;
-  text-transform: uppercase; color: var(--olive);
-}
-
-/* Desktop — links visíveis, burger escondido */
-.links {
-  display: flex;
-  list-style: none;
-  gap: 2.5rem;
-  align-items: center;
-}
-.navLink {
-  font-family: var(--font-body);
-  font-size: 0.7rem; font-weight: 400;
-  letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--gray-600);
-  position: relative; transition: color 0.3s;
-  text-decoration: none;
-}
-.navLink::after {
-  content: ''; position: absolute;
-  bottom: -3px; left: 0;
-  width: 100%; height: 1px;
-  background: var(--olive);
-  transform: scaleX(0); transform-origin: left;
-  transition: transform 0.35s cubic-bezier(0.25,0.1,0.25,1);
-}
+.logoMain { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; letter-spacing: 0.1em; color: var(--black); line-height: 1; }
+.logoSub { font-family: var(--font-body); font-size: 0.48rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--olive); }
+.links { display: flex; list-style: none; gap: 2.5rem; align-items: center; margin: 0; padding: 0; }
+.navLink { font-family: var(--font-body); font-size: 0.7rem; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-600); position: relative; transition: color 0.3s; text-decoration: none; }
+.navLink::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 100%; height: 1px; background: var(--olive); transform: scaleX(0); transform-origin: left; transition: transform 0.35s cubic-bezier(0.25,0.1,0.25,1); }
 .navLink:hover { color: var(--black); }
 .navLink:hover::after, .active::after { transform: scaleX(1); }
 .active { color: var(--black) !important; }
-
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  z-index: 200;
-}
-.burger span {
-  display: block; width: 22px; height: 1.5px;
-  background: var(--black);
-  transition: transform 0.35s ease, opacity 0.25s ease;
-  transform-origin: center;
-}
+.burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 200; }
+.burger span { display: block; width: 22px; height: 1.5px; background: var(--black); transition: transform 0.35s ease, opacity 0.25s ease; transform-origin: center; }
 .burgerActive span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
 .burgerActive span:nth-child(2) { opacity: 0; }
 .burgerActive span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+.mobileMenu { display: none; }
 
-/* Mobile */
 @media (max-width: 768px) {
-  .nav { padding: 1rem 1.5rem; }
-
-  /* Mostra burger */
-  .burger { display: flex; }
-
-  /* Esconde links por padrão */
+  .inner { padding: 1rem 1.5rem; }
   .links { display: none; }
-
-  /* Mostra links quando aberto */
-  .open {
-    display: flex !important;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--white);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-    z-index: 150;
-    list-style: none;
-  }
-
-  .navLink {
-    font-size: 1rem;
-    letter-spacing: 0.2em;
-    color: var(--gray-600);
-  }
+  .burger { display: flex; }
+  .mobileMenu { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--white); z-index: 99; }
+  .mobileLink { font-family: var(--font-body); font-size: 1rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; }
+  .mobileLink:hover { color: var(--black); }
 }

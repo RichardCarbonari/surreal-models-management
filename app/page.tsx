@@ -30,11 +30,11 @@ export default function HomePage() {
           <div className={styles.heroImageGrid}>
             <div className={styles.heroImg1}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=80" alt="Model" />
+              <img src="https://lh3.googleusercontent.com/d/1q7hHDCT8YGPwi9vXp4lbhEFCodOeDVsP" alt="Model" />
             </div>
             <div className={styles.heroImg2}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=600&q=80" alt="Model" />
+              <img src="https://lh3.googleusercontent.com/d/1YX1Cb7rZgvFksrO4zhvCq_IDmJ1hn0uJ" alt="Model" />
             </div>
           </div>
           <div className={styles.heroStats}>
