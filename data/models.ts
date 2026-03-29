@@ -222,9 +222,9 @@ export const models: Model[] = [
     slug: "matheus-cunha",
     name: "Matheus Cunha",
     category: "masculino",
-    coverImage: d("1NET_iDCfiSBZvW_OkMAZsuoCCG6sCuJZ"),
+    coverImage: d("19-k9GN4fRLYzXJQBbzyn1t7WbaQSt8Ku"),
     images: [
-      d("1NET_iDCfiSBZvW_OkMAZsuoCCG6sCuJZ"),
+      d("19-k9GN4fRLYzXJQBbzyn1t7WbaQSt8Ku"),
       d("133ZFjfaBhHba664lttLWbCTqjVzIWS6p"),
       d("1RMtgWqkPoYfHTqham2Y3VwWfdIjqgUZw"),
       d("11Nu5MYmMrmaP5VCz3tmmCqsChkXHLlqQ"),
