@@ -101,9 +101,12 @@ export default function ModelBanner({ model }: Props) {
           <div className={styles.measurements}>
             <h2 className={styles.measureTitle}>Medidas</h2>
             <div className={styles.measureGrid}>
-              <MeasureItem label="Altura" value={model.height} />
+              {model.height && <MeasureItem label="Altura" value={model.height} />}
               {model.bust && <MeasureItem label="Busto" value={model.bust} />}
-              <MeasureItem label="Cintura" value={model.waist} />
+              {model.waist && <MeasureItem label="Cintura" value={model.waist} />}
+              {model.hips && <MeasureItem label="Quadril" value={model.hips} />}
+              {model.bust && <MeasureItem label="Busto" value={model.bust} />}
+              {model.waist && <MeasureItem label="Cintura" value={model.waist} />}
               {model.hips && <MeasureItem label="Quadril" value={model.hips} />}
               <MeasureItem label="Calçado" value={model.shoes} />
               <MeasureItem label="Olhos" value={model.eyes} />
@@ -113,7 +116,12 @@ export default function ModelBanner({ model }: Props) {
           </div>
 
           <div className={styles.actions}>
-            <a
+            {model.instagram && (
+              <a href={model.instagram} target="_blank" rel="noopener noreferrer" className={styles.btnInstagram}>
+                Instagram
+              </a>
+            )}
+            
               href={`mailto:surrealmodelsmanagment@gmail.com?subject=Interesse em ${model.name}`}
               className={styles.btnPrimary}
             >
