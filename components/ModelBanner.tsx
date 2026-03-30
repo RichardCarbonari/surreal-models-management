@@ -27,9 +27,9 @@ export default function ModelBanner({ model }: Props) {
               <button className={`${styles.tab} ${activeTab === "polaroids" ? styles.tabActive : ""}`} onClick={() => { setActiveTab("polaroids"); setActiveImg(0); }}>Polaroids</button>
             )}
           </div>
-          <div className={`${styles.mainImage} ${activeTab === "polaroids" ? styles.polaroidMode : ""}`}>
+          <div className={styles.mainImage}>
             {currentImages && currentImages.length > 0 ? (
-              <img src={currentImages[activeImg]} alt={`${model.name} ${activeImg + 1}`} className={styles.mainImg} />
+              <img src={currentImages[activeImg]} alt={model.name} className={styles.mainImg} />
             ) : (
               <div className={styles.noImage}>Sem imagens</div>
             )}
