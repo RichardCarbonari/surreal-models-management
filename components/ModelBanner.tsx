@@ -105,13 +105,6 @@ export default function ModelBanner({ model }: Props) {
               {model.bust && <MeasureItem label="Busto" value={model.bust} />}
               {model.waist && <MeasureItem label="Cintura" value={model.waist} />}
               {model.hips && <MeasureItem label="Quadril" value={model.hips} />}
-              {model.bust && <MeasureItem label="Busto" value={model.bust} />}
-              {model.waist && <MeasureItem label="Cintura" value={model.waist} />}
-              {model.hips && <MeasureItem label="Quadril" value={model.hips} />}
-              <MeasureItem label="Calçado" value={model.shoes} />
-              <MeasureItem label="Olhos" value={model.eyes} />
-              <MeasureItem label="Cabelo" value={model.hair} />
-              {model.age && <MeasureItem label="Idade" value={`${model.age} anos`} />}
             </div>
           </div>
 
