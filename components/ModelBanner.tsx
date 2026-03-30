@@ -106,12 +106,17 @@ export default function ModelBanner({ model }: Props) {
               {model.waist && <MeasureItem label="Cintura" value={model.waist} />}
               {model.hips && <MeasureItem label="Quadril" value={model.hips} />}
             </div>
-          </div>
 
-          <div className={styles.actions}>
-            {model.instagram && (
-              <a href={model.instagram} target="_blank" rel="noopener noreferrer" className={styles.btnInstagram}>
-                Instagram
+
+
+
+
+
+
+
+
+
+
               </a>
             )}
             
