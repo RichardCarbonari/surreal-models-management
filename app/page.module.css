@@ -147,3 +147,12 @@
   .heroLogo { font-size: 3.8rem; }
   .dragHint { display: none; }
 }
+
+.wrapperHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.wrapperVisible {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}

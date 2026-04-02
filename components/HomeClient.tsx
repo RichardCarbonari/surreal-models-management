@@ -1,6 +1,7 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import SplashScreen from "./SplashScreen";
 import styles from "@/app/page.module.css";
 
 interface Model { slug: string; coverImage: string; name: string; }
@@ -9,7 +10,6 @@ const CELL_W = 320;
 const GAP = 36;
 const TOP_PAD = 40;
 
-// Aspect ratios alternating like primemgmt
 const RATIOS = [
   { w: 9,  h: 13 },
   { w: 3,  h: 4  },
@@ -23,22 +23,13 @@ const RATIOS = [
 function buildCols(images: Model[], numCols: number) {
   const colHeights = new Array(numCols).fill(TOP_PAD);
   const cells: { model: Model; top: number; left: number; w: number; h: number; i: number }[] = [];
-
   images.forEach((model, i) => {
     const col = i % numCols;
     const ratio = RATIOS[i % RATIOS.length];
     const h = Math.round((CELL_W * ratio.h) / ratio.w);
-    cells.push({
-      model,
-      top: colHeights[col],
-      left: col * (CELL_W + GAP) + GAP,
-      w: CELL_W,
-      h,
-      i,
-    });
+    cells.push({ model, top: colHeights[col], left: col * (CELL_W + GAP) + GAP, w: CELL_W, h, i });
     colHeights[col] += h + GAP;
   });
-
   const totalW = numCols * (CELL_W + GAP) + GAP;
   const totalH = Math.max(...colHeights) + TOP_PAD;
   return { cells, totalW, totalH };
@@ -47,23 +38,28 @@ function buildCols(images: Model[], numCols: number) {
 export default function HomeClient({ images }: { images: Model[] }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const masonryRef = useRef<HTMLDivElement>(null);
+  const [showSplash, setShowSplash] = useState(true);
+  const [masonryVisible, setMasonryVisible] = useState(false);
 
   const NUM_COLS = 8;
   const { cells, totalW, totalH } = buildCols(images, NUM_COLS);
+
+  const handleSplashComplete = () => {
+    setMasonryVisible(true);
+    setTimeout(() => setShowSplash(false), 600);
+  };
 
   useEffect(() => {
     const el = wrapperRef.current;
     const masonry = masonryRef.current;
     if (!el || !masonry) return;
 
-    // Start at 0,0 — images visible immediately
     const initX = 0;
     const initY = 0;
     let curX = initX, curY = initY;
     let targetX = initX, targetY = initY;
     masonry.style.transform = `translate(${curX}px, ${curY}px)`;
 
-    // Smooth lerp loop
     let raf: number;
     const tick = () => {
       curX += (targetX - curX) * 0.075;
@@ -73,27 +69,12 @@ export default function HomeClient({ images }: { images: Model[] }) {
     };
     raf = requestAnimationFrame(tick);
 
-    // Drag
     let dragging = false, ox = 0, oy = 0, tx0 = 0, ty0 = 0;
-    const down = (e: MouseEvent) => {
-      dragging = true; ox = e.clientX; oy = e.clientY;
-      tx0 = targetX; ty0 = targetY;
-      el.style.cursor = 'grabbing';
-    };
+    const down = (e: MouseEvent) => { dragging = true; ox = e.clientX; oy = e.clientY; tx0 = targetX; ty0 = targetY; el.style.cursor = 'grabbing'; };
     const up = () => { dragging = false; el.style.cursor = 'grab'; };
-    const move = (e: MouseEvent) => {
-      if (!dragging) return;
-      targetX = tx0 + (e.clientX - ox);
-      targetY = ty0 + (e.clientY - oy);
-    };
-    const tstart = (e: TouchEvent) => {
-      ox = e.touches[0].clientX; oy = e.touches[0].clientY;
-      tx0 = targetX; ty0 = targetY;
-    };
-    const tmove = (e: TouchEvent) => {
-      targetX = tx0 + (e.touches[0].clientX - ox);
-      targetY = ty0 + (e.touches[0].clientY - oy);
-    };
+    const move = (e: MouseEvent) => { if (!dragging) return; targetX = tx0 + (e.clientX - ox); targetY = ty0 + (e.clientY - oy); };
+    const tstart = (e: TouchEvent) => { ox = e.touches[0].clientX; oy = e.touches[0].clientY; tx0 = targetX; ty0 = targetY; };
+    const tmove = (e: TouchEvent) => { targetX = tx0 + (e.touches[0].clientX - ox); targetY = ty0 + (e.touches[0].clientY - oy); };
 
     el.addEventListener('mousedown', down);
     window.addEventListener('mouseup', up);
@@ -110,48 +91,45 @@ export default function HomeClient({ images }: { images: Model[] }) {
   }, [totalW, totalH]);
 
   return (
-    <div className={styles.wrapper} ref={wrapperRef}>
+    <>
+      {showSplash && (
+        <SplashScreen
+          onComplete={handleSplashComplete}
+          images={images.slice(0, 12).map(m => m.coverImage)}
+        />
+      )}
+
       <div
-        ref={masonryRef}
-        className={styles.masonry}
-        style={{ width: totalW, height: totalH }}
+        className={`${styles.wrapper} ${masonryVisible ? styles.wrapperVisible : styles.wrapperHidden}`}
+        ref={wrapperRef}
       >
-        {cells.map(({ model, top, left, w, h, i }) => (
-          <Link
-            key={i}
-            href={`/portfolio/${model.slug}`}
-            className={styles.cell}
-            draggable={false}
-            style={{ top, left, width: w, height: h }}
-          >
-            <img
-              src={model.coverImage}
-              alt={model.name}
-              draggable={false}
-              className={styles.cellImg}
-            />
-            <span className={styles.cellTitle}>{model.name}</span>
-          </Link>
-        ))}
-      </div>
+        <div ref={masonryRef} className={styles.masonry} style={{ width: totalW, height: totalH }}>
+          {cells.map(({ model, top, left, w, h, i }) => (
+            <Link key={i} href={`/portfolio/${model.slug}`} className={styles.cell} draggable={false} style={{ top, left, width: w, height: h }}>
+              <img src={model.coverImage} alt={model.name} draggable={false} className={styles.cellImg} />
+              <span className={styles.cellTitle}>{model.name}</span>
+            </Link>
+          ))}
+        </div>
 
-      <div className={styles.overlay} />
+        <div className={styles.overlay} />
 
-      <div className={styles.heroContent}>
-        <div className={styles.heroInner}>
-          <p className={styles.heroEyebrow}>São Paulo · Brasil</p>
-          <h1 className={styles.heroLogo}>Surreal</h1>
-          <p className={styles.heroSub}>Models Management</p>
-          <Link href="/portfolio" className={styles.heroBtn}>Models</Link>
+        <div className={styles.heroContent}>
+          <div className={styles.heroInner}>
+            <p className={styles.heroEyebrow}>São Paulo · Brasil</p>
+            <h1 className={styles.heroLogo}>Surreal</h1>
+            <p className={styles.heroSub}>Models Management</p>
+            <Link href="/portfolio" className={styles.heroBtn}>Models</Link>
+          </div>
+        </div>
+
+        <div className={styles.dragHint}>
+          <span>drag to explore</span>
+          <svg width="36" height="8" viewBox="0 0 36 8" fill="none">
+            <path d="M0 4h34M31 1l3 3-3 3" stroke="currentColor" strokeWidth="1.2"/>
+          </svg>
         </div>
       </div>
-
-      <div className={styles.dragHint}>
-        <span>drag to explore</span>
-        <svg width="36" height="8" viewBox="0 0 36 8" fill="none">
-          <path d="M0 4h34M31 1l3 3-3 3" stroke="currentColor" strokeWidth="1.2"/>
-        </svg>
-      </div>
-    </div>
+    </>
   );
 }
