@@ -22,7 +22,7 @@
 
 /* Logo */
 .logo { display: flex; flex-direction: column; gap: 0.05rem; text-decoration: none; }
-.logoMain { font-family: var(--font-display); font-size: 1.35rem; font-weight: 400; letter-spacing: 0.08em; color: var(--black); line-height: 1; }
+.logoMain { font-family: "Cormorant SC", serif; font-size: 1.35rem; font-weight: 400; letter-spacing: 0.08em; color: var(--black); line-height: 1; }
 .logoSub { font-family: var(--font-body); font-size: 0.45rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--olive); }
 
 /* Desktop links */
