@@ -39,9 +39,17 @@ export default function HomeClient({ images }: { images: Model[] }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const masonryRef = useRef<HTMLDivElement>(null);
   const [splashDone, setSplashDone] = useState(false);
+  const [slideIn, setSlideIn] = useState(false);
 
   const NUM_COLS = 8;
   const { cells, totalW, totalH } = buildCols(images, NUM_COLS);
+
+  const handleSplashComplete = () => {
+    setSplashDone(true);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => setSlideIn(true));
+    });
+  };
 
   useEffect(() => {
     const el = wrapperRef.current;
@@ -83,12 +91,16 @@ export default function HomeClient({ images }: { images: Model[] }) {
 
   return (
     <>
-      <SplashScreen onComplete={() => setSplashDone(true)} />
+      <SplashScreen onComplete={handleSplashComplete} />
 
       <div
         ref={wrapperRef}
         className={styles.wrapper}
-        style={{ opacity: splashDone ? 1 : 0, transition: 'opacity 0.6s ease' }}
+        style={{
+          transform: splashDone ? (slideIn ? 'translateY(0)' : 'translateY(100vh)') : 'translateY(100vh)',
+          transition: slideIn ? 'transform 0.8s cubic-bezier(0.76, 0, 0.24, 1)' : 'none',
+          opacity: splashDone ? 1 : 0,
+        }}
       >
         <div ref={masonryRef} className={styles.masonry} style={{ width: totalW, height: totalH }}>
           {cells.map(({ model, top, left, w, h, i }) => (

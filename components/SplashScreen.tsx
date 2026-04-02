@@ -7,48 +7,53 @@ interface Props {
 }
 
 export default function SplashScreen({ onComplete }: Props) {
-  const [phase, setPhase] = useState<"idle" | "expanding" | "done">("idle");
+  const [phase, setPhase] = useState<"idle" | "shrink" | "reveal" | "done">("idle");
   const triggered = useRef(false);
 
   const trigger = () => {
     if (triggered.current) return;
     triggered.current = true;
-    setPhase("expanding");
+
+    // Phase 1: logo shrinks to navbar position
+    setPhase("shrink");
+
+    // Phase 2: masonry slides up
+    setTimeout(() => setPhase("reveal"), 800);
+
+    // Phase 3: done
     setTimeout(() => {
       onComplete();
       setPhase("done");
-    }, 1200);
+    }, 1600);
   };
 
   useEffect(() => {
-    const onMove = () => trigger();
-    const onClick = () => trigger();
-    window.addEventListener("mousemove", onMove, { once: true });
-    window.addEventListener("click", onClick, { once: true });
-    window.addEventListener("touchstart", onClick, { once: true });
+    window.addEventListener("mousemove", trigger, { once: true });
+    window.addEventListener("click", trigger, { once: true });
+    window.addEventListener("touchstart", trigger, { once: true });
     return () => {
-      window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("click", onClick);
-      window.removeEventListener("touchstart", onClick);
+      window.removeEventListener("mousemove", trigger);
+      window.removeEventListener("click", trigger);
+      window.removeEventListener("touchstart", trigger);
     };
   }, []);
 
   if (phase === "done") return null;
 
   return (
-    <div className={`${styles.splash} ${phase === "expanding" ? styles.expanding : ""}`}>
-      {/* White background that clips away */}
-      <div className={`${styles.bg} ${phase === "expanding" ? styles.bgExpand : ""}`} />
+    <div className={`${styles.splash} ${phase === "reveal" ? styles.splashUp : ""}`}>
 
-      {/* The logo — becomes the clip mask shape */}
-      <div className={styles.logoWrap}>
-        <h1 className={`${styles.logo} ${phase === "expanding" ? styles.logoExpand : ""}`}>
-          Surreal
-        </h1>
-        {phase === "idle" && (
-          <p className={styles.hint}>move to enter</p>
-        )}
-      </div>
+      {/* White background */}
+      <div className={`${styles.bg} ${phase !== "idle" ? styles.bgFade : ""}`} />
+
+      {/* Logo — shrinks to navbar */}
+      <h1 className={`${styles.logo} ${phase === "shrink" || phase === "reveal" ? styles.logoShrink : ""}`}>
+        Surreal
+      </h1>
+
+      {phase === "idle" && (
+        <p className={styles.hint}>click to enter</p>
+      )}
     </div>
   );
 }

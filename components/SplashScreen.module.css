@@ -1,3 +1,4 @@
+/* ── SPLASH ── */
 .splash {
   position: fixed;
   inset: 0;
@@ -5,32 +6,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
   pointer-events: auto;
+  transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+  transform: translateY(0);
 }
 
-/* White background */
+/* Phase reveal: splash slides up out of view */
+.splashUp {
+  transform: translateY(-100%);
+}
+
+/* ── WHITE BG ── */
 .bg {
   position: absolute;
   inset: 0;
   background: #faf9f7;
-  transition: opacity 0.9s ease 0.3s;
-  z-index: 1;
+  transition: opacity 0.4s ease;
+  z-index: -1;
 }
-.bgExpand {
-  opacity: 0;
-}
-
-/* Logo wrap */
-.logoWrap {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+.bgFade {
+  opacity: 0.95; /* stays mostly white while logo moves */
 }
 
-/* Logo — expands to fill screen as clip mask */
+/* ── LOGO ── */
 .logo {
   font-family: "Cormorant SC", serif;
   font-size: clamp(5rem, 14vw, 11rem);
@@ -38,21 +38,27 @@
   color: #0a0a0a;
   letter-spacing: 0.05em;
   line-height: 1;
-  transform-origin: center center;
+  transform-origin: top left;
   transition:
-    transform 1s cubic-bezier(0.16, 1, 0.3, 1),
-    color 0.4s ease,
-    opacity 0.5s ease 0.6s;
-  animation: fadeInLogo 1s cubic-bezier(0.16,1,0.3,1) forwards;
-  will-change: transform;
+    font-size 0.7s cubic-bezier(0.76, 0, 0.24, 1),
+    transform 0.7s cubic-bezier(0.76, 0, 0.24, 1),
+    color 0.3s ease;
+  animation: fadeInLogo 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  position: relative;
+  z-index: 2;
 }
 
-.logoExpand {
-  transform: scale(22);
-  color: #faf9f7;
-  opacity: 0;
+/* Shrinks to navbar size and moves to top-left */
+.logoShrink {
+  font-size: 1.4rem;
+  transform: translate(
+    calc(-50vw + 2.5rem + 1px),
+    calc(-50vh + 1.3rem + 2px)
+  );
+  color: #0a0a0a;
 }
 
+/* ── HINT ── */
 .hint {
   font-family: var(--font-body);
   font-size: 0.55rem;
@@ -63,13 +69,14 @@
   animation: fadeInHint 0.8s ease forwards;
   animation-delay: 0.8s;
   opacity: 0;
+  position: relative;
+  z-index: 2;
 }
 
 @keyframes fadeInLogo {
-  from { opacity: 0; transform: scale(0.95) translateY(16px); }
-  to   { opacity: 1; transform: scale(1) translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes fadeInHint {
   from { opacity: 0; }
   to   { opacity: 0.6; }
