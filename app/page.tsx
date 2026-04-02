@@ -30,7 +30,7 @@ export default function HomePage() {
           <div className={styles.heroImageGrid}>
             <div className={styles.heroImg1}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://lh3.googleusercontent.com/d/18pOdJhHpySBruGk0jvgqCoOY8YgXkgW7" alt="Model" />
+              <img src="https://lh3.googleusercontent.com/d/1iYJOaGJxV2o8tWFH6tIGmMyrWHvkR0BN" alt="Model" />
             </div>
             <div className={styles.heroImg2}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
