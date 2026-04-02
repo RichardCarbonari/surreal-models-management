@@ -9,7 +9,7 @@ interface Model { slug: string; coverImage: string; name: string; }
 const CELL_W = 260;
 const GAP = 8;
 const ROW_H = 340;
-const NUM_ROWS = 4;
+const NUM_ROWS = 5;
 
 const DELAYS = [0, 3.2, 6.5, 1.8, 8.1, 4.4, 11.2, 2.7, 7.3, 5.6, 9.8, 0.9, 13.1, 3.8, 6.2, 10.5, 1.4];
 
