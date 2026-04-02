@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className={styles.inner}>
           <Link href="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
             <span className={styles.logoMain}>Surreal</span>
-            <span className={styles.logoSub}>Models Management</span>
+            
           </Link>
 
           <ul className={styles.desktopLinks}>
