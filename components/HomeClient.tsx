@@ -5,148 +5,138 @@ import styles from "@/app/page.module.css";
 
 interface Model { slug: string; coverImage: string; name: string; }
 
-// Aspect ratios like primemgmt
-const RATIOS = [
-  { w: 9, h: 13 }, // portrait tall
-  { w: 3, h: 4  }, // portrait
-  { w: 3, h: 5  }, // portrait taller
-  { w: 7, h: 10 }, // portrait
-  { w: 9, h: 16 }, // portrait tallest
-  { w: 10, h: 7 }, // landscape
-  { w: 7, h: 5  }, // landscape
-];
-
 const CELL_W = 320;
 const GAP = 36;
-const COLS = 8;
-const TOP_OFFSET = 40;
+const TOP_PAD = 40;
 
-function buildLayout(count: number) {
-  const cols: number[] = new Array(COLS).fill(TOP_OFFSET);
-  const cells: { top: number; left: number; w: number; h: number; ratio: typeof RATIOS[0] }[] = [];
+// Aspect ratios alternating like primemgmt
+const RATIOS = [
+  { w: 9,  h: 13 },
+  { w: 3,  h: 4  },
+  { w: 3,  h: 5  },
+  { w: 7,  h: 10 },
+  { w: 9,  h: 16 },
+  { w: 10, h: 7  },
+  { w: 5,  h: 7  },
+];
 
-  for (let i = 0; i < count; i++) {
-    const col = i % COLS;
+function buildCols(images: Model[], numCols: number) {
+  const colHeights = new Array(numCols).fill(TOP_PAD);
+  const cells: { model: Model; top: number; left: number; w: number; h: number; i: number }[] = [];
+
+  images.forEach((model, i) => {
+    const col = i % numCols;
     const ratio = RATIOS[i % RATIOS.length];
     const h = Math.round((CELL_W * ratio.h) / ratio.w);
-    cells.push({ top: cols[col], left: col * (CELL_W + GAP) + GAP, w: CELL_W, h, ratio });
-    cols[col] += h + GAP;
-  }
+    cells.push({
+      model,
+      top: colHeights[col],
+      left: col * (CELL_W + GAP) + GAP,
+      w: CELL_W,
+      h,
+      i,
+    });
+    colHeights[col] += h + GAP;
+  });
 
-  const totalW = COLS * (CELL_W + GAP) + GAP;
-  const totalH = Math.max(...cols) + TOP_OFFSET;
+  const totalW = numCols * (CELL_W + GAP) + GAP;
+  const totalH = Math.max(...colHeights) + TOP_PAD;
   return { cells, totalW, totalH };
 }
 
 export default function HomeClient({ images }: { images: Model[] }) {
-  const masonryRef = useRef<HTMLDivElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const masonryRef = useRef<HTMLDivElement>(null);
 
-  const { cells, totalW, totalH } = buildLayout(images.length);
+  const NUM_COLS = 8;
+  const { cells, totalW, totalH } = buildCols(images, NUM_COLS);
 
   useEffect(() => {
     const el = wrapperRef.current;
     const masonry = masonryRef.current;
     if (!el || !masonry) return;
 
-    // Start centered
-    const startX = -(totalW / 2 - window.innerWidth / 2);
-    const startY = -(totalH / 2 - window.innerHeight / 2);
-    let curX = startX, curY = startY;
-    let targetX = startX, targetY = startY;
+    // Center the masonry on load
+    const initX = -(totalW / 2 - window.innerWidth / 2);
+    const initY = -(totalH / 2 - window.innerHeight / 2);
+    let curX = initX, curY = initY;
+    let targetX = initX, targetY = initY;
     masonry.style.transform = `translate(${curX}px, ${curY}px)`;
 
-    // Smooth lerp animation
+    // Smooth lerp loop
     let raf: number;
-    const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
     const tick = () => {
-      curX = lerp(curX, targetX, 0.08);
-      curY = lerp(curY, targetY, 0.08);
+      curX += (targetX - curX) * 0.075;
+      curY += (targetY - curY) * 0.075;
       masonry.style.transform = `translate(${curX.toFixed(2)}px, ${curY.toFixed(2)}px)`;
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
 
     // Drag
-    let isDown = false, startDX = 0, startDY = 0, startTX = 0, startTY = 0;
-    const onDown = (e: MouseEvent) => {
-      isDown = true;
-      startDX = e.clientX; startDY = e.clientY;
-      startTX = targetX; startTY = targetY;
+    let dragging = false, ox = 0, oy = 0, tx0 = 0, ty0 = 0;
+    const down = (e: MouseEvent) => {
+      dragging = true; ox = e.clientX; oy = e.clientY;
+      tx0 = targetX; ty0 = targetY;
       el.style.cursor = 'grabbing';
     };
-    const onUp = () => { isDown = false; el.style.cursor = 'grab'; };
-    const onMove = (e: MouseEvent) => {
-      if (!isDown) return;
-      targetX = startTX + (e.clientX - startDX);
-      targetY = startTY + (e.clientY - startDY);
+    const up = () => { dragging = false; el.style.cursor = 'grab'; };
+    const move = (e: MouseEvent) => {
+      if (!dragging) return;
+      targetX = tx0 + (e.clientX - ox);
+      targetY = ty0 + (e.clientY - oy);
     };
-    const onTouchStart = (e: TouchEvent) => {
-      startDX = e.touches[0].clientX; startDY = e.touches[0].clientY;
-      startTX = targetX; startTY = targetY;
+    const tstart = (e: TouchEvent) => {
+      ox = e.touches[0].clientX; oy = e.touches[0].clientY;
+      tx0 = targetX; ty0 = targetY;
     };
-    const onTouchMove = (e: TouchEvent) => {
-      targetX = startTX + (e.touches[0].clientX - startDX);
-      targetY = startTY + (e.touches[0].clientY - startDY);
+    const tmove = (e: TouchEvent) => {
+      targetX = tx0 + (e.touches[0].clientX - ox);
+      targetY = ty0 + (e.touches[0].clientY - oy);
     };
 
-    el.addEventListener('mousedown', onDown);
-    window.addEventListener('mouseup', onUp);
-    window.addEventListener('mousemove', onMove);
-    el.addEventListener('touchstart', onTouchStart, { passive: true });
-    el.addEventListener('touchmove', onTouchMove, { passive: true });
+    el.addEventListener('mousedown', down);
+    window.addEventListener('mouseup', up);
+    window.addEventListener('mousemove', move);
+    el.addEventListener('touchstart', tstart, { passive: true });
+    el.addEventListener('touchmove', tmove, { passive: true });
 
     return () => {
       cancelAnimationFrame(raf);
-      el.removeEventListener('mousedown', onDown);
-      window.removeEventListener('mouseup', onUp);
-      window.removeEventListener('mousemove', onMove);
-      el.removeEventListener('touchstart', onTouchStart);
-      el.removeEventListener('touchmove', onTouchMove);
+      el.removeEventListener('mousedown', down);
+      window.removeEventListener('mouseup', up);
+      window.removeEventListener('mousemove', move);
     };
   }, [totalW, totalH]);
 
   return (
     <div className={styles.wrapper} ref={wrapperRef}>
-      {/* Masonry with absolute positioned cells */}
       <div
-        className={styles.masonry}
         ref={masonryRef}
+        className={styles.masonry}
         style={{ width: totalW, height: totalH }}
       >
-        {images.map((model, i) => {
-          const cell = cells[i];
-          if (!cell) return null;
-          return (
-            <Link
-              key={i}
-              href={`/portfolio/${model.slug}`}
-              className={styles.cell}
+        {cells.map(({ model, top, left, w, h, i }) => (
+          <Link
+            key={i}
+            href={`/portfolio/${model.slug}`}
+            className={styles.cell}
+            draggable={false}
+            style={{ top, left, width: w, height: h }}
+          >
+            <img
+              src={model.coverImage}
+              alt={model.name}
               draggable={false}
-              style={{
-                position: 'absolute',
-                top: cell.top,
-                left: cell.left,
-                width: cell.w,
-                height: cell.h,
-              }}
-            >
-              <img
-                src={model.coverImage}
-                alt={model.name}
-                draggable={false}
-                className={styles.cellImg}
-              />
-              <span className={styles.cellTitle}>{model.name}</span>
-            </Link>
-          );
-        })}
+              className={styles.cellImg}
+            />
+            <span className={styles.cellTitle}>{model.name}</span>
+          </Link>
+        ))}
       </div>
 
-      {/* Overlay */}
       <div className={styles.overlay} />
 
-      {/* Hero content */}
       <div className={styles.heroContent}>
         <div className={styles.heroInner}>
           <p className={styles.heroEyebrow}>São Paulo · Brasil</p>
