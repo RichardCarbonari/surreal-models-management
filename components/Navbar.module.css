@@ -78,7 +78,7 @@
   }
 
   .drawerLogo {
-    font-family: var(--font-display);
+    font-family: "Cormorant SC", serif;
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.08em;
