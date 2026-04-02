@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: #0a0a0a;
+  background: #1a1a1a;
   cursor: grab;
   user-select: none;
 }
@@ -19,6 +19,8 @@
   display: block;
   overflow: hidden;
   text-decoration: none;
+  position: absolute;
+  background: #111;
 }
 
 .cellImg {
@@ -29,7 +31,7 @@
   display: block;
   pointer-events: none;
   transition: transform 0.6s ease, filter 0.5s ease;
-  filter: brightness(0.75);
+  filter: brightness(0.8);
 }
 .cell:hover .cellImg {
   transform: scale(1.04);

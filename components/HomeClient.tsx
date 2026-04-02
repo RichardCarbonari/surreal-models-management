@@ -56,9 +56,9 @@ export default function HomeClient({ images }: { images: Model[] }) {
     const masonry = masonryRef.current;
     if (!el || !masonry) return;
 
-    // Center the masonry on load
-    const initX = -(totalW / 2 - window.innerWidth / 2);
-    const initY = -(totalH / 2 - window.innerHeight / 2);
+    // Start at top-left to show images immediately
+    const initX = -(GAP);
+    const initY = -(TOP_PAD);
     let curX = initX, curY = initY;
     let targetX = initX, targetY = initY;
     masonry.style.transform = `translate(${curX}px, ${curY}px)`;
