@@ -1,0 +1,121 @@
+================================================================================
+  SURREAL MODELS MANAGEMENT — MAPA DO SITE
+  www.surrealmgmt.com.br
+  Atualizado: Abril 2026
+================================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  STACK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Framework     Next.js 14 (App Router)
+  Linguagem     TypeScript
+  Estilo        CSS Modules
+  Deploy        Vercel (auto-deploy a cada git push)
+  Repositório   github.com/RichardCarbonari/surreal-models-management
+  Domínio       www.surrealmgmt.com.br (DNS: Hostinger → Vercel)
+  Fotos         Google Drive (lh3.googleusercontent.com/d/FILE_ID)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ROTAS DO SITE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  /                          → Home
+  /portfolio                 → Grid de modelos com filtros
+  /portfolio/[slug]          → Página individual do modelo
+
+  Slugs disponíveis (17 modelos):
+  /portfolio/richard-carbonari     masculino
+  /portfolio/junior-benevides      masculino
+  /portfolio/bernardo-balsanic     masculino
+  /portfolio/emad                  masculino
+  /portfolio/kareem                masculino
+  /portfolio/wagner-piazzoh        masculino
+  /portfolio/matheus-cunha         masculino
+  /portfolio/guss-camargo          masculino
+  /portfolio/guilherme-cajaiba     masculino
+  /portfolio/clara-albuquerque     feminino
+  /portfolio/renata-jamilly        feminino
+  /portfolio/iza-mazotti           feminino
+  /portfolio/samira-leopoldino     feminino
+  /portfolio/fernanda-faleiro      feminino
+  /portfolio/jullie-rocha          feminino
+  /portfolio/giovana-peixoto       feminino
+  /portfolio/nanda-peixoto         feminino
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ESTRUTURA DE ARQUIVOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  app/
+  ├── globals.css              → Variáveis CSS globais, reset, tipografia
+  ├── layout.tsx               → Root layout (Navbar + Footer globais)
+  ├── page.tsx                 → Home
+  ├── page.module.css
+  └── portfolio/
+      ├── page.tsx             → /portfolio
+      ├── page.module.css
+      └── [slug]/
+          ├── page.tsx         → /portfolio/[slug]
+          └── page.module.css
+
+  components/
+  ├── Navbar.tsx/css           → Nav fixa (desktop links + mobile drawer)
+  ├── Footer.tsx/css           → Rodapé preto
+  ├── CoverflowCarousel.tsx/css→ Carrossel Home (modelos featured)
+  ├── ContactForm.tsx/css      → Formulário contato (client component)
+  ├── PortfolioGrid.tsx/css    → Grid masonry com filtros
+  ├── ModelCard.tsx/css        → Card do modelo no grid
+  └── ModelBanner.tsx/css      → Página completa do modelo
+
+  data/
+  └── models.ts                → Dados dos 17 modelos
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SEÇÕES DA HOME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. HERO      → Duas fotos de modelos + apresentação
+  2. CARROSSEL → Modelos em destaque (featured: true)
+  3. SOBRE     → Texto institucional (ancora: /#sobre)
+  4. CONTATO   → Formulário (ancora: /#contato)
+
+  Modelos no carrossel (featured: true):
+  Richard, Junior, Bernardo, Guss, Clara, Renata, Iza
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  DESIGN SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Cores:
+  --black:    #0a0a0a
+  --white:    #faf9f7
+  --olive:    #6b6b45
+
+  Fontes:
+  Logo:     Cormorant SC Bold
+  Títulos:  Cormorant Garamond
+  Corpo:    Montserrat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CAMPOS EXIBIDOS NA PÁGINA DO MODELO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Altura / Busto / Cintura / Quadril / Instagram / Solicitar Modelo
+
+  Campos no sistema mas não exibidos:
+  shoes / eyes / hair / age / nationality
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PENDÊNCIAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [ ] Polaroids — estrutura pronta, aguardando links do Drive
+  [ ] Junior Benevides — medidas em branco
+  [ ] Categoria "desenvolvimento" — sem modelos cadastrados
+  [ ] Domínio sem www — surrealmgmt.com.br tem erro SSL
+  [ ] Formulário de contato — sem envio real (só visual)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  COMO ATUALIZAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Novo modelo / foto / medida → editar data/models.ts
+  Qualquer alteração → git add -A && git commit -m "desc" && git push
+  Vercel faz deploy automático em ~30 segundos
+
+  Formato URL foto Drive:
+  https://lh3.googleusercontent.com/d/[FILE_ID]
+================================================================================
