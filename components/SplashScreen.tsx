@@ -4,67 +4,51 @@ import styles from "./SplashScreen.module.css";
 
 interface Props {
   onComplete: () => void;
-  images: string[];
 }
 
-export default function SplashScreen({ onComplete, images }: Props) {
-  const [phase, setPhase] = useState<"idle" | "falling" | "done">("idle");
-  const [triggered, setTriggered] = useState(false);
-  const splashRef = useRef<HTMLDivElement>(null);
+export default function SplashScreen({ onComplete }: Props) {
+  const [phase, setPhase] = useState<"idle" | "expanding" | "done">("idle");
+  const triggered = useRef(false);
 
   const trigger = () => {
-    if (triggered) return;
-    setTriggered(true);
-    setPhase("falling");
+    if (triggered.current) return;
+    triggered.current = true;
+    setPhase("expanding");
     setTimeout(() => {
-      setPhase("done");
       onComplete();
-    }, 1800);
+      setPhase("done");
+    }, 1200);
   };
 
   useEffect(() => {
-    const el = splashRef.current;
-    if (!el) return;
-    el.addEventListener("click", trigger);
-    el.addEventListener("mousemove", trigger, { once: true });
+    const onMove = () => trigger();
+    const onClick = () => trigger();
+    window.addEventListener("mousemove", onMove, { once: true });
+    window.addEventListener("click", onClick, { once: true });
+    window.addEventListener("touchstart", onClick, { once: true });
     return () => {
-      el.removeEventListener("click", trigger);
-      el.removeEventListener("mousemove", trigger);
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("click", onClick);
+      window.removeEventListener("touchstart", onClick);
     };
-  }, [triggered]);
+  }, []);
 
   if (phase === "done") return null;
 
   return (
-    <div
-      ref={splashRef}
-      className={`${styles.splash} ${phase === "falling" ? styles.falling : ""}`}
-    >
-      {/* Falling photos */}
-      {phase === "falling" && images.slice(0, 12).map((src, i) => (
-        <div
-          key={i}
-          className={styles.fallingPhoto}
-          style={{
-            left: `${(i % 6) * 17 + Math.random() * 4}%`,
-            animationDelay: `${i * 0.08}s`,
-            animationDuration: `${0.9 + Math.random() * 0.4}s`,
-            width: i % 3 === 0 ? "180px" : i % 3 === 1 ? "220px" : "160px",
-            aspectRatio: i % 2 === 0 ? "2/3" : "3/4",
-          }}
-        >
-          <img src={src} alt="" draggable={false} />
-        </div>
-      ))}
+    <div className={`${styles.splash} ${phase === "expanding" ? styles.expanding : ""}`}>
+      {/* White background that clips away */}
+      <div className={`${styles.bg} ${phase === "expanding" ? styles.bgExpand : ""}`} />
 
-      {/* Logo */}
-      <div className={`${styles.logoWrap} ${phase === "falling" ? styles.logoFade : ""}`}>
-        <h1 className={styles.logo}>Surreal</h1>
-        <p className={styles.hint}>click or move to enter</p>
+      {/* The logo — becomes the clip mask shape */}
+      <div className={styles.logoWrap}>
+        <h1 className={`${styles.logo} ${phase === "expanding" ? styles.logoExpand : ""}`}>
+          Surreal
+        </h1>
+        {phase === "idle" && (
+          <p className={styles.hint}>move to enter</p>
+        )}
       </div>
-
-      {/* White overlay that fades out */}
-      <div className={`${styles.whiteOverlay} ${phase === "falling" ? styles.overlayFade : ""}`} />
     </div>
   );
 }

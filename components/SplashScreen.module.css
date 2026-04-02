@@ -1,37 +1,56 @@
 .splash {
   position: fixed;
   inset: 0;
-  background: #faf9f7;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: none;
-  overflow: hidden;
+  pointer-events: auto;
 }
 
-/* Logo */
+/* White background */
+.bg {
+  position: absolute;
+  inset: 0;
+  background: #faf9f7;
+  transition: opacity 0.9s ease 0.3s;
+  z-index: 1;
+}
+.bgExpand {
+  opacity: 0;
+}
+
+/* Logo wrap */
 .logoWrap {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  z-index: 10;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.logoFade {
-  opacity: 0;
-  transform: scale(0.95);
 }
 
+/* Logo — expands to fill screen as clip mask */
 .logo {
   font-family: "Cormorant SC", serif;
-  font-size: clamp(5rem, 15vw, 12rem);
+  font-size: clamp(5rem, 14vw, 11rem);
   font-weight: 700;
   color: #0a0a0a;
   letter-spacing: 0.05em;
   line-height: 1;
-  animation: fadeInLogo 1.2s cubic-bezier(0.16,1,0.3,1) forwards;
+  transform-origin: center center;
+  transition:
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.4s ease,
+    opacity 0.5s ease 0.6s;
+  animation: fadeInLogo 1s cubic-bezier(0.16,1,0.3,1) forwards;
+  will-change: transform;
+}
+
+.logoExpand {
+  transform: scale(22);
+  color: #faf9f7;
+  opacity: 0;
 }
 
 .hint {
@@ -42,55 +61,16 @@
   text-transform: uppercase;
   color: #9c9b94;
   animation: fadeInHint 0.8s ease forwards;
-  animation-delay: 1s;
+  animation-delay: 0.8s;
   opacity: 0;
 }
 
-/* Falling photos */
-.fallingPhoto {
-  position: absolute;
-  top: -400px;
-  overflow: hidden;
-  border-radius: 1px;
-  animation: fallDown cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.15);
-}
-
-.fallingPhoto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-}
-
-/* White overlay fades away as photos fall */
-.whiteOverlay {
-  position: absolute;
-  inset: 0;
-  background: #faf9f7;
-  z-index: 5;
-  pointer-events: none;
-  transition: opacity 1.4s ease 0.3s;
-}
-.overlayFade { opacity: 0; }
-
-/* Keyframes */
 @keyframes fadeInLogo {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: scale(0.95) translateY(16px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
 }
+
 @keyframes fadeInHint {
   from { opacity: 0; }
-  to   { opacity: 0.7; }
-}
-@keyframes fallDown {
-  0%   { transform: translateY(0) rotate(var(--rot, -3deg)) scale(0.9); opacity: 0; }
-  20%  { opacity: 1; }
-  100% { transform: translateY(130vh) rotate(var(--rot, 3deg)) scale(1); opacity: 0.6; }
-}
-
-/* Splash fades out */
-.falling {
-  pointer-events: none;
+  to   { opacity: 0.6; }
 }

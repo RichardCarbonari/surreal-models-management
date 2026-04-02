@@ -38,27 +38,18 @@ function buildCols(images: Model[], numCols: number) {
 export default function HomeClient({ images }: { images: Model[] }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const masonryRef = useRef<HTMLDivElement>(null);
-  const [showSplash, setShowSplash] = useState(true);
-  const [masonryVisible, setMasonryVisible] = useState(false);
+  const [splashDone, setSplashDone] = useState(false);
 
   const NUM_COLS = 8;
   const { cells, totalW, totalH } = buildCols(images, NUM_COLS);
-
-  const handleSplashComplete = () => {
-    setMasonryVisible(true);
-    setTimeout(() => setShowSplash(false), 600);
-  };
 
   useEffect(() => {
     const el = wrapperRef.current;
     const masonry = masonryRef.current;
     if (!el || !masonry) return;
 
-    const initX = 0;
-    const initY = 0;
-    let curX = initX, curY = initY;
-    let targetX = initX, targetY = initY;
-    masonry.style.transform = `translate(${curX}px, ${curY}px)`;
+    let curX = 0, curY = 0, targetX = 0, targetY = 0;
+    masonry.style.transform = `translate(0px, 0px)`;
 
     let raf: number;
     const tick = () => {
@@ -88,20 +79,16 @@ export default function HomeClient({ images }: { images: Model[] }) {
       window.removeEventListener('mouseup', up);
       window.removeEventListener('mousemove', move);
     };
-  }, [totalW, totalH]);
+  }, []);
 
   return (
     <>
-      {showSplash && (
-        <SplashScreen
-          onComplete={handleSplashComplete}
-          images={images.slice(0, 12).map(m => m.coverImage)}
-        />
-      )}
+      <SplashScreen onComplete={() => setSplashDone(true)} />
 
       <div
-        className={`${styles.wrapper} ${masonryVisible ? styles.wrapperVisible : styles.wrapperHidden}`}
         ref={wrapperRef}
+        className={styles.wrapper}
+        style={{ opacity: splashDone ? 1 : 0, transition: 'opacity 0.6s ease' }}
       >
         <div ref={masonryRef} className={styles.masonry} style={{ width: totalW, height: totalH }}>
           {cells.map(({ model, top, left, w, h, i }) => (
