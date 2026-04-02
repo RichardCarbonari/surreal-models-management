@@ -4,16 +4,15 @@ import Link from "next/link";
 import { models, ModelCategory } from "@/data/models";
 import styles from "./PortfolioGrid.module.css";
 
-const CATEGORIES: { value: ModelCategory | "todos"; label: string }[] = [
-  { value: "todos", label: "Todos" },
+const CATEGORIES: { value: ModelCategory; label: string }[] = [
   { value: "feminino", label: "Feminino" },
   { value: "masculino", label: "Masculino" },
   { value: "desenvolvimento", label: "Em Desenvolvimento" },
 ];
 
 export default function PortfolioGrid() {
-  const [active, setActive] = useState<ModelCategory | "todos">("todos");
-  const filtered = active === "todos" ? models : models.filter(m => m.category === active);
+  const [active, setActive] = useState<ModelCategory>("feminino");
+  const filtered = models.filter(m => m.category === active);
 
   return (
     <div className={styles.wrapper}>
