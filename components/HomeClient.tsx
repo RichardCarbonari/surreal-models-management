@@ -42,15 +42,15 @@ export default function HomeClient({ images }: { images: Model[] }) {
   const [slideIn, setSlideIn] = useState(false);
 
   const NUM_COLS = 8;
-  const { cells, totalW, totalH } = buildCols(images, NUM_COLS);
+  const allImages = [...images, ...images, ...images];
+  const { cells, totalW, totalH } = buildCols(allImages, NUM_COLS);
 
   const handleSplashComplete = () => {
     setSplashDone(true);
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => setSlideIn(true));
-    });
+    requestAnimationFrame(() => requestAnimationFrame(() => setSlideIn(true)));
   };
 
+  // Drag + lerp
   useEffect(() => {
     const el = wrapperRef.current;
     const masonry = masonryRef.current;
@@ -89,6 +89,32 @@ export default function HomeClient({ images }: { images: Model[] }) {
     };
   }, []);
 
+  // GSAP flip animation on cells
+  useEffect(() => {
+    if (!splashDone) return;
+
+    const initGsap = async () => {
+      const { gsap } = await import("gsap");
+      const cards = document.querySelectorAll('[data-flip-card]');
+
+      cards.forEach((card, i) => {
+        const delay = (i % 17) * 1.2 + Math.random() * 4;
+        const duration = 6 + Math.random() * 6;
+
+        gsap.to(card, {
+          rotateY: 360,
+          duration,
+          delay,
+          ease: "power1.inOut",
+          repeat: -1,
+          repeatDelay: Math.random() * 8 + 4,
+        });
+      });
+    };
+
+    initGsap();
+  }, [splashDone]);
+
   return (
     <>
       <SplashScreen onComplete={handleSplashComplete} />
@@ -104,10 +130,17 @@ export default function HomeClient({ images }: { images: Model[] }) {
       >
         <div ref={masonryRef} className={styles.masonry} style={{ width: totalW, height: totalH }}>
           {cells.map(({ model, top, left, w, h, i }) => (
-            <Link key={i} href={`/portfolio/${model.slug}`} className={styles.cell} draggable={false} style={{ top, left, width: w, height: h }}>
-              <img src={model.coverImage} alt={model.name} draggable={false} className={styles.cellImg} />
-              <span className={styles.cellTitle}>{model.name}</span>
-            </Link>
+            <div
+              key={i}
+              data-flip-card
+              className={styles.flipWrap}
+              style={{ position: 'absolute', top, left, width: w, height: h }}
+            >
+              <Link href={`/portfolio/${model.slug}`} className={styles.cell} draggable={false}>
+                <img src={model.coverImage} alt={model.name} draggable={false} className={styles.cellImg} />
+                <span className={styles.cellTitle}>{model.name}</span>
+              </Link>
+            </div>
           ))}
         </div>
 
