@@ -16,13 +16,14 @@
   justify-content: stretch;
   gap: 4px;
   padding: 0;
+  height: 100%;
 }
 
 .row {
   position: relative;
   overflow: hidden;
   flex: 1;
-  min-height: 180px;
+  min-height: 0;
 }
 
 .rowTrack {
@@ -34,6 +35,7 @@
   bottom: 0;
   will-change: transform;
   padding: 0;
+  height: 100%;
 }
 
 /* Scroll left (even rows) */
