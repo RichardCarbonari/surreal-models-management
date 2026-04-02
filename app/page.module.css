@@ -157,7 +157,34 @@
   transition: opacity 0.8s ease;
 }
 
+
+
+/* ── FLIP ANIMATION ── */
 .flipWrap {
-  perspective: 800px;
-  transform-style: preserve-3d;
+  perspective: 1200px;
+  animation: triggerFlip var(--flip-duration, 1.4s) ease-in-out infinite;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+}
+
+/* Trigger the flip at intervals using animation-delay */
+@keyframes triggerFlip {
+  0%, 85%   { transform: rotateY(0deg); }
+  90%        { transform: rotateY(90deg); }
+  95%        { transform: rotateY(-90deg); }
+  100%       { transform: rotateY(0deg); }
+}
+
+.flipWrap {
+  animation-name: flipCycle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes flipCycle {
+  0%   { transform: perspective(800px) rotateY(0deg); }
+  8%   { transform: perspective(800px) rotateY(180deg); }
+  16%  { transform: perspective(800px) rotateY(360deg); }
+  100% { transform: perspective(800px) rotateY(360deg); }
 }

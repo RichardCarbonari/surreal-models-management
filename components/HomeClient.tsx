@@ -35,6 +35,9 @@ function buildCols(images: Model[], numCols: number) {
   return { cells, totalW, totalH };
 }
 
+// Staggered delays so flips happen at different times
+const DELAYS = [0, 3.2, 6.5, 1.8, 8.1, 4.4, 11.2, 2.7, 7.3, 5.6, 9.8, 0.9, 13.1, 3.8, 6.2, 10.5, 1.4];
+
 export default function HomeClient({ images }: { images: Model[] }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const masonryRef = useRef<HTMLDivElement>(null);
@@ -50,7 +53,6 @@ export default function HomeClient({ images }: { images: Model[] }) {
     requestAnimationFrame(() => requestAnimationFrame(() => setSlideIn(true)));
   };
 
-  // Drag + lerp
   useEffect(() => {
     const el = wrapperRef.current;
     const masonry = masonryRef.current;
@@ -89,32 +91,6 @@ export default function HomeClient({ images }: { images: Model[] }) {
     };
   }, []);
 
-  // GSAP flip animation on cells
-  useEffect(() => {
-    if (!splashDone) return;
-
-    const initGsap = async () => {
-      const { gsap } = await import("gsap");
-      const cards = document.querySelectorAll('[data-flip-card]');
-
-      cards.forEach((card, i) => {
-        const delay = (i % 17) * 1.2 + Math.random() * 4;
-        const duration = 6 + Math.random() * 6;
-
-        gsap.to(card, {
-          rotateY: 360,
-          duration,
-          delay,
-          ease: "power1.inOut",
-          repeat: -1,
-          repeatDelay: Math.random() * 8 + 4,
-        });
-      });
-    };
-
-    initGsap();
-  }, [splashDone]);
-
   return (
     <>
       <SplashScreen onComplete={handleSplashComplete} />
@@ -129,19 +105,29 @@ export default function HomeClient({ images }: { images: Model[] }) {
         }}
       >
         <div ref={masonryRef} className={styles.masonry} style={{ width: totalW, height: totalH }}>
-          {cells.map(({ model, top, left, w, h, i }) => (
-            <div
-              key={i}
-              data-flip-card
-              className={styles.flipWrap}
-              style={{ position: 'absolute', top, left, width: w, height: h }}
-            >
-              <Link href={`/portfolio/${model.slug}`} className={styles.cell} draggable={false}>
-                <img src={model.coverImage} alt={model.name} draggable={false} className={styles.cellImg} />
-                <span className={styles.cellTitle}>{model.name}</span>
-              </Link>
-            </div>
-          ))}
+          {cells.map(({ model, top, left, w, h, i }) => {
+            const delay = DELAYS[i % DELAYS.length];
+            const duration = 1.4 + (i % 5) * 0.2;
+            const interval = 8 + (i % 7) * 2.5;
+            return (
+              <div
+                key={i}
+                className={styles.flipWrap}
+                style={{
+                  position: 'absolute',
+                  top, left, width: w, height: h,
+                  animationDelay: `${delay}s`,
+                  animationDuration: `${interval}s`,
+                  '--flip-duration': `${duration}s`,
+                } as React.CSSProperties}
+              >
+                <Link href={`/portfolio/${model.slug}`} className={styles.cell} draggable={false}>
+                  <img src={model.coverImage} alt={model.name} draggable={false} className={styles.cellImg} />
+                  <span className={styles.cellTitle}>{model.name}</span>
+                </Link>
+              </div>
+            );
+          })}
         </div>
 
         <div className={styles.overlay} />
