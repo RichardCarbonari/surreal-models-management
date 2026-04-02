@@ -116,9 +116,8 @@ export default function HomeClient({ images }: { images: Model[] }) {
                 style={{
                   position: 'absolute',
                   top, left, width: w, height: h,
-                  animationDelay: `${delay}s`,
-                  animationDuration: `${interval}s`,
-                  '--flip-duration': `${duration}s`,
+                  '--del': `${delay}s`,
+                  '--dur': `${interval}s`,
                 } as React.CSSProperties}
               >
                 <Link href={`/portfolio/${model.slug}`} className={styles.cell} draggable={false}>
