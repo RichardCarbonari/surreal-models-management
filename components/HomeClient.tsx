@@ -41,7 +41,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
         <div className={styles.rowsWrap}>
           {Array.from({ length: NUM_ROWS }).map((_, rowIdx) => {
             const goLeft = rowIdx % 2 === 0;
-            const speed = 35 + rowIdx * 5; // different speeds per row
+            const speed = 60 + rowIdx * 8; // different speeds per row
             const offset = rowIdx * 8; // vertical offset for stagger
             return (
               <div

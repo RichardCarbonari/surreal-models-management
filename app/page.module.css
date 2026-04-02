@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: #111;
+  background: transparent;
 }
 
 /* ── ROWS ── */
@@ -93,7 +93,7 @@
   object-position: top center;
   display: block;
   pointer-events: none;
-  filter: brightness(0.75);
+  filter: brightness(0.85);
   transition: filter 0.4s ease;
 }
 .flipWrap:hover .cellImg { filter: brightness(0.95); }
@@ -116,7 +116,7 @@
 /* ── OVERLAY ── */
 .overlay {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.45) 100%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 100%);
   pointer-events: none;
   z-index: 5;
 }
