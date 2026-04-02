@@ -56,9 +56,9 @@ export default function HomeClient({ images }: { images: Model[] }) {
     const masonry = masonryRef.current;
     if (!el || !masonry) return;
 
-    // Start at top-left to show images immediately
-    const initX = -(GAP);
-    const initY = -(TOP_PAD);
+    // Start at 0,0 — images visible immediately
+    const initX = 0;
+    const initY = 0;
     let curX = initX, curY = initY;
     let targetX = initX, targetY = initY;
     masonry.style.transform = `translate(${curX}px, ${curY}px)`;
