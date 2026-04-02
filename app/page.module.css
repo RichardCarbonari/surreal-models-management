@@ -186,3 +186,40 @@
   .heroLogo { font-size: 3.8rem; }
   .dragHint { display: none; }
 }
+
+/* ── ANIMAÇÕES DE ENTRADA ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.heroEyebrow {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.heroLogo {
+  animation: fadeUp 1.1s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation-delay: 0.65s;
+  opacity: 0;
+}
+.heroSub {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+.heroBtn {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 1.35s;
+  opacity: 0;
+}
+.dragHint {
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 1.9s;
+  opacity: 0;
+}
