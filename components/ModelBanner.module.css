@@ -278,3 +278,21 @@
   .article { padding-top: calc(var(--nav-h) + 16px); padding-bottom: 60px; }
   .name { font-size: 2rem; }
 }
+
+.btnInstagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: transparent;
+  border: 1px solid var(--olive);
+  color: var(--olive);
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+.btnInstagram:hover { background: var(--olive); color: var(--white); }

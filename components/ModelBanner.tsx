@@ -55,10 +55,16 @@ export default function ModelBanner({ model }: Props) {
           <div className={styles.measurements}>
             <h2 className={styles.measureTitle}>Medidas</h2>
             <div className={styles.measureGrid}>
-              {model.height && <MeasureItem label="Altura" value={model.height} />}
-              {model.bust && <MeasureItem label="Busto" value={model.bust} />}
-              {model.waist && <MeasureItem label="Cintura" value={model.waist} />}
-              {model.hips && <MeasureItem label="Quadril" value={model.hips} />}
+              {model.height && <MeasureItem label="Height" value={model.height} />}
+              {model.age && <MeasureItem label="Age" value={model.age} />}
+              {model.bust && <MeasureItem label="Chest" value={model.bust} />}
+              {model.waist && <MeasureItem label="Waist" value={model.waist} />}
+              {model.hips && <MeasureItem label="Hips" value={model.hips} />}
+              {model.shoes && <MeasureItem label="Shoes" value={model.shoes} />}
+              {model.shirts && <MeasureItem label="Shirts" value={model.shirts} />}
+              {model.pants && <MeasureItem label="Pants" value={model.pants} />}
+              {model.eyes && <MeasureItem label="Eyes" value={model.eyes} />}
+              {model.hair && <MeasureItem label="Hair" value={model.hair} />}
             </div>
           </div>
 
