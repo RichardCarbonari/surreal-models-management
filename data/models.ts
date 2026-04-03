@@ -208,8 +208,7 @@ export interface Model {
     ],
     polaroids: [],
   },
-  polaroids: string[];
-  height: string;
+  polaroids: string[  height: string;
   bust?: string;
   waist: string;
   hips?: string;
