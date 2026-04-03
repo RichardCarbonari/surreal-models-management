@@ -66,15 +66,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
         </div>
 
         <div className={styles.overlay} />
-
-        <div className={styles.heroContent}>
-          <div className={styles.heroInner}>
-            <p className={styles.heroEyebrow}>São Paulo · Brasil</p>
-            <h1 className={styles.heroLogo}>Surreal</h1>
-            <p className={styles.heroSub}>Models Management</p>
-            <Link href="/portfolio" className={styles.heroBtn}>Models</Link>
-          </div>
-        </div>
+      </div>
       </div>
     </>
   );
