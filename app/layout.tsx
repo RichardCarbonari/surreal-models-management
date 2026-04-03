@@ -5,8 +5,13 @@ import BottomNav from "@/components/BottomNav";
 
 export const metadata: Metadata = {
   title: "Surreal Models Management",
-  description: "Conectando talentos extraordinários às maiores oportunidades do mundo da moda e publicidade.",
-  viewport: "width=device-width, initial-scale=1",
+  description: "Agência de modelos premium. Conectando talentos extraordinários às maiores oportunidades do mundo da moda e publicidade.",
+  keywords: ["modelos", "agência", "moda", "surreal", "management"],
+  openGraph: {
+    title: "Surreal Models Management",
+    description: "Conectando talentos extraordinários às maiores oportunidades do mundo.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -25,4 +30,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-
