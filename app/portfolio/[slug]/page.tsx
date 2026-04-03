@@ -14,9 +14,11 @@ export default function ModelPage({ params }: Props) {
   const model = getModelBySlug(params.slug);
   if (!model) notFound();
   return (
-    <div className={styles.page}>
-      <ModelBanner model={model} />
+    <>
+      <div className={styles.page}>
+        <ModelBanner model={model} />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

@@ -1,8 +1,8 @@
 export const dynamic = "force-dynamic";
 
 import PortfolioGrid from "@/components/PortfolioGrid";
-import styles from "./page.module.css";
 import Footer from "@/components/Footer";
+import styles from "./page.module.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,14 +12,16 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <div className={styles.page}>
-      <div className={styles.header}>
-        <h1 className={styles.title}>Talentos</h1>
+    <>
+      <div className={styles.page}>
+        <div className={styles.header}>
+          <h1 className={styles.title}>Talentos</h1>
+        </div>
+        <div className={styles.content}>
+          <PortfolioGrid />
+        </div>
       </div>
-      <div className={styles.content}>
-        <PortfolioGrid />
-      </div>
-    </div>
-    <Footer />
+      <Footer />
+    </>
   );
 }
