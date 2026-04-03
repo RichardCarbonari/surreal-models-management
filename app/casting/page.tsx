@@ -38,7 +38,7 @@ export default function CastingPage() {
                 <div className={styles.formGroup}><label className={styles.label}>Cidade</label><input type="text" className={styles.input} placeholder="Ex: São Paulo" /></div>
               </div>
               <div className={styles.formGroup}><label className={styles.label}>Link do book</label><input type="text" className={styles.input} placeholder="https://..." /></div>
-              <div className={styles.formGroup}><label className={styles.label}>Sobre você</label><textarea className={styles.textarea} placeholder="Conte um pouco sobre você..." rows={4} /></div>
+              <div className={styles.formGroup}><label className={styles.label}>Sobre você</label><textarea className={styles.textarea} placeholder="Conte um pouco sobre você..." rows={4}></textarea></div>
               <a href="mailto:surrealmodelsmanagment@gmail.com?subject=Casting" className={styles.submitBtn}>Enviar candidatura</a>
             </div>
           </div>
