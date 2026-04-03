@@ -6,12 +6,9 @@ import styles from "@/app/page.module.css";
 
 interface Model { slug: string; coverImage: string; name: string; }
 
-const CELL_W = 260;
-const GAP = 8;
-const ROW_H = 340;
-const NUM_ROWS = 5;
-
-const DELAYS = [0, 3.2, 6.5, 1.8, 8.1, 4.4, 11.2, 2.7, 7.3, 5.6, 9.8, 0.9, 13.1, 3.8, 6.2, 10.5, 1.4];
+const NUM_COLS = 4;
+const CELL_H = 380;
+const GAP = 6;
 
 export default function HomeClient({ images }: { images: Model[] }) {
   const [splashDone, setSplashDone] = useState(false);
@@ -22,7 +19,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
     requestAnimationFrame(() => requestAnimationFrame(() => setSlideIn(true)));
   };
 
-  // Build rows — each row gets all images repeated for infinite scroll
+  // Each column gets all images repeated for infinite scroll
   const repeated = [...images, ...images, ...images, ...images];
 
   return (
@@ -37,59 +34,43 @@ export default function HomeClient({ images }: { images: Model[] }) {
           opacity: splashDone ? 1 : 0,
         }}
       >
-        {/* Scrolling rows */}
-        <div className={styles.rowsWrap}>
-          {Array.from({ length: NUM_ROWS }).map((_, rowIdx) => {
-            const goLeft = rowIdx % 2 === 0;
-            const speed = 60 + rowIdx * 8; // different speeds per row
-            const offset = rowIdx * 8; // vertical offset for stagger
+        {/* 4 vertical columns */}
+        <div className={styles.colsWrap}>
+          {Array.from({ length: NUM_COLS }).map((_, colIdx) => {
+            const goUp = colIdx % 2 === 0;
+            const speed = 25 + colIdx * 5;
             return (
-              <div
-                key={rowIdx}
-                className={styles.row}
-                style={{ top: `${rowIdx * (ROW_H + GAP) - offset}px` }}
-              >
+              <div key={colIdx} className={styles.col}>
                 <div
-                  className={`${styles.rowTrack} ${goLeft ? styles.scrollLeft : styles.scrollRight}`}
+                  className={`${styles.colTrack} ${goUp ? styles.scrollUp : styles.scrollDown}`}
                   style={{ animationDuration: `${speed}s` }}
                 >
-                  {/* Double for seamless loop */}
-                  {[...repeated, ...repeated].map((model, i) => {
-                    const delay = DELAYS[i % DELAYS.length];
-                    const flipInterval = 10 + (i % 7) * 2;
-                    return (
-                      <div
-                        key={i}
-                        className={styles.flipWrap}
-                        style={{
-                          ['--del' as string]: `${delay}s`,
-                          ['--dur' as string]: `${flipInterval}s`,
-                          width: CELL_W,
-                          height: ROW_H,
-                          flexShrink: 0,
-                        }}
-                      >
-                        {/* No link — just image */}
-                        <div className={styles.cell} draggable={false}>
-                          <img
-                            src={model.coverImage}
-                            alt={model.name}
-                            draggable={false}
-                            className={styles.cellImg}
-                          />
-                          <span className={styles.cellTitle}>{model.name}</span>
-                        </div>
-                      </div>
-                    );
-                  })}
+                  {/* Double the images for seamless loop */}
+                  {[...repeated, ...repeated].map((model, i) => (
+                    <div
+                      key={i}
+                      className={styles.card}
+                      style={{ height: CELL_H }}
+                    >
+                      <img
+                        src={model.coverImage}
+                        alt={model.name}
+                        draggable={false}
+                        className={styles.cardImg}
+                      />
+                      <span className={styles.cardName}>{model.name}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             );
           })}
         </div>
 
+        {/* Overlay */}
         <div className={styles.overlay} />
 
+        {/* Hero */}
         <div className={styles.heroContent}>
           <div className={styles.heroInner}>
             <p className={styles.heroEyebrow}>São Paulo · Brasil</p>
