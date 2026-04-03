@@ -29,14 +29,14 @@ export default function HomeClient({ images }: { images: Model[] }) {
         className={styles.wrapper}
         style={{
           transform: splashDone ? (slideIn ? 'translateY(0)' : 'translateY(100vh)') : 'translateY(100vh)',
-          transition: slideIn ? 'transform 1s cubic-bezier(0.76, 0, 0.24, 1)' : 'none',
+          transition: slideIn ? 'transform 1.2s cubic-bezier(0.76, 0, 0.24, 1)' : 'none',
           opacity: splashDone ? 1 : 0,
         }}
       >
         <div className={styles.colsWrap}>
           {/* Col 1 — sobe */}
           <div className={styles.col}>
-            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '45s' }}>
+            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '70s' }}>
               {[...col1, ...col1].map((m, i) => (
                 <div key={i} className={styles.card}>
                   <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
@@ -47,7 +47,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
 
           {/* Col 2 — desce */}
           <div className={styles.col}>
-            <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '50s' }}>
+            <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '80s' }}>
               {[...col2, ...col2].map((m, i) => (
                 <div key={i} className={styles.card}>
                   <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
@@ -58,7 +58,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
 
           {/* Col 3 — sobe mais devagar */}
           <div className={styles.col}>
-            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '55s' }}>
+            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '90s' }}>
               {[...col3, ...col3].map((m, i) => (
                 <div key={i} className={styles.card}>
                   <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
@@ -69,7 +69,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
 
           {/* Col 4 — desce mais devagar */}
           <div className={styles.col}>
-            <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '60s' }}>
+            <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '100s' }}>
               {[...col4, ...col4].map((m, i) => (
                 <div key={i} className={styles.card}>
                   <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
