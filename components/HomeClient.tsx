@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 import SplashScreen from "./SplashScreen";
 import styles from "@/app/page.module.css";
 
@@ -17,18 +16,11 @@ export default function HomeClient({ images }: { images: Model[] }) {
     requestAnimationFrame(() => requestAnimationFrame(() => setSlideIn(true)));
   };
 
-  // Imagens repetidas para loop infinito
   const imgs = [...images, ...images, ...images, ...images];
 
-  // 7 colunas — as 2 extras (1 cada lado) ficam fora da tela criando efeito infinito
   const cols = [
-    { dir: 'up',   delay: '0s'   },
-    { dir: 'down', delay: '0s'   },
-    { dir: 'up',   delay: '0s'   },
-    { dir: 'down', delay: '0s'   },
-    { dir: 'up',   delay: '0s'   },
-    { dir: 'down', delay: '0s'   },
-    { dir: 'up',   delay: '0s'   },
+    { dir: 'up' }, { dir: 'down' }, { dir: 'up' },
+    { dir: 'down' }, { dir: 'up' }, { dir: 'down' }, { dir: 'up' },
   ];
 
   return (
@@ -48,25 +40,17 @@ export default function HomeClient({ images }: { images: Model[] }) {
             <div key={colIdx} className={styles.col}>
               <div
                 className={`${styles.track} ${col.dir === 'up' ? styles.up : styles.down}`}
-                style={{ animationDuration: '200s', animationDelay: col.delay }}
+                style={{ animationDuration: '200s' }}
               >
                 {[...imgs, ...imgs].map((m, i) => (
                   <div key={i} className={styles.card}>
-                    <img
-                      src={m.coverImage}
-                      alt={m.name}
-                      className={styles.cardImg}
-                      draggable={false}
-                    />
+                    <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
                   </div>
                 ))}
               </div>
             </div>
           ))}
         </div>
-
-        <div className={styles.overlay} />
-      </div>
       </div>
     </>
   );
