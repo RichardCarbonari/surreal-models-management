@@ -7,10 +7,12 @@ import styles from "@/app/page.module.css";
 interface Model { slug: string; coverImage: string; name: string; }
 
 export default function HomeClient({ images }: { images: Model[] }) {
-  const [splashDone, setSplashDone] = useState(false);
-  const [slideIn, setSlideIn] = useState(false);
+  const alreadySeen = typeof window !== 'undefined' && sessionStorage.getItem('splashSeen') === '1';
+  const [splashDone, setSplashDone] = useState(alreadySeen);
+  const [slideIn, setSlideIn] = useState(alreadySeen);
 
   const handleSplashComplete = () => {
+    sessionStorage.setItem('splashSeen', '1');
     setSplashDone(true);
     requestAnimationFrame(() => requestAnimationFrame(() => setSlideIn(true)));
   };
@@ -31,7 +33,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
 
   return (
     <>
-      <SplashScreen onComplete={handleSplashComplete} />
+      {!alreadySeen && <SplashScreen onComplete={handleSplashComplete} />}
 
       <div
         className={styles.wrapper}
