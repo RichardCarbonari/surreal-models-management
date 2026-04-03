@@ -97,8 +97,10 @@
 
 /* Contact strip */
 .contact {
-  background: var(--black);
+  background: var(--white);
   padding: 4rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+  padding-bottom: 100px;
 }
 
 .contactInner {
@@ -116,7 +118,7 @@
   font-size: 0.55rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--olive-light);
+  color: var(--olive);
   display: block;
   margin-bottom: 0.8rem;
 }
@@ -125,7 +127,7 @@
   font-family: "Cormorant SC", serif;
   font-size: clamp(1.2rem, 3vw, 2rem);
   font-weight: 600;
-  color: var(--white);
+  color: var(--black);
   letter-spacing: 0.03em;
 }
 
@@ -134,7 +136,7 @@
   font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: 0.2em;
-  color: var(--olive-light);
+  color: var(--gray-400);
   margin-top: 0.4rem;
 }
 
