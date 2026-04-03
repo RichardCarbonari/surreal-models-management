@@ -1,16 +1,147 @@
-.page { min-height: 100vh; padding-top: 64px; background: var(--white); padding-bottom: 80px; }
-.hero { padding: 5rem 2.5rem 3rem; max-width: 1000px; margin: 0 auto; border-bottom: 1px solid var(--gray-200); }
-.eyebrow { display: block; font-family: var(--font-body); font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--olive); margin-bottom: 1.5rem; }
-.title { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 300; color: var(--black); line-height: 1; }
-.title em { font-style: italic; color: var(--olive); }
-.content { max-width: 1000px; margin: 0 auto; padding: 5rem 2.5rem; display: grid; grid-template-columns: 2fr 1fr; gap: 6rem; align-items: start; }
-.lead { font-family: var(--font-display); font-size: 1.4rem; font-weight: 300; line-height: 1.7; color: var(--black); margin-bottom: 2rem; }
-.body { font-family: var(--font-body); font-size: 0.85rem; font-weight: 300; line-height: 2; color: var(--gray-600); margin-bottom: 1.5rem; }
-.stats { display: flex; flex-direction: column; gap: 2.5rem; }
-.stat { display: flex; flex-direction: column; gap: 0.4rem; }
-.statNum { font-family: var(--font-display); font-size: 3rem; font-weight: 300; color: var(--black); line-height: 1; }
-.statLabel { font-family: var(--font-body); font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gray-400); }
-.contact { max-width: 1000px; margin: 0 auto; padding: 3rem 2.5rem 6rem; border-top: 1px solid var(--gray-200); }
-.contactEmail { font-family: var(--font-display); font-size: 1.2rem; font-weight: 300; color: var(--black); margin-top: 1rem; }
-.contactIg { font-family: var(--font-body); font-size: 0.75rem; font-weight: 300; letter-spacing: 0.1em; color: var(--olive); margin-top: 0.5rem; }
-@media (max-width: 768px) { .content { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 1.5rem; } .hero { padding: 3rem 1.5rem 2rem; } .stats { flex-direction: row; flex-wrap: wrap; } .contact { padding: 3rem 1.5rem 8rem; } }
+.page {
+  min-height: 100vh;
+  padding-top: 64px;
+  background: var(--white);
+}
+
+.hero {
+  padding: 5rem 2.5rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: "Cormorant SC", serif;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.04em;
+  line-height: 0.95;
+  margin-bottom: 2.5rem;
+}
+
+.heroText {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gray-600);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* Content grid */
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 300;
+  line-height: 2.1;
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+}
+
+.body:first-child {
+  font-size: 0.95rem;
+  color: var(--black);
+  font-weight: 400;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: sticky;
+  top: 100px;
+}
+
+.stat { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.statNum {
+  font-family: "Cormorant SC", serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+
+/* Contact strip */
+.contact {
+  background: var(--black);
+  padding: 4rem 2.5rem;
+}
+
+.contactInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contactLabel {
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--olive-light);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.contactEmail {
+  font-family: "Cormorant SC", serif;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+.contactIg {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: var(--olive-light);
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 3rem 1.5rem 2.5rem; }
+  .content { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 1.5rem; }
+  .stats { flex-direction: row; flex-wrap: wrap; position: static; }
+  .contact { padding: 3rem 1.5rem 6rem; }
+  .contactInner { flex-direction: column; }
+}
