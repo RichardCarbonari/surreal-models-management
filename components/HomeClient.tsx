@@ -36,7 +36,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
         <div className={styles.colsWrap}>
           {/* Col 1 — sobe */}
           <div className={styles.col}>
-            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '100s' }}>
+            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '115s' }}>
               {[...col1, ...col1].map((m, i) => (
                 <div key={i} className={styles.card}>
                   <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
@@ -47,7 +47,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
 
           {/* Col 2 — desce */}
           <div className={styles.col}>
-            <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '100s' }}>
+            <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '115s' }}>
               {[...col2, ...col2].map((m, i) => (
                 <div key={i} className={styles.card}>
                   <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
@@ -58,7 +58,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
 
           {/* Col 3 — sobe mais devagar */}
           <div className={styles.col}>
-            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '100s' }}>
+            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '115s' }}>
               {[...col3, ...col3].map((m, i) => (
                 <div key={i} className={styles.card}>
                   <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
@@ -69,7 +69,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
 
           {/* Col 4 — desce mais devagar */}
           <div className={styles.col}>
-            <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '100s' }}>
+            <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '115s' }}>
               {[...col4, ...col4].map((m, i) => (
                 <div key={i} className={styles.card}>
                   <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
