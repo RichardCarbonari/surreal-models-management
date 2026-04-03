@@ -67,10 +67,21 @@ export default function HomeClient({ images }: { images: Model[] }) {
             </div>
           </div>
 
-          {/* Col 4 — desce mais devagar */}
+          {/* Col 4 — desce */}
           <div className={styles.col}>
             <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '200s' }}>
               {[...col4, ...col4].map((m, i) => (
+                <div key={i} className={styles.card}>
+                  <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Col 5 — sobe */}
+          <div className={styles.col}>
+            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '200s' }}>
+              {[...[...images, ...images, ...images], ...[...images, ...images, ...images]].map((m, i) => (
                 <div key={i} className={styles.card}>
                   <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
                 </div>

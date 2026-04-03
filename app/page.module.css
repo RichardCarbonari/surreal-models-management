@@ -57,7 +57,7 @@
 /* ── CARD ── */
 .card {
   width: 100%;
-  aspect-ratio: 2 / 3;
+  height: 260px;
   flex-shrink: 0;
   overflow: hidden;
   position: relative;
