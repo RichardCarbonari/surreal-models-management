@@ -36,6 +36,7 @@
 .up {
   top: 0;
   animation: scrollUp linear infinite;
+  animation-delay: 0s;
 }
 @keyframes scrollUp {
   from { transform: translateY(0); }
@@ -46,6 +47,7 @@
 .down {
   top: 0;
   animation: scrollDown linear infinite;
+  animation-delay: 0s;
 }
 @keyframes scrollDown {
   from { transform: translateY(-50%); }
