@@ -15,11 +15,19 @@ export default function HomeClient({ images }: { images: Model[] }) {
     requestAnimationFrame(() => requestAnimationFrame(() => setSlideIn(true)));
   };
 
-  // 4 colunas com imagens repetidas para loop infinito
-  const col1 = [...images, ...images, ...images];
-  const col2 = [...images, ...images, ...images];
-  const col3 = [...images, ...images, ...images];
-  const col4 = [...images, ...images, ...images];
+  // Imagens repetidas para loop infinito
+  const imgs = [...images, ...images, ...images, ...images];
+
+  // 7 colunas — as 2 extras (1 cada lado) ficam fora da tela criando efeito infinito
+  const cols = [
+    { dir: 'up',   delay: '0s'   },
+    { dir: 'down', delay: '0s'   },
+    { dir: 'up',   delay: '0s'   },
+    { dir: 'down', delay: '0s'   },
+    { dir: 'up',   delay: '0s'   },
+    { dir: 'down', delay: '0s'   },
+    { dir: 'up',   delay: '0s'   },
+  ];
 
   return (
     <>
@@ -34,60 +42,25 @@ export default function HomeClient({ images }: { images: Model[] }) {
         }}
       >
         <div className={styles.colsWrap}>
-          {/* Col 1 — sobe */}
-          <div className={styles.col}>
-            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '200s' }}>
-              {[...col1, ...col1].map((m, i) => (
-                <div key={i} className={styles.card}>
-                  <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
-                </div>
-              ))}
+          {cols.map((col, colIdx) => (
+            <div key={colIdx} className={styles.col}>
+              <div
+                className={`${styles.track} ${col.dir === 'up' ? styles.up : styles.down}`}
+                style={{ animationDuration: '200s', animationDelay: col.delay }}
+              >
+                {[...imgs, ...imgs].map((m, i) => (
+                  <div key={i} className={styles.card}>
+                    <img
+                      src={m.coverImage}
+                      alt={m.name}
+                      className={styles.cardImg}
+                      draggable={false}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-
-          {/* Col 2 — desce */}
-          <div className={styles.col}>
-            <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '200s' }}>
-              {[...col2, ...col2].map((m, i) => (
-                <div key={i} className={styles.card}>
-                  <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Col 3 — sobe mais devagar */}
-          <div className={styles.col}>
-            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '200s' }}>
-              {[...col3, ...col3].map((m, i) => (
-                <div key={i} className={styles.card}>
-                  <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Col 4 — desce */}
-          <div className={styles.col}>
-            <div className={`${styles.track} ${styles.down}`} style={{ animationDuration: '200s' }}>
-              {[...col4, ...col4].map((m, i) => (
-                <div key={i} className={styles.card}>
-                  <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Col 5 — sobe */}
-          <div className={styles.col}>
-            <div className={`${styles.track} ${styles.up}`} style={{ animationDuration: '200s' }}>
-              {[...[...images, ...images, ...images], ...[...images, ...images, ...images]].map((m, i) => (
-                <div key={i} className={styles.card}>
-                  <img src={m.coverImage} alt={m.name} className={styles.cardImg} draggable={false} />
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className={styles.overlay} />
