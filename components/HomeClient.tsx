@@ -31,8 +31,29 @@ const HOME_IMAGES: Model[] = [
   { coverImage: "https://lh3.googleusercontent.com/d/1yLxgmelI_L7aHVc2l4UPzDfmW7HlEokJ", name: "", slug: "" },
 ];
 
+const shuffle = (arr: Model[], seed: number) => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = (seed * (i + 7) * 2654435761) % (i + 1);
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
+const COLS = [
+  { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 1)  },
+  { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 7)  },
+  { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 13) },
+  { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 3)  },
+  { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 17) },
+  { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 5)  },
+  { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 11) },
+];
+
 export default function HomeClient({ images }: { images: Model[] }) {
   const alreadySeen = typeof window !== 'undefined' && sessionStorage.getItem('splashSeen') === '1';
+  const [splashDone, setSplashDone] = useState(alreadySeen);
+  const [slideIn, setSlideIn] = useState(alreadySeen);
   const [stopped, setStopped] = useState(false);
 
   useEffect(() => {
@@ -40,34 +61,12 @@ export default function HomeClient({ images }: { images: Model[] }) {
     const timer = setTimeout(() => setStopped(true), 5000);
     return () => clearTimeout(timer);
   }, [splashDone]);
-  const [splashDone, setSplashDone] = useState(alreadySeen);
-  const [slideIn, setSlideIn] = useState(alreadySeen);
 
   const handleSplashComplete = () => {
     sessionStorage.setItem('splashSeen', '1');
     setSplashDone(true);
     requestAnimationFrame(() => requestAnimationFrame(() => setSlideIn(true)));
   };
-
-  // Shuffle helper with seed per column
-  const shuffle = (arr: Model[], seed: number) => {
-    const a = [...arr];
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = (seed * (i + 7) * 2654435761) % (i + 1);
-      [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-  };
-
-  const cols = [
-    { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 1) },
-    { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 7) },
-    { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 13) },
-    { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 3) },
-    { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 17) },
-    { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 5) },
-    { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 11) },
-  ];
 
   return (
     <>
@@ -82,7 +81,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
         }}
       >
         <div className={styles.colsWrap}>
-          {cols.map((col, colIdx) => (
+          {COLS.map((col, colIdx) => (
             <div key={colIdx} className={styles.col}>
               <div
                 className={`${styles.track} ${col.dir === 'up' ? styles.up : styles.down}`}
