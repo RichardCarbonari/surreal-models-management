@@ -6,7 +6,6 @@ import styles from "./BottomNav.module.css";
 const items = [
   { href: "/", label: "Home" },
   { href: "/portfolio", label: "Portfólio" },
-  { href: "/#sobre", label: "Sobre" },
   { href: "/#contato", label: "Contato" },
 ];
 
