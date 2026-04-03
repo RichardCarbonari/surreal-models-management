@@ -6,8 +6,8 @@ import styles from "./BottomNav.module.css";
 const items = [
   { href: "/", label: "Home" },
   { href: "/portfolio", label: "Models" },
-  { href: "/casting", label: "Casting" },
-  { href: "/sobre", label: "Sobre" },
+  { href: "/casting", label: "By Surreal" },
+  { href: "/sobre", label: "About" },
 ];
 
 export default function BottomNav() {
