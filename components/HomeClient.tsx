@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SplashScreen from "./SplashScreen";
 import styles from "@/app/page.module.css";
 
@@ -33,6 +33,13 @@ const HOME_IMAGES: Model[] = [
 
 export default function HomeClient({ images }: { images: Model[] }) {
   const alreadySeen = typeof window !== 'undefined' && sessionStorage.getItem('splashSeen') === '1';
+  const [stopped, setStopped] = useState(false);
+
+  useEffect(() => {
+    if (!splashDone) return;
+    const timer = setTimeout(() => setStopped(true), 5000);
+    return () => clearTimeout(timer);
+  }, [splashDone]);
   const [splashDone, setSplashDone] = useState(alreadySeen);
   const [slideIn, setSlideIn] = useState(alreadySeen);
 
@@ -79,7 +86,10 @@ export default function HomeClient({ images }: { images: Model[] }) {
             <div key={colIdx} className={styles.col}>
               <div
                 className={`${styles.track} ${col.dir === 'up' ? styles.up : styles.down}`}
-                style={{ animationDuration: '200s' }}
+                style={{
+                  animationDuration: '200s',
+                  animationPlayState: stopped ? 'paused' : 'running',
+                }}
               >
                 {[...col.imgs, ...col.imgs].map((m, i) => (
                   <div key={i} className={styles.card}>
