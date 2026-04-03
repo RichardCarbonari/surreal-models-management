@@ -16,7 +16,7 @@ export default function CastingPage() {
         <div className={styles.hero}>
           <span className={styles.eyebrow}>Surreal — Casting</span>
           <h1 className={styles.title}>
-            Quero ser<br />
+            Quero ser<br/>
             <em>um modelo</em>
           </h1>
           <p className={styles.subtitle}>
@@ -52,7 +52,7 @@ export default function CastingPage() {
             <p className={styles.formSubtitle}>
               Preencha o formulário abaixo e nossa equipe entrará em contato em até 5 dias úteis.
             </p>
-            <form className={styles.form}>
+            <div className={styles.form}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label className={styles.label}>Nome completo</label>
@@ -97,7 +97,7 @@ export default function CastingPage() {
               >
                 Enviar candidatura
               </a>
-            </form>
+            </div>
           </div>
         </div>
       </div>

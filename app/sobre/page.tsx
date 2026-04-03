@@ -16,7 +16,7 @@ export default function SobrePage() {
         <div className={styles.hero}>
           <span className={styles.eyebrow}>Surreal — Sobre nós</span>
           <h1 className={styles.title}>
-            Uma agência<br />
+            Uma agência<br/>
             <em>diferente</em>
           </h1>
         </div>
