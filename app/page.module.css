@@ -1,4 +1,3 @@
-/* ── WRAPPER ── */
 .wrapper {
   position: relative;
   width: 100vw;
@@ -7,55 +6,56 @@
   background: #0a0a0a;
 }
 
-/* ── COLUMNS ── */
+/* ── 4 COLUNAS ── */
 .colsWrap {
   position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 6px;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
 }
 
 .col {
-  flex: 1;
   overflow: hidden;
   position: relative;
+  height: 100%;
 }
 
-.colTrack {
+/* Track — contém todas as imagens empilhadas */
+.track {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   position: absolute;
   left: 0;
   right: 0;
   will-change: transform;
 }
 
-/* Scroll up (even cols) */
-.scrollUp {
-  animation: moveUp linear infinite;
+/* Sobe — começa do 0 e vai para -50% */
+.up {
   top: 0;
+  animation: scrollUp linear infinite;
 }
-@keyframes moveUp {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
+@keyframes scrollUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
 }
 
-/* Scroll down (odd cols) */
-.scrollDown {
-  animation: moveDown linear infinite;
-  top: -50%;
+/* Desce — começa de -50% e vai para 0 */
+.down {
+  top: 0;
+  animation: scrollDown linear infinite;
 }
-@keyframes moveDown {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(50%); }
+@keyframes scrollDown {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0); }
 }
 
 /* ── CARD ── */
 .card {
   width: 100%;
+  aspect-ratio: 2 / 3;
   flex-shrink: 0;
   overflow: hidden;
   position: relative;
@@ -68,31 +68,19 @@
   object-position: top center;
   display: block;
   pointer-events: none;
-  filter: brightness(0.8);
-  transition: filter 0.4s ease;
+  filter: brightness(0.75);
+  transition: filter 0.6s ease;
 }
 .card:hover .cardImg { filter: brightness(1); }
 
-.cardName {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 0.5rem 0.75rem;
-  font-family: var(--font-body);
-  font-size: 0.58rem; font-weight: 300;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(255,255,255,0);
-  transition: color 0.3s;
-  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
-}
-.card:hover .cardName { color: rgba(255,255,255,0.8); }
-
-/* ── OVERLAY ── */
+/* ── OVERLAY suave ── */
 .overlay {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center,
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 50%,
     rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.15) 60%,
-    rgba(0,0,0,0.3) 100%
+    rgba(0,0,0,0.08) 50%,
+    rgba(0,0,0,0.35) 100%
   );
   pointer-events: none;
   z-index: 5;
@@ -113,42 +101,46 @@
   font-family: var(--font-body); font-size: 0.55rem; font-weight: 300;
   letter-spacing: 0.4em; text-transform: uppercase;
   color: rgba(255,255,255,0.5); margin-bottom: 1rem;
-  animation: fadeUp 0.8s ease forwards; animation-delay: 0.3s; opacity: 0;
+  animation: fadeUp 1s ease forwards; animation-delay: 0.5s; opacity: 0;
 }
 .heroLogo {
   font-family: "Cormorant SC", serif;
   font-size: clamp(5rem, 13vw, 11rem);
   font-weight: 700; color: #fff;
   letter-spacing: 0.05em; line-height: 0.9;
-  animation: fadeUp 1.1s cubic-bezier(0.16,1,0.3,1) forwards;
-  animation-delay: 0.55s; opacity: 0;
-  text-shadow: 0 2px 40px rgba(0,0,0,0.5);
+  animation: fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation-delay: 0.7s; opacity: 0;
+  text-shadow: 0 2px 60px rgba(0,0,0,0.6);
 }
 .heroSub {
   font-family: var(--font-body); font-size: 0.58rem; font-weight: 300;
   letter-spacing: 0.45em; text-transform: uppercase;
   color: rgba(255,255,255,0.6); margin-top: 0.8rem;
-  animation: fadeUp 0.8s ease forwards; animation-delay: 0.9s; opacity: 0;
+  animation: fadeUp 1s ease forwards; animation-delay: 1.1s; opacity: 0;
 }
 .heroBtn {
   margin-top: 2.5rem;
   display: inline-block; padding: 1rem 3.5rem;
-  border: 1px solid rgba(255,255,255,0.6); color: #fff;
+  border: 1px solid rgba(255,255,255,0.5); color: #fff;
   font-family: var(--font-body); font-size: 0.6rem; font-weight: 400;
   letter-spacing: 0.4em; text-transform: uppercase; text-decoration: none;
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  transition: background 0.4s, border-color 0.4s, letter-spacing 0.4s;
-  animation: fadeUp 0.7s ease forwards; animation-delay: 1.2s; opacity: 0;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  transition: background 0.5s, border-color 0.5s, letter-spacing 0.5s;
+  animation: fadeUp 1s ease forwards; animation-delay: 1.4s; opacity: 0;
 }
-.heroBtn:hover { background: rgba(255,255,255,0.14); border-color: #fff; letter-spacing: 0.5em; }
+.heroBtn:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.9);
+  letter-spacing: 0.52em;
+}
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
-  .colsWrap { gap: 4px; }
+  .colsWrap { grid-template-columns: repeat(2, 1fr); }
   .heroLogo { font-size: 3.5rem; }
 }
