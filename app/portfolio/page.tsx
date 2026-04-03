@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 
 import PortfolioGrid from "@/components/PortfolioGrid";
 import styles from "./page.module.css";
+import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,5 +20,6 @@ export default function PortfolioPage() {
         <PortfolioGrid />
       </div>
     </div>
+    <Footer />
   );
 }

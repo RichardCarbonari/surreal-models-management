@@ -1,0 +1,114 @@
+.page {
+  min-height: 100vh;
+  padding-top: 64px;
+  background: var(--white);
+}
+
+.hero {
+  padding: 5rem 2.5rem 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.58rem; letter-spacing: 0.35em;
+  text-transform: uppercase; color: var(--olive);
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 300; color: var(--black);
+  line-height: 1; margin-bottom: 1.5rem;
+}
+.title em { font-style: italic; color: var(--olive); }
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 0.9rem; font-weight: 300;
+  line-height: 1.9; color: var(--gray-600);
+  max-width: 500px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.sectionTitle {
+  font-family: var(--font-body);
+  font-size: 0.6rem; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gray-400); margin-bottom: 2rem;
+}
+
+/* Requirements */
+.reqGrid {
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+.reqItem {
+  display: flex; flex-direction: column; gap: 0.3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+.reqItem:last-child { border-bottom: none; }
+.reqLabel {
+  font-family: var(--font-body);
+  font-size: 0.58rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gray-400);
+}
+.reqValue {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 400; color: var(--black);
+}
+
+/* Form */
+.formWrap { display: flex; flex-direction: column; gap: 2rem; }
+.formSubtitle {
+  font-family: var(--font-body); font-size: 0.8rem;
+  font-weight: 300; color: var(--gray-600);
+  line-height: 1.8; margin-top: -1.5rem;
+}
+.form { display: flex; flex-direction: column; gap: 1.5rem; }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.formGroup { display: flex; flex-direction: column; gap: 0.5rem; }
+.label {
+  font-family: var(--font-body); font-size: 0.57rem;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--gray-400);
+}
+.input, .textarea {
+  background: transparent; border: none;
+  border-bottom: 1px solid var(--gray-200);
+  padding: 0.7rem 0; color: var(--black);
+  font-family: var(--font-body); font-size: 0.85rem;
+  font-weight: 300; outline: none;
+  transition: border-color 0.3s; resize: none; width: 100%;
+}
+.input:focus, .textarea:focus { border-bottom-color: var(--olive); }
+.input::placeholder, .textarea::placeholder { color: var(--gray-400); }
+
+.submitBtn {
+  align-self: flex-start;
+  display: inline-block; padding: 1rem 3rem;
+  background: var(--black); color: var(--white);
+  font-family: var(--font-body); font-size: 0.62rem;
+  font-weight: 400; letter-spacing: 0.25em;
+  text-transform: uppercase; text-decoration: none;
+  transition: background 0.3s; margin-top: 0.5rem;
+}
+.submitBtn:hover { background: var(--olive); }
+
+@media (max-width: 768px) {
+  .content { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 1.5rem 8rem; }
+  .hero { padding: 3rem 1.5rem 2rem; }
+  .formRow { grid-template-columns: 1fr; }
+}
