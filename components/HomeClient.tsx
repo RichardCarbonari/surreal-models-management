@@ -17,7 +17,7 @@ const HOME_IMAGES: Model[] = [
   { coverImage: "https://lh3.googleusercontent.com/d/1Q1IzEh17LU60Mma8avBNly4IyYZewWOO", name: "", slug: "" },
   { coverImage: "https://lh3.googleusercontent.com/d/1VI4HBhB_9fhbd4BYwCPAJD2sf6LFtRoU", name: "", slug: "" },
   { coverImage: "https://lh3.googleusercontent.com/d/1WheZvYuKU5mgmTelYf29SENOYXA0_mc9", name: "", slug: "" },
-  { coverImage: "https://lh3.googleusercontent.com/d/1XWri2JcxMJklqsmPRzrUKxcnTX4tooKO", name: "", slug: "" },
+  { coverImage: "https://lh3.googleusercontent.com/d/1a1J1MiUl7BPkOH27w2H7VpH8sZv_0nyb", name: "", slug: "" },
   { coverImage: "https://lh3.googleusercontent.com/d/1YIbjQ4U6B-JwSjl-n_hnUUNYA-dZ3aqv", name: "", slug: "" },
   { coverImage: "https://lh3.googleusercontent.com/d/1aGuhM3deI0NBpDuopCNb3mcVRbjA8m8E", name: "", slug: "" },
   { coverImage: "https://lh3.googleusercontent.com/d/1cF5mesr5Pdnm4a8a5G9SfB1SbPHMTcao", name: "", slug: "" },
