@@ -18,8 +18,8 @@
 /* Poses */
 .poseGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 .poseCard { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--gray-200); }
-.poseImg { aspect-ratio: 200/260; background: #f0eeeb; }
-.poseImg svg { width: 100%; height: 100%; display: block; }
+.poseImg { aspect-ratio: 3/4; background: #fff; display: flex; align-items: center; justify-content: center; }
+.poseImg img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .poseLabel { padding: 0.9rem 1rem; background: var(--olive); color: #fff; font-family: var(--font-body); font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; }
 
 /* Requirements */
