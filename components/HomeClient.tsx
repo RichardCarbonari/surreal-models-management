@@ -40,14 +40,22 @@ const shuffle = (arr: Model[], seed: number) => {
   return a;
 };
 
+// Build col images — each col gets unique shuffle + different starting offset
+// so when animation pauses, all 7 cols show different photos
+const makeCol = (seed: number, offset: number) => {
+  const shuffled = shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], seed);
+  // rotate array by offset so visible area starts at different image
+  return [...shuffled.slice(offset), ...shuffled.slice(0, offset)];
+};
+
 const COLS = [
-  { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 1)  },
-  { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 7)  },
-  { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 13) },
-  { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 3)  },
-  { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 17) },
-  { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 5)  },
-  { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 11) },
+  { dir: 'up',   imgs: makeCol(1,  0)  },
+  { dir: 'down', imgs: makeCol(7,  4)  },
+  { dir: 'up',   imgs: makeCol(13, 8)  },
+  { dir: 'down', imgs: makeCol(3,  12) },
+  { dir: 'up',   imgs: makeCol(17, 16) },
+  { dir: 'down', imgs: makeCol(5,  20) },
+  { dir: 'up',   imgs: makeCol(11, 2)  },
 ];
 
 export default function HomeClient({ images }: { images: Model[] }) {
