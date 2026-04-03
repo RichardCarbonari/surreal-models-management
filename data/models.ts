@@ -6,7 +6,43 @@ export interface Model {
   name: string;
   category: ModelCategory;
   coverImage: string;
-  images: string[];
+  images: string[  {
+    slug: "stevie-jones",
+    name: "Stevie Jones",
+    gender: "masculino",
+    coverImage: "https://lh3.googleusercontent.com/d/10OS-AKtwvsVEq8RKWCLXG_pM4hw3zfZk",
+    height: "",
+    bust: "",
+    waist: "",
+    hips: "",
+    shoes: "",
+    instagram: "",
+    photos: [
+      "https://lh3.googleusercontent.com/d/10OS-AKtwvsVEq8RKWCLXG_pM4hw3zfZk",
+      "https://lh3.googleusercontent.com/d/11M1YTZJUqQWhkXeaw_x_V-vteYDBLy8d",
+      "https://lh3.googleusercontent.com/d/12eneG_5t0Z8K9V9-W77J8vCJMp-FXDwk",
+      "https://lh3.googleusercontent.com/d/14UKd7lDPbTGgVV3jrUjQTrId7m1KLeim",
+      "https://lh3.googleusercontent.com/d/1AstMXBWamwp9qmtt-f7sKbQo4q7ZQMix",
+      "https://lh3.googleusercontent.com/d/1Ctz7jvxuCX0P6vMywxFU-u6CajTxLRrW",
+      "https://lh3.googleusercontent.com/d/1FR7niwshMT7gTTSKWhBdCAOujUKB6Q1T",
+      "https://lh3.googleusercontent.com/d/1G37wqZHsSB5kemNJH_BrssPpyp-PYCG8",
+      "https://lh3.googleusercontent.com/d/1MBs1mig9Oiyn2toHEZCKciZp7Ba7hc7K",
+      "https://lh3.googleusercontent.com/d/1MrYkR0y_XrNsoGBYanfKwSqaMoO--HJt",
+      "https://lh3.googleusercontent.com/d/1S6ExwxzgHf09A3hyWjgOxhT_NkkQn3uS",
+      "https://lh3.googleusercontent.com/d/1TY_XT0o0KzV5TakZiW5YxcKaDX5xcYaV",
+      "https://lh3.googleusercontent.com/d/1Zvztz-wXt1peOpQJnm7lf7xl8t7fI0jR",
+      "https://lh3.googleusercontent.com/d/1_23oOgRttOfhQ2ykpQQTQ5b30oZAK4FW",
+      "https://lh3.googleusercontent.com/d/1bcNmgIORij3lTjaoPljizpLVgc40SIGd",
+      "https://lh3.googleusercontent.com/d/1gLm9u3pOuVvErNQY_-MW_CcCVAa9pMjM",
+      "https://lh3.googleusercontent.com/d/1jUowa95YdZDevQytoybwSJizk3sB-7ty",
+      "https://lh3.googleusercontent.com/d/1lPhVDTyrT-AA4zD5n9-nv0-_AtpMD8iQ",
+      "https://lh3.googleusercontent.com/d/1nrUfBSh_aHhxWA_RLsqvX8Zr-rUjsswd",
+      "https://lh3.googleusercontent.com/d/1o47odPYijVZjz8qaavbwKYivV9d98frM",
+      "https://lh3.googleusercontent.com/d/1qH92Uh_q8OXA8MetZMJRP-FXuhPdX6Ix",
+    ],
+    polaroids: [],
+  },
+];
   polaroids: string[];
   height: string;
   bust?: string;
