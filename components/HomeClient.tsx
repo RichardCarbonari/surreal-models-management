@@ -42,12 +42,24 @@ export default function HomeClient({ images }: { images: Model[] }) {
     requestAnimationFrame(() => requestAnimationFrame(() => setSlideIn(true)));
   };
 
-  // Use new home images instead of models data
-  const imgs = [...HOME_IMAGES, ...HOME_IMAGES, ...HOME_IMAGES, ...HOME_IMAGES];
+  // Shuffle helper with seed per column
+  const shuffle = (arr: Model[], seed: number) => {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = (seed * (i + 7) * 2654435761) % (i + 1);
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
 
   const cols = [
-    { dir: 'up' }, { dir: 'down' }, { dir: 'up' },
-    { dir: 'down' }, { dir: 'up' }, { dir: 'down' }, { dir: 'up' },
+    { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 1) },
+    { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 7) },
+    { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 13) },
+    { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 3) },
+    { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 17) },
+    { dir: 'down', imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 5) },
+    { dir: 'up',   imgs: shuffle([...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES,...HOME_IMAGES], 11) },
   ];
 
   return (
@@ -69,7 +81,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
                 className={`${styles.track} ${col.dir === 'up' ? styles.up : styles.down}`}
                 style={{ animationDuration: '200s' }}
               >
-                {[...imgs, ...imgs].map((m, i) => (
+                {[...col.imgs, ...col.imgs].map((m, i) => (
                   <div key={i} className={styles.card}>
                     <img src={m.coverImage} alt="" className={styles.cardImg} draggable={false} />
                   </div>
