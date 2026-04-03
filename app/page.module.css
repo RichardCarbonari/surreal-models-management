@@ -37,7 +37,7 @@
 /* Sobe — começa do 0 e vai para -50% */
 .up {
   top: 0;
-  animation: scrollUp linear infinite;
+  animation: scrollUp ease-in-out infinite alternate;
   animation-delay: 0s;
 }
 @keyframes scrollUp {
@@ -48,7 +48,7 @@
 /* Desce — começa de -50% e vai para 0 */
 .down {
   top: 0;
-  animation: scrollDown linear infinite;
+  animation: scrollDown ease-in-out infinite alternate;
   animation-delay: 0s;
 }
 @keyframes scrollDown {
