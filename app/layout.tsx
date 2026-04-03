@@ -5,13 +5,7 @@ import BottomNav from "@/components/BottomNav";
 
 export const metadata: Metadata = {
   title: "Surreal Models Management",
-  description: "Agência de modelos premium. Conectando talentos extraordinários às maiores oportunidades do mundo da moda e publicidade.",
-  keywords: ["modelos", "agência", "moda", "surreal", "management"],
-  openGraph: {
-    title: "Surreal Models Management",
-    description: "Conectando talentos extraordinários às maiores oportunidades do mundo.",
-    type: "website",
-  },
+  description: "Agência de modelos premium.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
