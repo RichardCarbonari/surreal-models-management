@@ -20,11 +20,14 @@ export default function ModelBanner({ model }: Props) {
   return (
     <article className={styles.article}>
       <div className={styles.layout}>
+        {/* Gallery */}
         <div className={styles.galleryCol}>
           <div className={styles.tabs}>
-            <button className={`${styles.tab} ${activeTab === "book" ? styles.tabActive : ""}`} onClick={() => { setActiveTab("book"); setActiveImg(0); }}>Book</button>
+            <button className={`${styles.tab} ${activeTab === "book" ? styles.tabActive : ""}`}
+              onClick={() => { setActiveTab("book"); setActiveImg(0); }}>Book</button>
             {model.polaroids && model.polaroids.length > 0 && (
-              <button className={`${styles.tab} ${activeTab === "polaroids" ? styles.tabActive : ""}`} onClick={() => { setActiveTab("polaroids"); setActiveImg(0); }}>Polaroids</button>
+              <button className={`${styles.tab} ${activeTab === "polaroids" ? styles.tabActive : ""}`}
+                onClick={() => { setActiveTab("polaroids"); setActiveImg(0); }}>Polaroids</button>
             )}
           </div>
           <div className={styles.mainImage}>
@@ -37,7 +40,8 @@ export default function ModelBanner({ model }: Props) {
           {currentImages && currentImages.length > 1 && (
             <div className={styles.thumbs}>
               {currentImages.map((img, i) => (
-                <button key={i} className={`${styles.thumb} ${i === activeImg ? styles.thumbActive : ""}`} onClick={() => setActiveImg(i)}>
+                <button key={i} className={`${styles.thumb} ${i === activeImg ? styles.thumbActive : ""}`}
+                  onClick={() => setActiveImg(i)}>
                   <img src={img} alt={`${model.name} ${i + 1}`} className={styles.thumbImg} />
                 </button>
               ))}
@@ -45,6 +49,7 @@ export default function ModelBanner({ model }: Props) {
           )}
         </div>
 
+        {/* Info */}
         <div className={styles.info}>
           <div className={styles.infoTop}>
             <span className={styles.category}>{CATEGORY_LABEL[model.category]}</span>
@@ -52,6 +57,7 @@ export default function ModelBanner({ model }: Props) {
             {model.nationality && <p className={styles.nationality}>{model.nationality}</p>}
           </div>
 
+          {/* Measurements */}
           <div className={styles.measurements}>
             <h2 className={styles.measureTitle}>Medidas</h2>
             <div className={styles.measureGrid}>
@@ -68,17 +74,36 @@ export default function ModelBanner({ model }: Props) {
             </div>
           </div>
 
+          {/* Social — Instagram no estilo footer */}
+          {model.instagram && (
+            <div className={styles.social}>
+              <a href={model.instagram} target="_blank" rel="noopener noreferrer" className={styles.igLink}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </div>
+          )}
+
+          {/* Actions */}
           <div className={styles.actions}>
-            {model.instagram && (
-              <a href={model.instagram} target="_blank" rel="noopener noreferrer" className={styles.btnInstagram}>
-                Instagram
+            {model.portfolio && (
+              <a href={model.portfolio} target="_blank" rel="noopener noreferrer" className={styles.btnPortfolio}>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                </svg>
+                Drive
               </a>
             )}
-            <a href={`mailto:surrealmodelsmanagment@gmail.com?subject=Interesse em ${model.name}`} className={styles.btnPrimary}>
+            <a href={`mailto:surrealmodelsmanagment@gmail.com?subject=Interesse em ${model.name}`}
+              className={styles.btnPrimary}>
               Solicitar Modelo
             </a>
             <Link href="/portfolio" className={styles.btnSecondary}>
-              ← Voltar ao Portfólio
+              ← Voltar
             </Link>
           </div>
         </div>
@@ -87,7 +112,7 @@ export default function ModelBanner({ model }: Props) {
   );
 }
 
-function MeasureItem({ label, value }: { label: string; value: string }) {
+function MeasureItem({ label, value }: { label: string; value: string | number }) {
   return (
     <div className={styles.measureItem}>
       <span className={styles.measureLabel}>{label}</span>
