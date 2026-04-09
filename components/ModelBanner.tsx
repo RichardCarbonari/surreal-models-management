@@ -62,7 +62,7 @@ export default function ModelBanner({ model }: Props) {
             <h2 className={styles.measureTitle}>Medidas</h2>
             <div className={styles.measureGrid}>
               {model.height && <MeasureItem label="Height" value={model.height} />}
-              {model.age && <MeasureItem label="Age" value={model.age} />}
+              {model.age && <MeasureItem label="Age" value={String(model.age)} />}
               {model.bust && <MeasureItem label="Chest" value={model.bust} />}
               {model.waist && <MeasureItem label="Waist" value={model.waist} />}
               {model.hips && <MeasureItem label="Hips" value={model.hips} />}
@@ -109,7 +109,7 @@ export default function ModelBanner({ model }: Props) {
   );
 }
 
-function MeasureItem({ label, value }: { label: string; value: string | number }) {
+function MeasureItem({ label, value }: { label: string; value: string | number | undefined }) {
   return (
     <div className={styles.measureItem}>
       <span className={styles.measureLabel}>{label}</span>

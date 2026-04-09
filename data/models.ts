@@ -13,9 +13,9 @@ export interface Model {
   waist?: string;
   hips?: string;
   shoes: string;
-  eyes: string;
-  hair: string;
-  nationality: string;
+  eyes?: string;
+  hair?: string;
+  nationality?: string;
   age?: number;
   instagram?: string;
   shirts?: string;
