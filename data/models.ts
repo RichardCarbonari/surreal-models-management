@@ -280,6 +280,7 @@ export const models: Model[] = [
     eyes: "Hazel", hair: "Black", nationality: "Brasileiro",
     instagram: "https://www.instagram.com/jassikamuzu/",
     portfolio: "https://drive.google.com/drive/folders/1qjtQXY1czSPN3UdW9Rhq1pu8-Qs842nx",
+    bust: "92cm",
   },
 ];
 
