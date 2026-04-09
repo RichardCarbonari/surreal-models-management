@@ -186,6 +186,16 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/yaas.matos_/",
     portfolio: "https://drive.google.com/drive/folders/1mKyXJbIdDzDtdlI1XVUrisEnrphJoLyu",
   },
+  {
+    id: "24", slug: "renata-miller", name: "Renata Miller", category: "feminino",
+    coverImage: d("1yAyjIXnrIMQxL7HfU1XpxlTfwANVE0o4"),
+    images: [],
+    polaroids: [], height: "1,73m", bust: "78cm", waist: "61cm", hips: "91cm",
+    shoes: "39", shirts: "S", pants: "36",
+    eyes: "Brown", hair: "Brown", nationality: "Brasileira",
+    instagram: "https://www.instagram.com/rmilleer_/",
+    portfolio: "https://drive.google.com/drive/folders/1YwquDuStHktcMrEXp5c5orDn7_fyZ6ZX",
+  },
 ];
 
 export const getFeaturedModels = () => models.filter((m) => m.featured);
