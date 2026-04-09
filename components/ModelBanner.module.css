@@ -1,5 +1,5 @@
 .article {
-  padding-top: calc(var(--nav-h) + 32px);
+  padding-top: calc(var(--nav-h) + 56px);
   padding-bottom: 100px;
   min-height: 100vh;
   background: var(--white);
@@ -140,7 +140,7 @@
   top: calc(var(--nav-h) + 40px);
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
 .infoTop {
@@ -320,7 +320,7 @@
 
 /* Social */
 .social {
-  margin: 1.5rem 0 1rem;
+  margin: 0;
 }
 
 .igLink {
