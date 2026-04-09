@@ -103,10 +103,14 @@ export const models: Model[] = [
     polaroids: [], height: "1,89m", bust: "90cm", waist: "74cm", hips: "88cm", shoes: "44", eyes: "Castanhos", hair: "Preto", nationality: "Egípcio", age: 26,
   },
   {
-    id: "7", slug: "matheus-cunha", name: "Matheus Cunha", category: "masculino",
+    id: "7", slug: "matheus-cunha", name: "Mateus Cunha", category: "masculino",
     coverImage: d("19-k9GN4fRLYzXJQBbzyn1t7WbaQSt8Ku"),
     images: [d("19-k9GN4fRLYzXJQBbzyn1t7WbaQSt8Ku"),d("133ZFjfaBhHba664lttLWbCTqjVzIWS6p"),d("1RMtgWqkPoYfHTqham2Y3VwWfdIjqgUZw"),d("11Nu5MYmMrmaP5VCz3tmmCqsChkXHLlqQ"),d("1BFjPtQzYxWHyAs1bXDJYuhDhVOOrkGKA"),d("1kOOrWcGJA9x6UHq7QaTAfNegmO7g4abr"),d("1kslTibmAit2WkFX22dXi6yvKl4QARqwG"),d("185daWdO2Z7LR8OeQCLwFGbHTnQjvZ76E"),d("1yTXPVydNmWA29d1MAoa2qkGVgcGWEIyA"),d("1zv-oZ-0gQRi6BGaGXBGEBo4fw_UA1hyr"),d("19-k9GN4fRLYzXJQBbzyn1t7WbaQSt8Ku"),d("1cd7Y-GNpgHDxqBkdZ33fKSEGpOfQz4qj"),d("1qQxCiPvuGqJHikwlWVvT3bKHXNBhq4rP"),d("1A7SUti7PsXOa8-1R8vnY2w-xqSwookIb"),d("1kLzG519W5eTJX_ZdS0HOtEgWsQIqUq71"),d("1o3VZWqs3iudT92TtkPhg8M7ej8amt_6D"),d("1ShwjAe3rYE8Ykty9H4lojMjky8sU11CO"),d("1E9R-6q7GNsK0j-hHZGjpy_ooCB1YrKna")],
-    polaroids: [], height: "1,89m", bust: "99cm", waist: "72cm", hips: "91cm", shoes: "42", eyes: "Castanhos", hair: "Preto", nationality: "Brasileiro", age: 23,
+    polaroids: [], height: "1,92m", bust: "98cm", waist: "78cm", hips: "95cm",
+    shoes: "44/45", shirts: "M", pants: "32/34",
+    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro", age: 23,
+    instagram: "https://www.instagram.com/tezezico/",
+    portfolio: "https://drive.google.com/drive/folders/1JIOUE9n3oZ6JsoVFmOPbukSN9HWDHT9r",
   },
   {
     id: "17", slug: "nanda-peixoto", name: "Nanda Peixoto", category: "feminino",
