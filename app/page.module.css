@@ -156,7 +156,7 @@
     overflow: hidden;
   }
   .card {
-    height: 33.33vh;
-    aspect-ratio: unset;
+    height: auto;
+    aspect-ratio: 3 / 4;
   }
 }
