@@ -181,7 +181,11 @@ export const models: Model[] = [
     id: "21", slug: "helena-weber", name: "Helena Weber", category: "feminino",
     coverImage: "https://lh3.googleusercontent.com/d/10SKW64UkXddGuqwR6MmHgFkC3v0rCJMq",
     images: ["https://lh3.googleusercontent.com/d/10SKW64UkXddGuqwR6MmHgFkC3v0rCJMq","https://lh3.googleusercontent.com/d/16oyie682lnzngr5VYo-_szjqvlfrfcer","https://lh3.googleusercontent.com/d/18RGAoC_Wn0wSGR_ZP_Fw43b6i3M6QcUe","https://lh3.googleusercontent.com/d/19363eoRX3foPMzoVALUa1KKnUEZlbmcp","https://lh3.googleusercontent.com/d/1D9KquxxP2iEjglsKe39p0a7OXEfchjT7","https://lh3.googleusercontent.com/d/1E-UO9Ayh6ew9tfmVwN-oQwsOR62CMcrd","https://lh3.googleusercontent.com/d/1ENa_tL_KFggJDktZ70HHH6LbiBeY24vk","https://lh3.googleusercontent.com/d/1KS6rHRZePk5FLq6X5sztBr3ADSceI6Xu","https://lh3.googleusercontent.com/d/1RESuQaiqdUazut8HdivQ4-ksmm9dmKrx","https://lh3.googleusercontent.com/d/1SXOx7vPX-KONsyjsCex4iy9zihP01RZ0","https://lh3.googleusercontent.com/d/1Y8RPxk2ElVPj0fyp3vipnbV85LhfS_tB","https://lh3.googleusercontent.com/d/1_E3Svi2-NR8IZ-0dUDv9ldGIsLmzbVh8","https://lh3.googleusercontent.com/d/1a78oH1pop0GSvZhlnWrWIdTBgZKEE3Ir","https://lh3.googleusercontent.com/d/1dOVtMAf5oVWOXir4Lps_bU5lutoiDMqQ","https://lh3.googleusercontent.com/d/1gbEHjjpSNe1wSLDkI3XYtb821Py6Moyz","https://lh3.googleusercontent.com/d/1iQKTBdYUgu66PZ236POMUAbQK60mQWnf","https://lh3.googleusercontent.com/d/1jOaOKLXiWY85JyMRRoQP9GS-vPIxeHtX","https://lh3.googleusercontent.com/d/1l2SiPt635rKeYrsCW1UVMebzv7xDFATC","https://lh3.googleusercontent.com/d/1tQUjQG3937mnQFAXWW7f-vcH5c7XrbLG","https://lh3.googleusercontent.com/d/1vn_aHFgB-1kuiT5U0mPO6EJnz5rQxOGl","https://lh3.googleusercontent.com/d/1wE9t7wfNbuJcMwL2bxI7RPDiJ6GMJXcN","https://lh3.googleusercontent.com/d/1wUVUiyDSOrik6pmYlgeET1tmLgyWwK96","https://lh3.googleusercontent.com/d/1xFd3ZwC6WpSBCRC1g2da1_XED1eTnwm5"],
-    polaroids: [], height: "", waist: "", shoes: "", eyes: "", hair: "", nationality: "",
+    polaroids: [], height: "176cm", bust: "80cm", waist: "62cm", hips: "89cm",
+    shoes: "39", shirts: "XS", pants: "38 BR",
+    eyes: "Blue", hair: "Blond", nationality: "Brasileira",
+    instagram: "https://www.instagram.com/_helenaweber/",
+    portfolio: "https://drive.google.com/drive/folders/1XYjLdyfmGxBv89YQVBc47dDVcIU7bJYb",
   },
   {
     id: "22", slug: "florencia", name: "Florencia", category: "feminino",
