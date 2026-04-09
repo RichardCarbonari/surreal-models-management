@@ -96,7 +96,11 @@ export const models: Model[] = [
     id: "15", slug: "jullie-rocha", name: "Jullie Rocha", category: "feminino",
     coverImage: d("1OhZnEla-2Y7yO4l0QhsRiWIKYA88k0Nv"),
     images: [d("1OhZnEla-2Y7yO4l0QhsRiWIKYA88k0Nv"),d("1JFK3Pf-r78kfHay6jJ0Kg-43T-YzSJfg"),d("1dZQT4LV7BP6GD8NMSaAOa9niIIvucND3"),d("1HtrjxIMWAOrOuZw2xnneR7yjbfqXNWVr"),d("1y9gkp20proJGbfKHemGXluQgi8Z1ahjX"),d("1kbRTeuPEOxpi4e4xga6GuYsUrLkr3YSa"),d("1kj9ELBmk71GgE-oGztyAyXuXZSzAFEIB"),d("1fuybtLeYgF6hC87acm6XLI9V2jD4h94c"),d("1Qa_3bbL6dAK-ErYXiGbbdySSE1Y3LolM"),d("1WcfJhu3lHOeac6qFflWq88Bv2E7DcYa0"),d("1-YQSZZB0foG1G1numyZE275ifmrHTFNM"),d("1ifTQLN48A1lB4DBzV6SbRrj1Xa-CLIaj")],
-    polaroids: [], height: "1,70m", bust: "83cm", waist: "63cm", hips: "94cm", shoes: "38", eyes: "Castanhos", hair: "Preto", nationality: "Brasileira", age: 22,
+    polaroids: [], height: "170cm", bust: "80cm", waist: "64cm", hips: "94cm",
+    shoes: "39 EUR", shirts: "S EUR", pants: "38 EUR",
+    eyes: "Green", hair: "Brown", nationality: "Brasileira", age: 22,
+    instagram: "https://www.instagram.com/jullierocha/",
+    portfolio: "https://drive.google.com/drive/folders/1_wrHwfhtrEqQL8LpMbmaIeT5PSb6dnrW",
   },
   {
     id: "2", slug: "junior-benevides", name: "Junior Benevides", category: "masculino",
