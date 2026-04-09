@@ -18,6 +18,9 @@ export interface Model {
   nationality: string;
   age?: number;
   instagram?: string;
+  shirts?: string;
+  pants?: string;
+  portfolio?: string;
   featured?: boolean;
 }
 
@@ -64,7 +67,10 @@ export const models: Model[] = [
     id: "8", slug: "guss-camargo", name: "Guss Camargo", category: "masculino",
     coverImage: d("1w7T0D9ftguujG9klWLWSnvU8fDbG4rG3"),
     images: [d("1w7T0D9ftguujG9klWLWSnvU8fDbG4rG3"),d("179m_VHoG75a5wJfSXJcZ3WTdanL1i6CU"),d("1EFDdZTIiB3-HXUM65EBcH3XSqxgfeD9m"),d("1L68mUjIITLc27Rm2bHgBwpFO8LRlMJ22"),d("1L1PeQLd6IuQjQ9y4xBvuuz2jp4FP6whZ"),d("1-N_gReE-9gVSZ4KwOrun-rt8SslnmPYT"),d("1668xrbqAkpPu5DSAO_rm0TPVJKJ3EDLe"),d("1iiLOFvATblNLl3vDJNXYPSzVZCnuKRVp"),d("1iYJOaGJxV2o8tWFH6tIGmMyrWHvkR0BN"),d("1uWXzTEtMqSJi7_SY4I9q8vjzJ4xOYlw9"),d("1CfjKUabMoeSr37Wod8ylSqo9oq2b2aFQ"),d("1FlyuI-Ekt1Ma3boISoRkTi3nV60KdDRd"),d("1e9WAkx69hbUfdj52Nvs7Q4BNRPy20zv9"),d("1q-xHLrvr9LL_Tss8Mt_2_VR9HLLAQJSB")],
-    polaroids: [], height: "1,89m", bust: "92cm", waist: "74cm", hips: "88cm", shoes: "42", eyes: "Castanhos", hair: "Preto", nationality: "Brasileiro", age: 22, featured: true,
+    polaroids: [], height: "192cm", bust: "92cm", waist: "74cm", hips: "88cm", shoes: "44 EU",
+    shirts: "M", pants: "40x42", eyes: "Dark Brown", hair: "Black", nationality: "Brasileiro", age: 22,
+    portfolio: "https://drive.google.com/drive/folders/1JIOUE9n3oZ6JsoVFmOPbukSN9HWDHT9r",
+    featured: true,
   },
   {
     id: "12", slug: "iza-mazotti", name: "Iza Mazotti", category: "feminino",
