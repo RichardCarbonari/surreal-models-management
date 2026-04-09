@@ -151,8 +151,12 @@
     right: 0;
     gap: 3px;
   }
+  .col {
+    height: 100vh;
+    overflow: hidden;
+  }
   .card {
-    height: auto;
-    aspect-ratio: 2 / 3;
+    height: 33.33vh;
+    aspect-ratio: unset;
   }
 }
