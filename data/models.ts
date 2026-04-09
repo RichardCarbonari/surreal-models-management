@@ -59,7 +59,11 @@ export const models: Model[] = [
     id: "16", slug: "giovana-peixoto", name: "Giovana Peixoto", category: "feminino",
     coverImage: d("1YIgOBx-qcml5XzDWw-FLp9v4UlerboYA"),
     images: [d("1YIgOBx-qcml5XzDWw-FLp9v4UlerboYA"),d("18jaynPT2zb-BrE0R3E8kGpKI8Z7__9LD"),d("1cuLs5ioHKp8nXG5xQDxhAKp_uYLIU2-z"),d("1wBvH5BUJeKhgERD3yZ3badYESR2I8xy7"),d("1GSRVEr5K3g3zlAGwtL5xuLwQ2JQBNW-I"),d("1PITCbiNuR6izfl0-VzBmf5C1E2q0ITKo"),d("154YpjR9Zdk5ePIijNbDWi5crhQgiQ8cD"),d("1lKyLnF9qTnPEpbbn8Qxb9dyP4Nv0iu_y"),d("1pduPL0i5icQ-_Gfo-HHsB7AVSiRvGUU1"),d("1MyeBKnsfUi82I_-dSXFlR-meFY-zHofn"),d("1sBi3jkIPQLmr-t_CxKQTXe2hOBYYeS8p"),d("14rWqjdk7SGGA7hs0FP-vP62DismJzCk_"),d("167g-fSMJqlbpcYQTnxyoc-ukiwpKzKhy"),d("1wFYkG5jtM4kfFyDaJ-rqEqji9TDef7v1"),d("1-BOJeGU3ek2_iWMQSNzDf7uSi6SpYxdl"),d("1Sx6azXPifP221ogFRjuOA9WlNBjP4cZA"),d("1qzPxo5a_SYnC9cfSOrgfrGnJowUHqzUr")],
-    polaroids: [], height: "1,70m", bust: "82cm", waist: "63cm", hips: "93cm", shoes: "37", eyes: "Castanhos", hair: "Castanho", nationality: "Brasileira", age: 20,
+    polaroids: [], height: "1,72m", bust: "80cm", waist: "62cm", hips: "92cm",
+    shoes: "39", shirts: "XS", pants: "30",
+    eyes: "Dark Brown", hair: "Black", nationality: "Brasileira", age: 20,
+    instagram: "https://www.instagram.com/gio.peixoto/",
+    portfolio: "https://drive.google.com/drive/folders/1s9XZXx3FLtRmBa5IFndAkvA531pHRAsJ",
   },
   {
     id: "9", slug: "guilherme-cajaiba", name: "Guilherme Cajaiba", category: "masculino",
