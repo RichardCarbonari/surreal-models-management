@@ -37,7 +37,12 @@ export const models: Model[] = [
     id: "10", slug: "clara-albuquerque", name: "Clara Albuquerque", category: "feminino",
     coverImage: d("1YX1Cb7rZgvFksrO4zhvCq_IDmJ1hn0uJ"),
     images: [d("1YX1Cb7rZgvFksrO4zhvCq_IDmJ1hn0uJ"),d("1mvb1PuXbFMxZPmaCUv1T2Td0kbz0Qwd_"),d("1fCgnE9W-kjMBtuOvM8k2OGlazd3yWByY"),d("1gcbm56ispFFFmkQmLlid1NbJjM_NbXQw"),d("1erBiKRO45zn5HRlc7qfSFNDGyIMEr3JS"),d("1078nkZvNagrwrYRag7whs6f1oxB-EJP4"),d("1BLMzQCn20sFpwzfQMYacVL-YQ2zkqWot"),d("18cVpaBZ5kmw5CGMSoyFP9zrLtSpslilk"),d("1n8LIjoHpyLTI6KXL2U79BVSRImWobq-6"),d("1T3BZ_bzC2mncDLP9zVx0qi8f8k-wvPt1"),d("1X85m4srtMKfdrpeLspfVP4Tixb9jeTRP"),d("1-zysPf02YBDBwXeNc_DMjLwsWtxL6tdp"),d("1bsLsQae8c3je293L_Wzpy5uCVX5_1nq4"),d("1nkS1ZY3cjPOlQ9fPZhy_pd5F1rjeW7O5"),d("1qUJpq7kaO5fDqZQNQkmSfepJEJ_aP56V"),d("1KxdVCn0iURp66h2sJqTKst7z1Hnblj61"),d("1eY1lEIC8YzckLYGoZbNk8Nd1fKdoN52o")],
-    polaroids: [], height: "1,75m", bust: "79cm", waist: "62cm", hips: "92cm", shoes: "37", eyes: "Castanhos", hair: "Preto", nationality: "Brasileira", age: 21, featured: true,
+    polaroids: [], height: "175cm", bust: "78cm", waist: "62cm", hips: "89cm",
+    shoes: "40", shirts: "XS", pants: "30",
+    eyes: "Dark Brown", hair: "Black", nationality: "Brasileira", age: 21,
+    instagram: "https://www.instagram.com/imclaraalbuquerque/",
+    portfolio: "https://drive.google.com/drive/folders/1v-kN7Zq9g8-CmBaqzrc6KGNWWeyTWoJu",
+    featured: true,
   },
   {
     id: "4", slug: "emad", name: "Emad", category: "masculino",
