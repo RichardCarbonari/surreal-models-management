@@ -320,10 +320,7 @@
 
 /* Social */
 .social {
-  margin: 1.5rem 0;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--gray-200);
-  border-bottom: 1px solid var(--gray-200);
+  margin: 1.5rem 0 1rem;
 }
 
 .igLink {
@@ -343,9 +340,9 @@
 
 /* Portfolio button */
 .btnPortfolio {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
   padding: 0.9rem 2rem;
   border: 1px solid var(--olive);
   color: var(--olive);
@@ -357,5 +354,6 @@
   text-transform: uppercase;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
+  text-align: center;
 }
 .btnPortfolio:hover { background: var(--olive); color: var(--white); }
