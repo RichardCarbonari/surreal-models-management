@@ -100,7 +100,11 @@ export const models: Model[] = [
     id: "5", slug: "kareem", name: "Kareem", category: "masculino",
     coverImage: d("11DI2vjqPhyiBfhbxRC1YrduFvvwpUEOh"),
     images: [d("11DI2vjqPhyiBfhbxRC1YrduFvvwpUEOh"),d("1gZYMiCMzsGIXHK6J6udeFX7YbXFN28tH"),d("1l6qiVdAtu05VkG4WdTfI-NJsX4kfHa-L"),d("13ql8SvbkeXDKcnsm6AdeZ7MZBAYbP-2L"),d("1JpYT7v_8mkd-7U04NBkX4XX-37lo6Wy3"),d("1ccYHf9cDfewjOqQO-Ddm1RTzA2NVa_9A"),d("1Nd4voUcpXmjxlYlXqT4RWKM7CpPhTQC3"),d("1gaeGZ6ewPsz2nZNNaliFQmXmO16ouAxU"),d("1lPyHEv4rojtktwIaPMgOroLQkDHZsiA5"),d("1hmq1D_87yg0AXcDuK-qLdXenfRkldN0N"),d("1tNRYZQ4v5g6rWgwViX78v16TaEsWQ96A"),d("1rFRl9cFMBmpEciRoe181iVcOmS8AgPr-"),d("1FrWHA8eJ-YbG8fGteJPnxFH8g2GJHuwm"),d("1D_5UX3UsmRmr_Hp7nTNwSi4dNhw7_wxF")],
-    polaroids: [], height: "1,89m", bust: "90cm", waist: "74cm", hips: "88cm", shoes: "44", eyes: "Castanhos", hair: "Preto", nationality: "Egípcio", age: 26,
+    polaroids: [], height: "185cm", bust: "99cm", waist: "77cm", hips: "96cm",
+    shoes: "44/45", shirts: "M/L", pants: "30/32",
+    eyes: "Green", hair: "Brown", nationality: "Egípcio", age: 26,
+    instagram: "https://www.instagram.com/karemalashry/",
+    portfolio: "https://drive.google.com/drive/folders/1oL9XvmJPdEQiWDPWHX798wYxxHGcZZk4",
   },
   {
     id: "7", slug: "matheus-cunha", name: "Mateus Cunha", category: "masculino",
