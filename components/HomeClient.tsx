@@ -70,7 +70,7 @@ export default function HomeClient({ images }: { images: Model[] }) {
 
   return (
     <>
-      {!alreadySeen && <SplashScreen onComplete={handleSplashComplete} />}
+      {!splashDone && <SplashScreen onComplete={handleSplashComplete} />}
 
       <div
         className={styles.wrapper}
