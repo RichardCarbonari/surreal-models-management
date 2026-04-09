@@ -256,6 +256,16 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/guilher_rp/",
     portfolio: "https://drive.google.com/drive/folders/1XnAhIvyj0y9h592R6pUlD9tE25ri2lpb",
   },
+  {
+    id: "26", slug: "yassir", name: "Yassir", category: "masculino",
+    coverImage: "https://lh3.googleusercontent.com/d/1-2XAZgAMv3V78am5kjXNc7EQTarxdihy",
+    images: ["https://lh3.googleusercontent.com/d/1-2XAZgAMv3V78am5kjXNc7EQTarxdihy","https://lh3.googleusercontent.com/d/12IZM8Pr0T-pdqRtZMITZYK9qMxcik2C0","https://lh3.googleusercontent.com/d/12bMYnPRZ8nsdszLXnayY4sZVUnUJZL4f","https://lh3.googleusercontent.com/d/13o3PQfY9yjC9_oUt-l1btuo2Ba0-qkV6","https://lh3.googleusercontent.com/d/15FYf7u8F8FHguN7K8hlvFAQmFtDgRzci","https://lh3.googleusercontent.com/d/17HX3KZTDjncyHnKY_sgZ2Y37scqaoKHq","https://lh3.googleusercontent.com/d/1BLDWwvKQzwFbC9SnNrfcYta1YidqZGIa","https://lh3.googleusercontent.com/d/1GR2YRQBiukTi8tXRP4NFeLcKfMvjLAvG","https://lh3.googleusercontent.com/d/1Mip90Xv_zzRgdU6-KdS1GnOP-0jRsM6E","https://lh3.googleusercontent.com/d/1MmzIZJ3dzBIVBp556QpRNI-fARvt8BVR","https://lh3.googleusercontent.com/d/1NsCFxCxZur-0n7b3Vpr0QSEC2WKjjrmQ","https://lh3.googleusercontent.com/d/1U14ApVTSyu4bd5x1LgBvjhl2cW1hSC3y","https://lh3.googleusercontent.com/d/1VYdyhRzAKBQj7iACgotnf-KCHErzUw-a","https://lh3.googleusercontent.com/d/1Zx7raykdTWq3F0bDmOouNzWaTjvCdGE5","https://lh3.googleusercontent.com/d/1ZzQmhX5z6_SsfC-5RTMjbosPWtVN00eR","https://lh3.googleusercontent.com/d/1a-8obd6fv50epA-ZkrCuio8sh6rD45rg","https://lh3.googleusercontent.com/d/1cDKytXMhPntUg8sxZPiH5vn13ugeBm7I","https://lh3.googleusercontent.com/d/1d-f9Op2lIfmdD7-MERf7i1jdTv4Fj3vZ","https://lh3.googleusercontent.com/d/1dUToSoWKW0oCLMHL8Sd-v_wCrGxHmbE3","https://lh3.googleusercontent.com/d/1dX0mWi0WRVD1_zDHny4FlW-ctMxm2ljS","https://lh3.googleusercontent.com/d/1oJ4CpWrMmLxIDwfRQRq7TK30zsw7nPFO","https://lh3.googleusercontent.com/d/1uiyTI91HlELz7sncjaxGCk0r_42LQ4-U","https://lh3.googleusercontent.com/d/1uxTWJofWuWZPawQJN9P1ILyM72JmpvZG","https://lh3.googleusercontent.com/d/1vQ77N3Zoj3MoBTgOvaf_f-Tv0Ks01L_o","https://lh3.googleusercontent.com/d/1vqDlMnW69JQhCYFpByZdKj0m4syq1Jc7","https://lh3.googleusercontent.com/d/1yyjGjr25k2tnFAu5LFX8Rkk6APEb9j9Y","https://lh3.googleusercontent.com/d/1zAI8fGJmYbPy2eGNjivVxxsIUIkQlogq"],
+    polaroids: [], height: "1,85m", bust: "92cm", waist: "82cm", hips: "87cm",
+    shoes: "43", shirts: "S/M", pants: "M",
+    eyes: "Hazel", hair: "Black", nationality: "Brasileiro",
+    instagram: "https://www.instagram.com/jassikamuzu/",
+    portfolio: "https://drive.google.com/drive/folders/1qjtQXY1czSPN3UdW9Rhq1pu8-Qs842nx",
+  },
 ];
 
 export const getFeaturedModels = () => models.filter((m) => m.featured);
