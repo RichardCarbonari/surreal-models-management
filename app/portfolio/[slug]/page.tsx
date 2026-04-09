@@ -3,7 +3,7 @@ export const dynamic = "force-dynamic";
 import { notFound } from "next/navigation";
 import ModelBanner from "@/components/ModelBanner";
 import Footer from "@/components/Footer";
-import { getModelBySlug, Model } from "@/data/models";
+import { getModelBySlug } from "@/data/models";
 import styles from "./page.module.css";
 
 interface Props {
@@ -12,11 +12,11 @@ interface Props {
 
 export default function ModelPage({ params }: Props) {
   const model = getModelBySlug(params.slug);
-  if (!model) return notFound();
+  if (!model) notFound();
   return (
     <>
       <div className={styles.page}>
-        <ModelBanner model={model as Model} />
+        <ModelBanner model={model} />
       </div>
       <Footer />
     </>
