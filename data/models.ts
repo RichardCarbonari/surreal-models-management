@@ -65,7 +65,11 @@ export const models: Model[] = [
     id: "9", slug: "guilherme-cajaiba", name: "Guilherme Cajaiba", category: "masculino",
     coverImage: d("1UzBwqDxFBX3FZP5fWxb2fBiGQOC4qPeL"),
     images: [d("1UzBwqDxFBX3FZP5fWxb2fBiGQOC4qPeL"),d("1nHt81x3qCqFN5If6Zqo0sioDpXagRcia"),d("1lXtG7rDSfy3Dj3cD6KxrIr_LmGiV6rGY"),d("1RUFn1oysl2sqwUz7g9N8WZl2zBh-5efY"),d("1KpPVCzQoAgEDopQbXBrVfg1n16yBFAa1"),d("186sXJMeQlFjzUmFZQsEQChgp5XMavvL2"),d("1onaLEvqfu_z67_OXLac_MlOklxvk8ovj"),d("1SY56bmLDudPqjC3nsjtnA9zCGFgT7GxV"),d("18pOdJhHpySBruGk0jvgqCoOY8YgXkgW7"),d("15aeRnYBMcig7gRK03eMRjGpfsXJ3Qblv"),d("1Kn7Kgk6gxoXFsfkm-_f8Y8owF_9YRS6J"),d("1dxQMUpfc8A850Q8zFLiyskcGcUP3HrB4"),d("1d00BmJPjBvFo7Z-wgJrFhTrQQ9qrPzMx")],
-    polaroids: [], height: "1,88m", bust: "92cm", waist: "75cm", hips: "91cm", shoes: "43", eyes: "Castanhos", hair: "Castanho", nationality: "Brasileiro", age: 23,
+    polaroids: [], height: "188cm", bust: "94cm", waist: "74cm", hips: "89cm",
+    shoes: "44", shirts: "M", pants: "40",
+    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro", age: 23,
+    instagram: "https://www.instagram.com/cajjaiba/",
+    portfolio: "https://drive.google.com/drive/folders/1i96MK6SFzrUC968iDNQVBw0p5R5qZ8uj",
   },
   {
     id: "8", slug: "guss-camargo", name: "Guss Camargo", category: "masculino",
