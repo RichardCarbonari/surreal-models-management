@@ -117,10 +117,14 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1JIOUE9n3oZ6JsoVFmOPbukSN9HWDHT9r",
   },
   {
-    id: "17", slug: "nanda-peixoto", name: "Nanda Peixoto", category: "feminino",
+    id: "17", slug: "nanda-feitosa", name: "Nanda Feitosa", category: "feminino",
     coverImage: d("1rmNK_EQyxWDCtr0_01-3o6YyzOBX50tJ"),
     images: [d("1rmNK_EQyxWDCtr0_01-3o6YyzOBX50tJ"),d("1S2d3Yr79GX02DRo2wHcskMKCFp060LRJ"),d("1T7lokmC6L1hM-MxP4tUjZhPHQ0yMLGTj"),d("1hIlodbRPuXOFVGi3nZg--hxQu75FIYOb"),d("1DyIGfN3hrUNp_G1M3S4SDDoQqOPgS7rX"),d("1tOL_B5fSeBcc8TruSKvCQDMvMpgJncez"),d("16V3o6dEkfAdCfpL_FPw3_p5cl0GNf7Y7"),d("1gba4MfH6pEqiaqT3lq2cslpfj3VyljFU"),d("1ZfQZFEhl7lBu3wsAg6ZIUcZcuPhc1Fpx"),d("1ma_pVvhJPi1u3-jFihEYI8NsFIgshTw3"),d("1CmpRIeMRad15MbYgm5qFhUWySX8Vihx4"),d("1pc4DOfRBxWlYnVQC6jWxXJs9rY1qLSAx"),d("1eqOrhQQi5oCxoeFsFR8aVvbBcAoX5rvu")],
-    polaroids: [], height: "1,74m", bust: "79cm", waist: "62cm", hips: "92cm", shoes: "37", eyes: "Castanhos", hair: "Preto", nationality: "Brasileira", age: 20,
+    polaroids: [], height: "174cm", bust: "78cm", waist: "62cm", hips: "90cm",
+    shoes: "39", shirts: "XS", pants: "36",
+    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileira", age: 20,
+    instagram: "https://www.instagram.com/nanda__feitosa/",
+    portfolio: "https://drive.google.com/drive/folders/1FJWoKd5LRRpSfquNaW17uqvhUvM-t2bH",
   },
   {
     id: "11", slug: "renata-miller", name: "Renata Miller", category: "feminino",
