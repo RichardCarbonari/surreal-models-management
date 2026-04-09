@@ -123,10 +123,15 @@ export const models: Model[] = [
     polaroids: [], height: "1,74m", bust: "79cm", waist: "62cm", hips: "92cm", shoes: "37", eyes: "Castanhos", hair: "Preto", nationality: "Brasileira", age: 20,
   },
   {
-    id: "11", slug: "renata-jamilly", name: "Renata Jamilly", category: "feminino",
+    id: "11", slug: "renata-miller", name: "Renata Miller", category: "feminino",
     coverImage: d("1yAyjIXnrIMQxL7HfU1XpxlTfwANVE0o4"),
     images: [d("1yAyjIXnrIMQxL7HfU1XpxlTfwANVE0o4"),d("1ADSpnIkW3naEiCPRIgSKQ1ZunroVS-Yl"),d("1ZiKDGKAg5DBTQ3eMSBxeQcpYXrbSSkzc"),d("1aWWEDX2_3wpcM8zfctSWoBHNCI0xWOwH"),d("1YV0CF66emR_6j_DKsUhVNEc0omxDi6Ks"),d("1yPLov7L_YYSv9xBUXK2yhXp9WjRWTbaS"),d("1IjF-yWGq0d76GmMejqEF5hU9W0KDcIKq"),d("1KGIMdLHSDiGx8bGSn7vaSTYRnWqfQwdJ"),d("11KGijYBgOjnbGL7yJujmEzxCvqAhCJiZ"),d("1in_QS0dHNHN7dwfA9G_Gu6l_BgW6wjk6"),d("1s4aC-MrkmwwifSnOpwCgJgCfEshML2pN"),d("1246l1R_94jVekL2Oz9wAZq-hbOQGH60n"),d("1KH5rND8W3XzHzGAfKWDlOUY9-fYwJPkw"),d("16KQGVPV3mcn_PTQWUDKUALV7F6Ia3G_F"),d("1S9cRplvv9gQBRWzpWa6u61axO70MC6ov"),d("1iEw8JiJGnekLWB5j3dA0okSWSx0TXHP7"),d("1BMleWsd4lmvp_JpdqbUOQ3HxLWUNG_wd"),d("1oR5gmhIA3Va6V7z_v00pDnffYrxDSwOQ")],
-    polaroids: [], height: "1,75m", bust: "77cm", waist: "62cm", hips: "89cm", shoes: "38", eyes: "Castanhos", hair: "Preto", nationality: "Brasileira", age: 22, featured: true,
+    polaroids: [], height: "1,73m", bust: "78cm", waist: "61cm", hips: "91cm",
+    shoes: "39", shirts: "S", pants: "36",
+    eyes: "Brown", hair: "Brown", nationality: "Brasileira", age: 22,
+    instagram: "https://www.instagram.com/rmilleer_/",
+    portfolio: "https://drive.google.com/drive/folders/1YwquDuStHktcMrEXp5c5orDn7_fyZ6ZX",
+    featured: true,
   },
   {
     id: "1", slug: "richard-carbonari", name: "Richard Carbonari", category: "masculino",
