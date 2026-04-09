@@ -146,13 +146,13 @@
 
 @media (max-width: 768px) {
   .colsWrap {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: -12%;
-  right: -12%;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-}
-  .heroLogo { font-size: 3.5rem; }
+    grid-template-columns: repeat(3, 1fr);
+    left: 0;
+    right: 0;
+    gap: 3px;
+  }
+  .card {
+    height: auto;
+    aspect-ratio: 2 / 3;
+  }
 }
