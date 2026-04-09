@@ -8,9 +8,9 @@ export interface Model {
   coverImage: string;
   images: string[];
   polaroids: string[];
-  height: string;
+  height?: string;
   bust?: string;
-  waist: string;
+  waist?: string;
   hips?: string;
   shoes: string;
   eyes: string;
