@@ -49,7 +49,11 @@ export const models: Model[] = [
     id: "14", slug: "fernanda-faleiro", name: "Fernanda Faleiro", category: "feminino",
     coverImage: d("1DLyrt3f0s8Gv0IMOa4X0WpVVH6IMdliV"),
     images: [d("1DLyrt3f0s8Gv0IMOa4X0WpVVH6IMdliV"),d("1W4gzdSI-xxCrynyDFSXhylIU4rgbUM8M"),d("1Y1S7XFwvPn6kr--GgR_XTGhghUPpLbWo"),d("1s5HtF5IKKqlvFN-PCS6x-17s3e2pCS4g"),d("1o7-mmzQtKyESZnEtvHI2TCAGVp2hrE0R"),d("12fjo6pCBtI7TtOCLg03UHqlDA7dte8fC"),d("1SxOO2U8bW1D25yaWCYFQxTUO4ll_XzW5"),d("1XUzcATw8OPuzBWmwDoA9GXtBxocKcPR0"),d("15x2kCuvkjaq-Vl0C1IO9EvNC25PeXsom")],
-    polaroids: [], height: "1,75m", bust: "80cm", waist: "60cm", hips: "91cm", shoes: "37", eyes: "Castanhos", hair: "Castanho", nationality: "Brasileira", age: 21,
+    polaroids: [], height: "176cm", bust: "78cm", waist: "62cm", hips: "89cm",
+    shoes: "39", shirts: "XS", pants: "36",
+    eyes: "Brown", hair: "Dark Brown", nationality: "Brasileira", age: 21,
+    instagram: "https://www.instagram.com/fernanda.faleiroo/",
+    portfolio: "https://drive.google.com/drive/folders/1OaVR0ooI0sSNizCOlvHc6OEXVxLiknJP",
   },
   {
     id: "16", slug: "giovana-peixoto", name: "Giovana Peixoto", category: "feminino",
