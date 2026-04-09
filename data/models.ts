@@ -77,7 +77,12 @@ export const models: Model[] = [
     id: "12", slug: "iza-mazotti", name: "Iza Mazotti", category: "feminino",
     coverImage: d("16t4stUrtuHJ12aIvh2kPRkJgq3zoCnW8"),
     images: [d("16t4stUrtuHJ12aIvh2kPRkJgq3zoCnW8"),d("1REsEhUSHCb4xR9Ixes8Bx1_IrggCiTgj"),d("1rXy32D2RYSiV1JRzCzImA6i5_S1TYc8E"),d("14IL99hnKKBPi6sDLdxQ3PvKP_FBBmJNJ"),d("1L1Th2qgfomnvrwPi0X7JyXWdiEvpy6mG"),d("1OTbDjJBtTA3yxdX6SF_U4LCRogyYIII4"),d("1wCOOy6T0oLl78J37DB5yQdg_H97VpvZY"),d("1r3keAbbUHW2CAxpCNLUhAI0UBR2HjWtp"),d("1x0Euk604n4v098mpXjcdwWLjPVp-fupl"),d("1swGA9UeSfQIbo-Vqmjka4rQj8oMfzVA5"),d("1diL3vjQJTmrf2fPfgwsBw2BR3SwxjoqQ"),d("1hN2xZOc441-S6bx8AghhszZMdNkqsGNx")],
-    polaroids: [], height: "1,79m", bust: "80cm", waist: "60cm", hips: "90cm", shoes: "37", eyes: "Castanhos", hair: "Loiro", nationality: "Brasileira", age: 20, featured: true,
+    polaroids: [], height: "1,78m", bust: "81cm", waist: "60cm", hips: "89cm",
+    shoes: "40/41 EU", shirts: "S", pants: "38 EU",
+    eyes: "Brown", hair: "Brown", nationality: "Brasileira", age: 20,
+    instagram: "https://www.instagram.com/iza_mazotti/",
+    portfolio: "https://drive.google.com/drive/folders/1GFH8AhUnDEG9DJOS2JFosUw7MSVJ8pzK",
+    featured: true,
   },
   {
     id: "15", slug: "jullie-rocha", name: "Jullie Rocha", category: "feminino",
