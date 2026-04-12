@@ -297,27 +297,6 @@
 }
 .btnInstagram:hover { background: var(--olive); color: var(--white); }
 
-.btnPortfolio {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.9rem 2rem;
-  border: 1px solid var(--olive);
-  color: var(--olive);
-  background: transparent;
-  font-family: var(--font-body);
-  font-size: 0.62rem;
-  font-weight: 400;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
-}
-.btnPortfolio:hover {
-  background: var(--olive);
-  color: var(--white);
-}
-
 /* Social */
 .social {
   margin: 0;
