@@ -99,7 +99,7 @@ export default function ModelBanner({ model }: Props) {
               className={styles.btnPrimary}>
               Solicitar Modelo
             </a>
-            <Link href="/portfolio" className={styles.btnSecondary}>
+            <Link href="/portfolio" className={styles.btnBack}>
               ← Voltar
             </Link>
           </div>
