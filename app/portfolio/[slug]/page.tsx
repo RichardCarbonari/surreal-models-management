@@ -12,7 +12,7 @@ interface Props {
 
 export default function ModelPage({ params }: Props) {
   const model = getModelBySlug(params.slug);
-  if (!model) notFound();
+  if (!model) return notFound();
   return (
     <>
       <div className={styles.page}>
