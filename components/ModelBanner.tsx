@@ -20,7 +20,6 @@ export default function ModelBanner({ model }: Props) {
   return (
     <article className={styles.article}>
       <div className={styles.layout}>
-        {/* Gallery */}
         <div className={styles.galleryCol}>
           <div className={styles.tabs}>
             <button className={`${styles.tab} ${activeTab === "book" ? styles.tabActive : ""}`}
@@ -42,14 +41,13 @@ export default function ModelBanner({ model }: Props) {
               {currentImages.map((img, i) => (
                 <button key={i} className={`${styles.thumb} ${i === activeImg ? styles.thumbActive : ""}`}
                   onClick={() => setActiveImg(i)}>
-                  <img src={img} alt={`${model.name} ${i + 1}`} className={styles.thumbImg} />
+                  <img src={img} alt={model.name} className={styles.thumbImg} />
                 </button>
               ))}
             </div>
           )}
         </div>
 
-        {/* Info */}
         <div className={styles.info}>
           <div className={styles.infoTop}>
             <span className={styles.category}>{CATEGORY_LABEL[model.category]}</span>
@@ -57,12 +55,11 @@ export default function ModelBanner({ model }: Props) {
             {model.nationality && <p className={styles.nationality}>{model.nationality}</p>}
           </div>
 
-          {/* Measurements */}
           <div className={styles.measurements}>
             <h2 className={styles.measureTitle}>Medidas</h2>
             <div className={styles.measureGrid}>
               {model.height && <MeasureItem label="Height" value={model.height} />}
-              {model.age && <MeasureItem label="Age" value={model.age} />}
+              {model.age !== undefined && <MeasureItem label="Age" value={String(model.age)} />}
               {model.bust && <MeasureItem label="Chest" value={model.bust} />}
               {model.waist && <MeasureItem label="Waist" value={model.waist} />}
               {model.hips && <MeasureItem label="Hips" value={model.hips} />}
@@ -74,7 +71,6 @@ export default function ModelBanner({ model }: Props) {
             </div>
           </div>
 
-          {/* Social — Instagram no estilo footer */}
           {model.instagram && (
             <div className={styles.social}>
               <a href={model.instagram} target="_blank" rel="noopener noreferrer" className={styles.igLink}>
@@ -88,7 +84,6 @@ export default function ModelBanner({ model }: Props) {
             </div>
           )}
 
-          {/* Actions */}
           <div className={styles.actions}>
             {model.portfolio && (
               <a href={model.portfolio} target="_blank" rel="noopener noreferrer" className={styles.btnPortfolio}>
@@ -109,7 +104,7 @@ export default function ModelBanner({ model }: Props) {
   );
 }
 
-function MeasureItem({ label, value }: { label: string; value: string | number }) {
+function MeasureItem({ label, value }: { label: string; value: string }) {
   return (
     <div className={styles.measureItem}>
       <span className={styles.measureLabel}>{label}</span>
