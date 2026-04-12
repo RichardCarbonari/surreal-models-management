@@ -33,7 +33,6 @@ export const models: Model[] = [
     images: [d("1HQ2YJfRP9Uymgp3qVYuJgq2kU7isH-TO"),d("1PBAiivYOdzh9QYJ08EDqBAUzzIl2-X5m"),d("1SI4NDTVgsD8TiDivWmOgMHJy1PECFsst"),d("17dAaERquRclF9Zg9z8OC7SWjsKSHoUD7"),d("1TYcnj_JsL7olMqL3OMRrePXCq3GD7_5k"),d("1q0zVdrBwEuu3yWQKy4wSChec-ZnhxtRz"),d("12l3ZBp8LvVcTNkgAJbhp9SQNSwL4FTGe"),d("1PfIY3i4VrmLyCfHtdRt19hmp95NRaT4n"),d("1JxAARtnAz56Uavjiih6nKQA3cgAn7Pfk"),d("17xZgoXLONNXi4Ch1LzMRjBIWlytQnjrN"),d("1ANBo1_JT3ZjJRYRiUGcrtfThcHd1ghrN"),d("1AOUlxBxDMDYF6LbZHnlywTB8SZnVJiEg")],
     polaroids: [], height: "1,86m", bust: "90cm", waist: "75cm", hips: "88cm", shoes: "42", eyes: "Verdes", hair: "Castanho", nationality: "Brasileiro", age: 22, featured: true,
   },
-  ,
   {
     id: "10", slug: "clara-albuquerque", name: "Clara Albuquerque", category: "feminino",
     coverImage: d("1YX1Cb7rZgvFksrO4zhvCq_IDmJ1hn0uJ"),
@@ -45,14 +44,12 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1v-kN7Zq9g8-CmBaqzrc6KGNWWeyTWoJu",
     featured: true,
   },
-  ,
   {
     id: "4", slug: "emad", name: "Emad", category: "masculino",
     coverImage: d("1A_cyOQj7z42k0ysC1Tr-n_XW5RUF4YrK"),
     images: [d("1A_cyOQj7z42k0ysC1Tr-n_XW5RUF4YrK"),d("1JnP7W0DHeBUeR4jTUBwpeKOEROd6XHJn"),d("1QaOhJ2qiBnDNfVGGlaxAsMx16xlz2ZmQ"),d("1JlCy41O0UkCjahGq4p-GHOnriUPzSJ4K"),d("1GKijZ-fIaSJpiGzPQHxmPMoElamnp6Px"),d("1tLdgLceF4mmbVPGJWIvan1k1oRmkdGB7"),d("1dP5jUjwU7uGenYlOtZ_fGjgUO0kTSEOu"),d("1PV2mfCDs7bm1Rdb9UAzP0gxL4C--Daxb"),d("19K0pY6MF1o_1e6IzKDvV8mfbbt9ITvmM"),d("1Qz_5PRileimilBO17co1S8nLpVxAEfQ-"),d("1jzvVxzWwnwGfuODcjOOz4eYHBkhEmeER"),d("1tzcV9k8zliTeD3lmNaqjWK6ncrrQapSX"),d("1PkX6UAzMsIM3vdceQ-rtP92gkwghjfcG")],
     polaroids: [], height: "1,85m", bust: "94cm", waist: "75cm", hips: "90cm", shoes: "44", eyes: "Castanhos", hair: "Preto", nationality: "Brasileiro", age: 24,
   },
-  ,
   {
     id: "14", slug: "fernanda-faleiro", name: "Fernanda Faleiro", category: "feminino",
     coverImage: d("1DLyrt3f0s8Gv0IMOa4X0WpVVH6IMdliV"),
@@ -63,7 +60,6 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/fernanda.faleiroo/",
     portfolio: "https://drive.google.com/drive/folders/1OaVR0ooI0sSNizCOlvHc6OEXVxLiknJP",
   },
-  ,
   {
     id: "19", slug: "fernando-nascimento", name: "Fernando Nascimento", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/148yWUmp-09eICHs-K2RdQSoULCOE6t3E",
@@ -74,7 +70,6 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/guilher_rp/",
     portfolio: "https://drive.google.com/drive/folders/1XnAhIvyj0y9h592R6pUlD9tE25ri2lpb",
   },
-  ,
   {
     id: "22", slug: "florencia", name: "Florencia", category: "feminino",
     coverImage: "https://lh3.googleusercontent.com/d/119aclghOTCjx5pdwD1cfg-XzZbfaeniH",
@@ -82,10 +77,7 @@ export const models: Model[] = [
     polaroids: [], height: "1,88m", bust: "100cm", waist: "78cm", hips: "96cm",
     shoes: "44", shirts: "M", pants: "42",
     eyes: "Brown", hair: "Redhead", nationality: "Brasileiro",
-    instagram: "https://www.instagram.com/guilher_rp/",
-    portfolio: "https://drive.google.com/drive/folders/1XnAhIvyj0y9h592R6pUlD9tE25ri2lpb",
   },
-  ,
   {
     id: "16", slug: "giovana-peixoto", name: "Giovana Peixoto", category: "feminino",
     coverImage: d("1YIgOBx-qcml5XzDWw-FLp9v4UlerboYA"),
@@ -96,7 +88,6 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/gio.peixoto/",
     portfolio: "https://drive.google.com/drive/folders/1s9XZXx3FLtRmBa5IFndAkvA531pHRAsJ",
   },
-  ,
   {
     id: "9", slug: "guilherme-cajaiba", name: "Guilherme Cajaiba", category: "masculino",
     coverImage: d("1UzBwqDxFBX3FZP5fWxb2fBiGQOC4qPeL"),
@@ -107,8 +98,6 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/cajjaiba/",
     portfolio: "https://drive.google.com/drive/folders/1i96MK6SFzrUC968iDNQVBw0p5R5qZ8uj",
   },
-  ,
-
   {
     id: "25", slug: "guilherme-ribeiro", name: "Guilherme Ribeiro", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/10b1eeM-3bC2cfORnDaVXN5DGFd7ciL-Y",
@@ -119,7 +108,6 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/guilher_rp/",
     portfolio: "https://drive.google.com/drive/folders/1XnAhIvyj0y9h592R6pUlD9tE25ri2lpb",
   },
-  ,
   {
     id: "8", slug: "guss-camargo", name: "Guss Camargo", category: "masculino",
     coverImage: d("1w7T0D9ftguujG9klWLWSnvU8fDbG4rG3"),
@@ -130,7 +118,6 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1JIOUE9n3oZ6JsoVFmOPbukSN9HWDHT9r",
     featured: true,
   },
-  ,
   {
     id: "21", slug: "helena-weber", name: "Helena Weber", category: "feminino",
     coverImage: "https://lh3.googleusercontent.com/d/10SKW64UkXddGuqwR6MmHgFkC3v0rCJMq",
@@ -141,7 +128,6 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/_helenaweber/",
     portfolio: "https://drive.google.com/drive/folders/1XYjLdyfmGxBv89YQVBc47dDVcIU7bJYb",
   },
-  ,
   {
     id: "12", slug: "iza-mazotti", name: "Iza Mazotti", category: "feminino",
     coverImage: d("16t4stUrtuHJ12aIvh2kPRkJgq3zoCnW8"),
@@ -153,7 +139,6 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1GFH8AhUnDEG9DJOS2JFosUw7MSVJ8pzK",
     featured: true,
   },
-  ,
   {
     id: "20", slug: "jhonny", name: "Jhonny", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/1-XZZcbvxUagm5VuwxNjrjOH664WisKEt",
@@ -161,10 +146,7 @@ export const models: Model[] = [
     polaroids: [], height: "1,88m", bust: "100cm", waist: "78cm", hips: "96cm",
     shoes: "44", shirts: "M", pants: "42",
     eyes: "Brown", hair: "Redhead", nationality: "Brasileiro",
-    instagram: "https://www.instagram.com/guilher_rp/",
-    portfolio: "https://drive.google.com/drive/folders/1XnAhIvyj0y9h592R6pUlD9tE25ri2lpb",
   },
-  ,
   {
     id: "15", slug: "jullie-rocha", name: "Jullie Rocha", category: "feminino",
     coverImage: d("1OhZnEla-2Y7yO4l0QhsRiWIKYA88k0Nv"),
@@ -175,14 +157,12 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/jullierocha/",
     portfolio: "https://drive.google.com/drive/folders/1_wrHwfhtrEqQL8LpMbmaIeT5PSb6dnrW",
   },
-  ,
   {
     id: "2", slug: "junior-benevides", name: "Junior Benevides", category: "masculino",
     coverImage: d("1qNC1XkSPLye8uSPQ-zyZA_a7rkTMq6rj"),
     images: [d("1qNC1XkSPLye8uSPQ-zyZA_a7rkTMq6rj"),d("13a8fpwoD5AzbQPmVgsfnSktvKooHWD--"),d("1CgTpHjxFgmnbo2IaHo00LCOLmt-LbmVF"),d("1GofjHf6f2aaNywMS_rvE2231HO0Yi4ka"),d("19RbUQNwHww8J6n5JcF53mmzfty2xhLC7"),d("1XUc8-OYla1ga4L6opZT-jDdoVwVptE11"),d("1ChAamB9p7bvUOGJiyUXsdxyGkm8c6WrY"),d("1ug_UzwcQJn5tHwV8Nu8tw0-rhuiGVvSb"),d("1gavX3LabcwSzV1dzgKcImMfFC1SlewCm"),d("15hfgTUOj1OYNo-2LAJ3Ckp0PShl1Yyki"),d("1fgrZVFG4maICYyjnTrH1isDkIMY4Io6Q"),d("1AIxsfvbidOhxG_uu9dyU1tL5BG62Jlxh")],
     polaroids: [], height: "1,85m", waist: "78cm", shoes: "42", eyes: "Castanhos", hair: "Preto", nationality: "Brasileiro", age: 23, featured: true,
   },
-  ,
   {
     id: "5", slug: "kareem", name: "Kareem", category: "masculino",
     coverImage: d("11DI2vjqPhyiBfhbxRC1YrduFvvwpUEOh"),
@@ -193,7 +173,6 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/karemalashry/",
     portfolio: "https://drive.google.com/drive/folders/1oL9XvmJPdEQiWDPWHX798wYxxHGcZZk4",
   },
-  ,
   {
     id: "7", slug: "matheus-cunha", name: "Mateus Cunha", category: "masculino",
     coverImage: d("19-k9GN4fRLYzXJQBbzyn1t7WbaQSt8Ku"),
@@ -204,7 +183,6 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/tezezico/",
     portfolio: "https://drive.google.com/drive/folders/1JIOUE9n3oZ6JsoVFmOPbukSN9HWDHT9r",
   },
-  ,
   {
     id: "17", slug: "nanda-feitosa", name: "Nanda Feitosa", category: "feminino",
     coverImage: d("1rmNK_EQyxWDCtr0_01-3o6YyzOBX50tJ"),
@@ -215,7 +193,6 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/nanda__feitosa/",
     portfolio: "https://drive.google.com/drive/folders/1FJWoKd5LRRpSfquNaW17uqvhUvM-t2bH",
   },
-  ,
   {
     id: "11", slug: "renata-miller", name: "Renata Miller", category: "feminino",
     coverImage: d("1yAyjIXnrIMQxL7HfU1XpxlTfwANVE0o4"),
@@ -227,21 +204,18 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1YwquDuStHktcMrEXp5c5orDn7_fyZ6ZX",
     featured: true,
   },
-  ,
   {
     id: "1", slug: "richard-carbonari", name: "Richard Carbonari", category: "masculino",
     coverImage: d("1q7hHDCT8YGPwi9vXp4lbhEFCodOeDVsP"),
     images: [d("1q7hHDCT8YGPwi9vXp4lbhEFCodOeDVsP"),d("1n53U9Ghm-fAbRkJJQBJ3A9qtRfcWo1VH"),d("1ACfvobQNpC6RVIJxEwidgl_k7wwMd9rN"),d("146Xt8WI1qxhgt0XC6MApJilSUDqt-G3f"),d("1z1TBsK4kNf4uX8gxRSBYnB2pr31CFbao"),d("1rgyTDm-0SDfP544o9NzesEfTc-CtJ-TD"),d("1y9-saC186SAEDOxK3wRa2pdeqWRPMiRG"),d("1Aa5whm4_0xD16N-RneaxZmAapM-uiLl5"),d("1QmQ3PcdVoGUWJvxaL75XiEOTzR5x_Gbh"),d("1CbMo2hC_sJFYevqgMZF57qJ0DchbkwKd"),d("15iJijOJOKUWGyRmS3KrO18lLod1vn0Aj"),d("1rJ4FtoEqE2BzdaqAZlolZroL4SqfC-9M"),d("1SEiBV4H1CtrztUIAs2L7BwsbH_PrbM5h"),d("1J4Js9J9BAlQ74N8DYnS1FNz0NFh_bIBF"),d("1QYJ-uu77Bo5eriVO9712si4v8cNQ7_en")],
     polaroids: [], height: "1,83m", bust: "98cm", waist: "78cm", hips: "96cm", shoes: "43", eyes: "Castanhos", hair: "Castanho", nationality: "Brasileiro", age: 25, featured: true,
   },
-  ,
   {
     id: "13", slug: "samira-leopoldino", name: "Samira Leopoldino", category: "feminino",
     coverImage: d("128REp4tgzfvybAtAszt9dQpunGKTZvEx"),
     images: [d("128REp4tgzfvybAtAszt9dQpunGKTZvEx"),d("1-YjnUDgfoiInHuYxfVUPsrdFk8dhqKl-"),d("1tIex6xQsSoz3nht8b0L1ba3w-2C5qsV3"),d("1MrnwZDlJXi_8A49XPnmCKqAz6VEDxy5E"),d("1I1PHO2LgzRAtjMMd6YIWvbEd5VvC6v-G"),d("1_lOL9kTqEtnuPh6YnfbnS4KDCR3bfhI2")],
     polaroids: [], height: "1,77m", bust: "86cm", waist: "65cm", hips: "96cm", shoes: "37", eyes: "Castanhos", hair: "Preto", nationality: "Brasileira", age: 19,
   },
-  ,
   {
     id: "18", slug: "stevie-jones", name: "Stevie Jones", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/10OS-AKtwvsVEq8RKWCLXG_pM4hw3zfZk",
@@ -249,17 +223,13 @@ export const models: Model[] = [
     polaroids: [], height: "1,88m", bust: "100cm", waist: "78cm", hips: "96cm",
     shoes: "44", shirts: "M", pants: "42",
     eyes: "Brown", hair: "Redhead", nationality: "Brasileiro",
-    instagram: "https://www.instagram.com/guilher_rp/",
-    portfolio: "https://drive.google.com/drive/folders/1XnAhIvyj0y9h592R6pUlD9tE25ri2lpb",
   },
-  ,
   {
     id: "6", slug: "wagner-piazzoh", name: "Wagner Piazzoh", category: "masculino",
     coverImage: d("1xcfkrcUkZKNXXdW20WEyqD4eGM9GVLK6"),
     images: [d("1xcfkrcUkZKNXXdW20WEyqD4eGM9GVLK6"),d("1hzpPlUUfrWNasMYqGHsuT4MyliNY1BnO"),d("1dwagOoslkufMBxVv67-VFuBgGrGxDwha"),d("1pDSb-fXjjgXJD9iY7Tu6tTlvVhtLh3pJ"),d("10mdUdbNqDgo3VdhTtTY6UXcE6gq_mIXe"),d("1IR0MEhNLIaR6b05UNlDrFevs-VMG9CqX"),d("1QJCx-dQfXAnQQM1bTvHrxUIMtfNf3439"),d("1xIoTkhlaskrw7R3oXhhUxmiZK6fSGsOs"),d("1d6w9WnkQ64j0WS0Oic0Qf5JUWUxb2cRO"),d("1u2NfLAbBL0X-HAoWbGMv8YBwQ0wipD-7"),d("1ivl9tuAwMhAeuuZjNW8lTCNZuluyGfhR"),d("1_vxHw8PTaz5KPpChtjDv9dOid3TCqU5a")],
     polaroids: [], height: "1,88m", bust: "85cm", waist: "64cm", hips: "87cm", shoes: "43", eyes: "Castanhos", hair: "Castanho", nationality: "Brasileiro", age: 24,
   },
-  ,
   {
     id: "23", slug: "yasmim-matos", name: "Yasmim Matos", category: "feminino",
     coverImage: "https://lh3.googleusercontent.com/d/10CxmJyocCoDX8DJErMGiXhVe63kCsR9K",
@@ -270,7 +240,6 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/yaas.matos_/",
     portfolio: "https://drive.google.com/drive/folders/1mKyXJbIdDzDtdlI1XVUrisEnrphJoLyu",
   },
-  ,
   {
     id: "26", slug: "yassir", name: "Yassir", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/1-2XAZgAMv3V78am5kjXNc7EQTarxdihy",
@@ -284,5 +253,5 @@ export const models: Model[] = [
 ];
 
 export const getFeaturedModels = () => models.filter((m) => m.featured);
-export const getModelBySlug = (slug: string) => models.find((m) => m.slug === slug);
+export const getModelBySlug = (slug: string) => models.find((m) => m && m.slug === slug);
 export const getModelsByCategory = (cat: ModelCategory) => models.filter((m) => m.category === cat);
