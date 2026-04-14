@@ -1,5 +1,4 @@
 export const dynamic = "force-dynamic";
-export const dynamic = "force-dynamic";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
 
