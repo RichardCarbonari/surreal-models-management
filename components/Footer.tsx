@@ -17,9 +17,10 @@ export default function Footer() {
         <nav className={styles.nav}>
           <span className={styles.navTitle}>Navegação</span>
           <ul>
-            <li><Link href="/#sobre">Sobre nós</Link></li>
-            <li><Link href="/portfolio">Portfólio</Link></li>
-            <li><Link href="/#contato">Contato</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/portfolio">Models</Link></li>
+            <li><Link href="/casting">Be Surreal</Link></li>
+            <li><Link href="/sobre">About</Link></li>
           </ul>
         </nav>
         <div className={styles.social}>
