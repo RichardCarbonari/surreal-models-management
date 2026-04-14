@@ -33,6 +33,13 @@ export default function Footer() {
             </svg>
             @surrealmgmt
           </a>
+          <a href="mailto:info@surrealmgmt.com.br" className={styles.igLink}>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
+            info@surrealmgmt.com.br
+          </a>
         </div>
       </div>
       <div className={styles.bottom}>
