@@ -55,27 +55,27 @@ export default function CastingPage() {
             <h2 className={styles.sectionTitle}>Envie sua candidatura</h2>
             <p className={styles.formSubtitle}>Nossa equipe entra em contato em até 5 dias úteis.</p>
             <div className={styles.form}>
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}><label className={styles.label}>Nome completo</label><input type="text" className={styles.input} placeholder="Seu nome" /></div>
-                <div className={styles.formGroup}><label className={styles.label}>Email</label><input type="email" className={styles.input} placeholder="seu@email.com" /></div>
+              <p className={styles.instructionText}>Ao clicar em <strong>Enviar candidatura</strong>, seu app de e-mail será aberto com as informações necessárias. Preencha os campos e anexe suas 4 fotos.</p>
+              <div className={styles.fieldList}>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Nome completo (Full name)</span></div>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Idade (Age)</span></div>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Email</span></div>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Telefone (Phone)</span></div>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Instagram</span></div>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Altura (Height)</span></div>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Medidas (Measurements)</span></div>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Sapato (Shoes)</span></div>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Cidade (City)</span></div>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Gênero (Gender)</span></div>
+                <div className={styles.fieldItem}><span className={styles.fieldLabel}>Sobre você (About you)</span></div>
               </div>
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}><label className={styles.label}>Telefone</label><input type="tel" className={styles.input} placeholder="(11) 99999-9999" /></div>
-                <div className={styles.formGroup}><label className={styles.label}>Instagram</label><input type="text" className={styles.input} placeholder="@seuuser" /></div>
-              </div>
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}><label className={styles.label}>Altura</label><input type="text" className={styles.input} placeholder="Ex: 1,80m" /></div>
-                <div className={styles.formGroup}><label className={styles.label}>Sapato</label><input type="text" className={styles.input} placeholder="Ex: 40" /></div>
-              </div>
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}><label className={styles.label}>Cidade</label><input type="text" className={styles.input} placeholder="Ex: São Paulo" /></div>
-                <div className={styles.formGroup}><label className={styles.label}>Gênero</label><input type="text" className={styles.input} placeholder="Ex: Feminino" /></div>
-              </div>
-              <div className={styles.formGroup}><label className={styles.label}>Sobre você</label><textarea className={styles.textarea} placeholder="Conte um pouco sobre você e sua experiência..." rows={4}></textarea></div>
-              <a href="mailto:info@surrealmgmt.com.br?subject=Casting — Surreal Models&body=Nome%20completo%3A%20%0AEmail%3A%20%0ATelefone%3A%20%0AInstagram%3A%20%0AAltura%3A%20%0ASapato%3A%20%0ACidade%3A%20%0AG%C3%AAnero%3A%20%0ASobre%20voc%C3%AA%3A%20" className={styles.submitBtn}>Enviar candidatura</a>
+              
+                href="mailto:info@surrealmgmt.com.br?subject=Casting%20%E2%80%94%20Surreal%20Models&body=Nome%20completo%20(Full%20name)%3A%20%0AIdade%20(Age)%3A%20%0AEmail%3A%20%0ATelefone%20(Phone)%3A%20%0AInstagram%3A%20%0AAltura%20(Height)%3A%20%0AMedidas%20(Measurements)%3A%20%0ASapato%20(Shoes)%3A%20%0ACidade%20(City)%3A%20%0AG%C3%AAnero%20(Gender)%3A%20%0ASobre%20voc%C3%AA%20(About%20you)%3A%20"
+                className={styles.submitBtn}
+              >
+                Enviar candidatura
+              </a>
             </div>
-          </div>
-        </div>
       </div>
       <Footer />
     </>
