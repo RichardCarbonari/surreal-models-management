@@ -57,7 +57,7 @@ export default function SobrePage() {
                 <span>Instagram</span>
               </a>
               <a href="mailto:jones@surrealmgmt.com.br" className={styles.bookerContact}>jones@surrealmgmt.com.br</a>
-              <a href="tel:+5511979621962" className={styles.bookerContact}>+55 11 97962-1962</a>
+              <a href="https://wa.me/5511979621962" className={styles.bookerContact}>+55 11 97962-1962</a>
             </div>
             <div className={styles.bookerCard}>
               <h3 className={styles.bookerName}>João Pedro</h3>
@@ -70,7 +70,7 @@ export default function SobrePage() {
                 <span>Instagram</span>
               </a>
               <a href="mailto:joao@surrealmgmt.com.br" className={styles.bookerContact}>joao@surrealmgmt.com.br</a>
-              <a href="tel:+5511913075068" className={styles.bookerContact}>+55 11 91307-5068</a>
+              <a href="https://wa.me/5511913075068" className={styles.bookerContact}>+55 11 91307-5068</a>
             </div>
           </div>
         </div>
