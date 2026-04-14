@@ -49,3 +49,26 @@
   .formRow { grid-template-columns: 1fr; }
   .page { padding-bottom: 100px; }
 }
+
+/* Field list — informational */
+.fieldList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 1.5rem 0 2rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+.fieldItem {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.fieldLabel {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+}
