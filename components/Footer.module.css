@@ -1,4 +1,4 @@
-.footer { background: var(--black); padding: 3rem 2.5rem 1.5rem; }
+.footer { background: var(--black); padding: 1.5rem 2.5rem 1.5rem; }
 .inner {
   max-width: 1400px; margin: 0 auto;
   display: grid; grid-template-columns: 2fr 1fr 1fr;
@@ -27,9 +27,9 @@
 .navTitle {
   display: block; font-size: 0.58rem; font-weight: 500;
   letter-spacing: 0.28em; text-transform: uppercase;
-  color: var(--olive-light); margin-bottom: 1.4rem;
+  color: var(--olive-light); margin-bottom: 0.8rem;
 }
-.nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
+.nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
 .nav ul li a {
   font-size: 0.8rem; font-weight: 300;
   color: rgba(255,255,255,0.5); letter-spacing: 0.06em;
