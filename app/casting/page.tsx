@@ -69,13 +69,15 @@ export default function CastingPage() {
                 <div className={styles.fieldItem}><span className={styles.fieldLabel}>Gênero (Gender)</span></div>
                 <div className={styles.fieldItem}><span className={styles.fieldLabel}>Sobre você (About you)</span></div>
               </div>
-              
+              <a
                 href="mailto:info@surrealmgmt.com.br?subject=Casting%20%E2%80%94%20Surreal%20Models&body=Nome%20completo%20(Full%20name)%3A%20%0AIdade%20(Age)%3A%20%0AEmail%3A%20%0ATelefone%20(Phone)%3A%20%0AInstagram%3A%20%0AAltura%20(Height)%3A%20%0AMedidas%20(Measurements)%3A%20%0ASapato%20(Shoes)%3A%20%0ACidade%20(City)%3A%20%0AG%C3%AAnero%20(Gender)%3A%20%0ASobre%20voc%C3%AA%20(About%20you)%3A%20"
                 className={styles.submitBtn}
               >
                 Enviar candidatura
               </a>
             </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </>
