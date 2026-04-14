@@ -216,3 +216,14 @@
 @media (max-width: 768px) {
   .bookerGrid { grid-template-columns: 1fr; }
 }
+
+.contactIgLink {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--gray-600);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.contactIgLink:hover { color: var(--black); }
