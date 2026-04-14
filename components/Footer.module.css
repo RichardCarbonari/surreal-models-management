@@ -36,6 +36,7 @@
   transition: color 0.3s; text-decoration: none;
 }
 .nav ul li a:hover { color: var(--white); }
+.social { display: flex; flex-direction: column; gap: 0.8rem; }
 .igLink {
   display: flex; align-items: center; gap: 0.6rem;
   font-size: 0.8rem; font-weight: 300;
