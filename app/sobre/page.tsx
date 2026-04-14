@@ -83,7 +83,14 @@ export default function SobrePage() {
             </div>
             <div>
               <span className={styles.contactLabel}>Instagram</span>
-              <p className={styles.contactEmail}>@surrealmgmt</p>
+              <a href="https://www.instagram.com/surrealmgmt/" target="_blank" rel="noopener noreferrer" className={styles.bookerIg}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+                <span>Instagram</span>
+              </a>
               <p className={styles.contactIg}>São Paulo · Brasil</p>
             </div>
           </div>
