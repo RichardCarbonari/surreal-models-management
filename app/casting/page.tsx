@@ -45,7 +45,7 @@ export default function CastingPage() {
           <div className={styles.requirements}>
             <h2 className={styles.sectionTitle}>Requisitos</h2>
             <div className={styles.reqGrid}>
-              <div className={styles.reqItem}><span className={styles.reqLabel}>Altura Feminino</span><span className={styles.reqValue}>1,70m+</span></div>
+              <div className={styles.reqItem}><span className={styles.reqLabel}>Altura Feminino</span><span className={styles.reqValue}>1,72m+</span></div>
               <div className={styles.reqItem}><span className={styles.reqLabel}>Altura Masculino</span><span className={styles.reqValue}>1,82m+</span></div>
               <div className={styles.reqItem}><span className={styles.reqLabel}>Idade</span><span className={styles.reqValue}>16 — 30 anos</span></div>
               <div className={styles.reqItem}><span className={styles.reqLabel}>Disponibilidade</span><span className={styles.reqValue}>Integral</span></div>
@@ -72,7 +72,7 @@ export default function CastingPage() {
                 <div className={styles.formGroup}><label className={styles.label}>Gênero</label><input type="text" className={styles.input} placeholder="Ex: Feminino" /></div>
               </div>
               <div className={styles.formGroup}><label className={styles.label}>Sobre você</label><textarea className={styles.textarea} placeholder="Conte um pouco sobre você e sua experiência..." rows={4}></textarea></div>
-              <a href="mailto:surrealmodelsmanagment@gmail.com?subject=Casting — Surreal Models" className={styles.submitBtn}>Enviar candidatura</a>
+              <a href="mailto:info@surrealmgmt.com.br?subject=Casting — Surreal Models&body=Nome%20completo%3A%20%0AEmail%3A%20%0ATelefone%3A%20%0AInstagram%3A%20%0AAltura%3A%20%0ASapato%3A%20%0ACidade%3A%20%0AG%C3%AAnero%3A%20%0ASobre%20voc%C3%AA%3A%20" className={styles.submitBtn}>Enviar candidatura</a>
             </div>
           </div>
         </div>
