@@ -43,6 +43,38 @@ export default function SobrePage() {
           </div>
         </div>
 
+        <div className={styles.bookers}>
+          <h2 className={styles.bookersTitle}>Bookers</h2>
+          <div className={styles.bookerGrid}>
+            <div className={styles.bookerCard}>
+              <h3 className={styles.bookerName}>Jones</h3>
+              <a href="https://www.instagram.com/itsjonessantana/" target="_blank" rel="noopener noreferrer" className={styles.bookerIg}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+                <span>Instagram</span>
+              </a>
+              <a href="mailto:jones@surrealmgmt.com.br" className={styles.bookerContact}>jones@surrealmgmt.com.br</a>
+              <a href="tel:+5511979621962" className={styles.bookerContact}>+55 11 97962-1962</a>
+            </div>
+            <div className={styles.bookerCard}>
+              <h3 className={styles.bookerName}>João Pedro</h3>
+              <a href="https://www.instagram.com/joaobooker/" target="_blank" rel="noopener noreferrer" className={styles.bookerIg}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+                <span>Instagram</span>
+              </a>
+              <a href="mailto:joao@surrealmgmt.com.br" className={styles.bookerContact}>joao@surrealmgmt.com.br</a>
+              <a href="tel:+5511913075068" className={styles.bookerContact}>+55 11 91307-5068</a>
+            </div>
+          </div>
+        </div>
+
         <div className={styles.contact}>
           <div className={styles.contactInner}>
             <div>

@@ -147,3 +147,70 @@
   .contact { padding: 3rem 1.5rem 6rem; }
   .contactInner { flex-direction: column; }
 }
+
+/* ─── Bookers ─── */
+.bookers {
+  padding: 4rem 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+.bookersTitle {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 2rem;
+}
+
+.bookerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.bookerCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bookerName {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--black);
+  margin: 0;
+}
+
+.bookerIg {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.bookerIg:hover { color: var(--black); }
+
+.bookerContact {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--gray-600);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.bookerContact:hover { color: var(--black); }
+
+@media (max-width: 768px) {
+  .bookerGrid { grid-template-columns: 1fr; }
+}
