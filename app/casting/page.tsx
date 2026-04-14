@@ -55,7 +55,7 @@ export default function CastingPage() {
             <h2 className={styles.sectionTitle}>Envie sua candidatura</h2>
             <p className={styles.formSubtitle}>Nossa equipe entra em contato em até 5 dias úteis.</p>
             <div className={styles.form}>
-              <p className={styles.instructionText}>Ao clicar em <strong>Enviar candidatura</strong>, seu app de e-mail será aberto com as informações necessárias. Preencha os campos e anexe suas 4 fotos.</p>
+              <p className={styles.instructionText}>Ao clicar em "Enviar candidatura", seu app de e-mail será aberto com as informações necessárias. Preencha os campos e anexe suas 4 fotos.</p>
               <div className={styles.fieldList}>
                 <div className={styles.fieldItem}><span className={styles.fieldLabel}>Nome completo (Full name)</span></div>
                 <div className={styles.fieldItem}><span className={styles.fieldLabel}>Idade (Age)</span></div>
