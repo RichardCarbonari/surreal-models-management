@@ -47,7 +47,7 @@ export default function CastingPage() {
             <div className={styles.reqGrid}>
               <div className={styles.reqItem}><span className={styles.reqLabel}>Altura Feminino</span><span className={styles.reqValue}>1,72m+</span></div>
               <div className={styles.reqItem}><span className={styles.reqLabel}>Altura Masculino</span><span className={styles.reqValue}>1,82m+</span></div>
-              <div className={styles.reqItem}><span className={styles.reqLabel}>Idade</span><span className={styles.reqValue}>16 — 30 anos</span></div>
+              <div className={styles.reqItem}><span className={styles.reqLabel}>Idade</span><span className={styles.reqValue}>18 — 30 anos</span></div>
               <div className={styles.reqItem}><span className={styles.reqLabel}>Disponibilidade</span><span className={styles.reqValue}>Integral</span></div>
             </div>
           </div>
