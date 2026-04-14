@@ -6,7 +6,7 @@ import styles from "./BottomNav.module.css";
 const items = [
   { href: "/", label: "Home" },
   { href: "/portfolio", label: "Models" },
-  { href: "/casting", label: "By Surreal" },
+  { href: "/casting", label: "Be Surreal" },
   { href: "/sobre", label: "About" },
 ];
 
