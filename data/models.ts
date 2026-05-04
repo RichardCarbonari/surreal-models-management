@@ -61,8 +61,7 @@ export const models: Model[] = [
     id: "19", slug: "fernando-nascimento", name: "Fernando Nascimento", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/148yWUmp-09eICHs-K2RdQSoULCOE6t3E",
     images: ["https://lh3.googleusercontent.com/d/148yWUmp-09eICHs-K2RdQSoULCOE6t3E","https://lh3.googleusercontent.com/d/15FnUWiUjZREImn010OWFjgx2LP1LaP5r","https://lh3.googleusercontent.com/d/16IqaSgUJuPAe2HHmTuAJYB4vLqJjDa6y","https://lh3.googleusercontent.com/d/1BBABNo-n2OnxYuMGtYvmLOrYCYpGyuXE","https://lh3.googleusercontent.com/d/1DI2Vj7zT8WRe5Qh2b6ApxfcPG1pXEn9G","https://lh3.googleusercontent.com/d/1ZgxQIhW0cOTZaubCoTGodfdXMwt8SXGA","https://lh3.googleusercontent.com/d/1bUtYRWQcf5xoq5qy45AAglGuj0y8QLo7","https://lh3.googleusercontent.com/d/1dTk6saiTXNJCU8y5uAkZ22nAu1kEV5u7","https://lh3.googleusercontent.com/d/1h2j3AJe62-A_HehA8GWt6MUr6YxVIHVt","https://lh3.googleusercontent.com/d/1pyJWk_eEbwi_Wf8W3aH8nUEbcjVozpfM","https://lh3.googleusercontent.com/d/1qMfiSFpBaDGBGrWD37LK296GKb_EDvdV","https://lh3.googleusercontent.com/d/1rJ38ChPfMW66tzKQlVAQCZM8ZxDvsIMY","https://lh3.googleusercontent.com/d/1ruMN-zuQYor8_UjWdh85nIGmMaPudOCv"],
-    polaroids: [], height: "1,88m", bust: "100cm", waist: "78cm", hips: "96cm",
-    shoes: "44", shirts: "M", pants: "42",
+    polaroids: [], nationality: "Brasileiro",
   },
   {
     id: "22", slug: "florencia", name: "Florencia", category: "feminino",
@@ -131,8 +130,7 @@ export const models: Model[] = [
     id: "20", slug: "jhonny", name: "Jhonny", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/1-XZZcbvxUagm5VuwxNjrjOH664WisKEt",
     images: ["https://lh3.googleusercontent.com/d/1-XZZcbvxUagm5VuwxNjrjOH664WisKEt","https://lh3.googleusercontent.com/d/1-yA8NRrVSpk6cYZmAFAlFmNhWwUQ1rok","https://lh3.googleusercontent.com/d/1-zb7MbSqGnkPbuyXmAXsmVX4pK_GmuP_","https://lh3.googleusercontent.com/d/11aJF49VShNPu2rjKMmIANHED4HWn0z-G","https://lh3.googleusercontent.com/d/14-bOxfhv6JX7fHInjNBKGpQxdeAE1A30","https://lh3.googleusercontent.com/d/16Qq5qhQtZNeB4Ms4kNphmoSA-8jbQ5GQ","https://lh3.googleusercontent.com/d/16fCgfihQELVECmdzg3eQT41CandYZoML","https://lh3.googleusercontent.com/d/184iQyh6o5u4kfpmOWe7fF_iR0qlBImPY","https://lh3.googleusercontent.com/d/1DLYCvt96VUiosJj2qis2kHVsUFdFG3Eh","https://lh3.googleusercontent.com/d/1EOrm1ea5qEGp0MympIWsd1lSk4nt6os0","https://lh3.googleusercontent.com/d/1SI8dVX7dKM5GuvTZW8YIbNfcygJ2vqH5","https://lh3.googleusercontent.com/d/1X11gbuPD9v5rEuhaEOBY5kTI65My3aHT","https://lh3.googleusercontent.com/d/1X1qi90Mgi0C-NkTHDtcZO10d9n6j7N_X","https://lh3.googleusercontent.com/d/1Ymg29xavDOb_oAD90M7DDXEi7U6ISWUa","https://lh3.googleusercontent.com/d/1bjb7LBXcaPzdLU3ZfaaRtYQQvOgdG9EI","https://lh3.googleusercontent.com/d/1dHM5lg8FNn8Olr0Ej3aef2IjPgnfVamB","https://lh3.googleusercontent.com/d/1e33RH5R_LD8uMIm7DSCKj5BUSaxykzKq","https://lh3.googleusercontent.com/d/1imSC7vRp9Ur9184BagVyJ6XbKDCaZEob","https://lh3.googleusercontent.com/d/1jjK-Ql0yaQnWUNoo0VvQn-TCF855h8id","https://lh3.googleusercontent.com/d/1lmPoObgFTnb3zvCf7IeObtGBxxJkZCv6","https://lh3.googleusercontent.com/d/1r2Lcr0W5s-_iJZmyr_5uMKMS7hdG8mP7","https://lh3.googleusercontent.com/d/1r5S-_3rJmiXvP0XwDF9iQKN0QtYcFryc","https://lh3.googleusercontent.com/d/1rJjQ0szKVRSzzxJskU3NvMtQZseoPmTv","https://lh3.googleusercontent.com/d/1uAWrm86wfy_ylFAvmkpT-vitvCeORMuH","https://lh3.googleusercontent.com/d/1vuVP_awESlH963XgZjGhWIQz6DRhVF34","https://lh3.googleusercontent.com/d/1x3Z4mYxuhXNHz_wI24zDK4G52UiZGkPt","https://lh3.googleusercontent.com/d/1yX0jFInRMbGYeNFFqyf_T6Gt7h9_vDew"],
-    polaroids: [], height: "1,88m", bust: "100cm", waist: "78cm", hips: "96cm",
-    shoes: "44", shirts: "M", pants: "42",
+    polaroids: [], nationality: "Brasileiro",
   },
   {
     id: "15", slug: "jullie-rocha", name: "Jullie Rocha", category: "feminino",
@@ -206,8 +204,7 @@ export const models: Model[] = [
     id: "18", slug: "stevie-jones", name: "Stevie Jones", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/10OS-AKtwvsVEq8RKWCLXG_pM4hw3zfZk",
     images: ["https://lh3.googleusercontent.com/d/10OS-AKtwvsVEq8RKWCLXG_pM4hw3zfZk","https://lh3.googleusercontent.com/d/11M1YTZJUqQWhkXeaw_x_V-vteYDBLy8d","https://lh3.googleusercontent.com/d/12eneG_5t0Z8K9V9-W77J8vCJMp-FXDwk","https://lh3.googleusercontent.com/d/14UKd7lDPbTGgVV3jrUjQTrId7m1KLeim","https://lh3.googleusercontent.com/d/1AstMXBWamwp9qmtt-f7sKbQo4q7ZQMix","https://lh3.googleusercontent.com/d/1Ctz7jvxuCX0P6vMywxFU-u6CajTxLRrW","https://lh3.googleusercontent.com/d/1FR7niwshMT7gTTSKWhBdCAOujUKB6Q1T","https://lh3.googleusercontent.com/d/1G37wqZHsSB5kemNJH_BrssPpyp-PYCG8","https://lh3.googleusercontent.com/d/1MBs1mig9Oiyn2toHEZCKciZp7Ba7hc7K","https://lh3.googleusercontent.com/d/1MrYkR0y_XrNsoGBYanfKwSqaMoO--HJt","https://lh3.googleusercontent.com/d/1S6ExwxzgHf09A3hyWjgOxhT_NkkQn3uS","https://lh3.googleusercontent.com/d/1TY_XT0o0KzV5TakZiW5YxcKaDX5xcYaV","https://lh3.googleusercontent.com/d/1Zvztz-wXt1peOpQJnm7lf7xl8t7fI0jR","https://lh3.googleusercontent.com/d/1_23oOgRttOfhQ2ykpQQTQ5b30oZAK4FW","https://lh3.googleusercontent.com/d/1bcNmgIORij3lTjaoPljizpLVgc40SIGd","https://lh3.googleusercontent.com/d/1gLm9u3pOuVvErNQY_-MW_CcCVAa9pMjM","https://lh3.googleusercontent.com/d/1jUowa95YdZDevQytoybwSJizk3sB-7ty","https://lh3.googleusercontent.com/d/1lPhVDTyrT-AA4zD5n9-nv0-_AtpMD8iQ","https://lh3.googleusercontent.com/d/1nrUfBSh_aHhxWA_RLsqvX8Zr-rUjsswd","https://lh3.googleusercontent.com/d/1o47odPYijVZjz8qaavbwKYivV9d98frM","https://lh3.googleusercontent.com/d/1qH92Uh_q8OXA8MetZMJRP-FXuhPdX6Ix"],
-    polaroids: [], height: "1,88m", bust: "100cm", waist: "78cm", hips: "96cm",
-    shoes: "44", shirts: "M", pants: "42",
+    polaroids: [], nationality: "Brasileiro",
   },
   {
     id: "6", slug: "wagner-piazzoh", name: "Wagner Piazzoh", category: "masculino",
