@@ -59,7 +59,6 @@ export default function ModelBanner({ model }: Props) {
             <h2 className={styles.measureTitle}>Medidas</h2>
             <div className={styles.measureGrid}>
               {model.height && <MeasureItem label="Height" value={model.height} />}
-              {model.age !== undefined && <MeasureItem label="Age" value={String(model.age)} />}
               {model.bust && <MeasureItem label="Chest" value={model.bust} />}
               {model.waist && <MeasureItem label="Waist" value={model.waist} />}
               {model.hips && <MeasureItem label="Hips" value={model.hips} />}
