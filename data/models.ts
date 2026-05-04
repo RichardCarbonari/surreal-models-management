@@ -38,8 +38,7 @@ export const models: Model[] = [
     images: [d("1YX1Cb7rZgvFksrO4zhvCq_IDmJ1hn0uJ"),d("1mvb1PuXbFMxZPmaCUv1T2Td0kbz0Qwd_"),d("1fCgnE9W-kjMBtuOvM8k2OGlazd3yWByY"),d("1gcbm56ispFFFmkQmLlid1NbJjM_NbXQw"),d("1erBiKRO45zn5HRlc7qfSFNDGyIMEr3JS"),d("1078nkZvNagrwrYRag7whs6f1oxB-EJP4"),d("1BLMzQCn20sFpwzfQMYacVL-YQ2zkqWot"),d("18cVpaBZ5kmw5CGMSoyFP9zrLtSpslilk"),d("1n8LIjoHpyLTI6KXL2U79BVSRImWobq-6"),d("1T3BZ_bzC2mncDLP9zVx0qi8f8k-wvPt1"),d("1X85m4srtMKfdrpeLspfVP4Tixb9jeTRP"),d("1-zysPf02YBDBwXeNc_DMjLwsWtxL6tdp"),d("1bsLsQae8c3je293L_Wzpy5uCVX5_1nq4"),d("1nkS1ZY3cjPOlQ9fPZhy_pd5F1rjeW7O5"),d("1qUJpq7kaO5fDqZQNQkmSfepJEJ_aP56V"),d("1KxdVCn0iURp66h2sJqTKst7z1Hnblj61"),d("1eY1lEIC8YzckLYGoZbNk8Nd1fKdoN52o")],
     polaroids: [], height: "175cm", bust: "78cm", waist: "62cm", hips: "89cm",
     shoes: "40", shirts: "XS", pants: "30",
-    eyes: "Dark Brown", hair: "Black", nationality: "Brasileira"
-    instagram: "https://www.instagram.com/imclaraalbuquerque/",
+    eyes: "Dark Brown", hair: "Black", nationality: "Brasileira", instagram: "https://www.instagram.com/imclaraalbuquerque/",
     portfolio: "https://drive.google.com/drive/folders/1v-kN7Zq9g8-CmBaqzrc6KGNWWeyTWoJu",
     featured: true,
   },
@@ -55,8 +54,7 @@ export const models: Model[] = [
     images: [d("1DLyrt3f0s8Gv0IMOa4X0WpVVH6IMdliV"),d("1W4gzdSI-xxCrynyDFSXhylIU4rgbUM8M"),d("1Y1S7XFwvPn6kr--GgR_XTGhghUPpLbWo"),d("1s5HtF5IKKqlvFN-PCS6x-17s3e2pCS4g"),d("1o7-mmzQtKyESZnEtvHI2TCAGVp2hrE0R"),d("12fjo6pCBtI7TtOCLg03UHqlDA7dte8fC"),d("1SxOO2U8bW1D25yaWCYFQxTUO4ll_XzW5"),d("1XUzcATw8OPuzBWmwDoA9GXtBxocKcPR0"),d("15x2kCuvkjaq-Vl0C1IO9EvNC25PeXsom")],
     polaroids: [], height: "176cm", bust: "78cm", waist: "62cm", hips: "89cm",
     shoes: "39", shirts: "XS", pants: "36",
-    eyes: "Brown", hair: "Dark Brown", nationality: "Brasileira"
-    instagram: "https://www.instagram.com/fernanda.faleiroo/",
+    eyes: "Brown", hair: "Dark Brown", nationality: "Brasileira", instagram: "https://www.instagram.com/fernanda.faleiroo/",
     portfolio: "https://drive.google.com/drive/folders/1OaVR0ooI0sSNizCOlvHc6OEXVxLiknJP",
   },
   {
@@ -84,8 +82,7 @@ export const models: Model[] = [
     images: [d("1YIgOBx-qcml5XzDWw-FLp9v4UlerboYA"),d("18jaynPT2zb-BrE0R3E8kGpKI8Z7__9LD"),d("1cuLs5ioHKp8nXG5xQDxhAKp_uYLIU2-z"),d("1wBvH5BUJeKhgERD3yZ3badYESR2I8xy7"),d("1GSRVEr5K3g3zlAGwtL5xuLwQ2JQBNW-I"),d("1PITCbiNuR6izfl0-VzBmf5C1E2q0ITKo"),d("154YpjR9Zdk5ePIijNbDWi5crhQgiQ8cD"),d("1lKyLnF9qTnPEpbbn8Qxb9dyP4Nv0iu_y"),d("1pduPL0i5icQ-_Gfo-HHsB7AVSiRvGUU1"),d("1MyeBKnsfUi82I_-dSXFlR-meFY-zHofn"),d("1sBi3jkIPQLmr-t_CxKQTXe2hOBYYeS8p"),d("14rWqjdk7SGGA7hs0FP-vP62DismJzCk_"),d("167g-fSMJqlbpcYQTnxyoc-ukiwpKzKhy"),d("1wFYkG5jtM4kfFyDaJ-rqEqji9TDef7v1"),d("1-BOJeGU3ek2_iWMQSNzDf7uSi6SpYxdl"),d("1Sx6azXPifP221ogFRjuOA9WlNBjP4cZA"),d("1qzPxo5a_SYnC9cfSOrgfrGnJowUHqzUr")],
     polaroids: [], height: "1,72m", bust: "80cm", waist: "62cm", hips: "92cm",
     shoes: "39", shirts: "XS", pants: "30",
-    eyes: "Dark Brown", hair: "Black", nationality: "Brasileira"
-    instagram: "https://www.instagram.com/gio.peixoto/",
+    eyes: "Dark Brown", hair: "Black", nationality: "Brasileira", instagram: "https://www.instagram.com/gio.peixoto/",
     portfolio: "https://drive.google.com/drive/folders/1s9XZXx3FLtRmBa5IFndAkvA531pHRAsJ",
   },
   {
@@ -94,8 +91,7 @@ export const models: Model[] = [
     images: [d("1UzBwqDxFBX3FZP5fWxb2fBiGQOC4qPeL"),d("1nHt81x3qCqFN5If6Zqo0sioDpXagRcia"),d("1lXtG7rDSfy3Dj3cD6KxrIr_LmGiV6rGY"),d("1RUFn1oysl2sqwUz7g9N8WZl2zBh-5efY"),d("1KpPVCzQoAgEDopQbXBrVfg1n16yBFAa1"),d("186sXJMeQlFjzUmFZQsEQChgp5XMavvL2"),d("1onaLEvqfu_z67_OXLac_MlOklxvk8ovj"),d("1SY56bmLDudPqjC3nsjtnA9zCGFgT7GxV"),d("18pOdJhHpySBruGk0jvgqCoOY8YgXkgW7"),d("15aeRnYBMcig7gRK03eMRjGpfsXJ3Qblv"),d("1Kn7Kgk6gxoXFsfkm-_f8Y8owF_9YRS6J"),d("1dxQMUpfc8A850Q8zFLiyskcGcUP3HrB4"),d("1d00BmJPjBvFo7Z-wgJrFhTrQQ9qrPzMx")],
     polaroids: [], height: "188cm", bust: "94cm", waist: "74cm", hips: "89cm",
     shoes: "44", shirts: "M", pants: "40",
-    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro"
-    instagram: "https://www.instagram.com/cajjaiba/",
+    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro", instagram: "https://www.instagram.com/cajjaiba/",
     portfolio: "https://drive.google.com/drive/folders/1i96MK6SFzrUC968iDNQVBw0p5R5qZ8uj",
   },
   {
@@ -113,8 +109,7 @@ export const models: Model[] = [
     coverImage: d("1w7T0D9ftguujG9klWLWSnvU8fDbG4rG3"),
     images: [d("1w7T0D9ftguujG9klWLWSnvU8fDbG4rG3"),d("179m_VHoG75a5wJfSXJcZ3WTdanL1i6CU"),d("1EFDdZTIiB3-HXUM65EBcH3XSqxgfeD9m"),d("1L68mUjIITLc27Rm2bHgBwpFO8LRlMJ22"),d("1L1PeQLd6IuQjQ9y4xBvuuz2jp4FP6whZ"),d("1-N_gReE-9gVSZ4KwOrun-rt8SslnmPYT"),d("1668xrbqAkpPu5DSAO_rm0TPVJKJ3EDLe"),d("1iiLOFvATblNLl3vDJNXYPSzVZCnuKRVp"),d("1iYJOaGJxV2o8tWFH6tIGmMyrWHvkR0BN"),d("1uWXzTEtMqSJi7_SY4I9q8vjzJ4xOYlw9"),d("1CfjKUabMoeSr37Wod8ylSqo9oq2b2aFQ"),d("1FlyuI-Ekt1Ma3boISoRkTi3nV60KdDRd"),d("1e9WAkx69hbUfdj52Nvs7Q4BNRPy20zv9"),d("1q-xHLrvr9LL_Tss8Mt_2_VR9HLLAQJSB")],
     polaroids: [], height: "192cm", bust: "92cm", waist: "74cm", hips: "88cm", shoes: "44 EU",
-    shirts: "M", pants: "40x42", eyes: "Dark Brown", hair: "Black", nationality: "Brasileiro"
-    instagram: "https://www.instagram.com/imguss__/",
+    shirts: "M", pants: "40x42", eyes: "Dark Brown", hair: "Black", nationality: "Brasileiro", instagram: "https://www.instagram.com/imguss__/",
     portfolio: "https://drive.google.com/drive/folders/1JIOUE9n3oZ6JsoVFmOPbukSN9HWDHT9r",
     featured: true,
   },
@@ -134,8 +129,7 @@ export const models: Model[] = [
     images: [d("16t4stUrtuHJ12aIvh2kPRkJgq3zoCnW8"),d("1REsEhUSHCb4xR9Ixes8Bx1_IrggCiTgj"),d("1rXy32D2RYSiV1JRzCzImA6i5_S1TYc8E"),d("14IL99hnKKBPi6sDLdxQ3PvKP_FBBmJNJ"),d("1L1Th2qgfomnvrwPi0X7JyXWdiEvpy6mG"),d("1OTbDjJBtTA3yxdX6SF_U4LCRogyYIII4"),d("1wCOOy6T0oLl78J37DB5yQdg_H97VpvZY"),d("1r3keAbbUHW2CAxpCNLUhAI0UBR2HjWtp"),d("1x0Euk604n4v098mpXjcdwWLjPVp-fupl"),d("1swGA9UeSfQIbo-Vqmjka4rQj8oMfzVA5"),d("1diL3vjQJTmrf2fPfgwsBw2BR3SwxjoqQ"),d("1hN2xZOc441-S6bx8AghhszZMdNkqsGNx")],
     polaroids: [], height: "1,78m", bust: "81cm", waist: "60cm", hips: "89cm",
     shoes: "40/41 EU", shirts: "S", pants: "38 EU",
-    eyes: "Brown", hair: "Brown", nationality: "Brasileira"
-    instagram: "https://www.instagram.com/iza_mazotti/",
+    eyes: "Brown", hair: "Brown", nationality: "Brasileira", instagram: "https://www.instagram.com/iza_mazotti/",
     portfolio: "https://drive.google.com/drive/folders/1GFH8AhUnDEG9DJOS2JFosUw7MSVJ8pzK",
     featured: true,
   },
@@ -153,8 +147,7 @@ export const models: Model[] = [
     images: [d("1OhZnEla-2Y7yO4l0QhsRiWIKYA88k0Nv"),d("1JFK3Pf-r78kfHay6jJ0Kg-43T-YzSJfg"),d("1dZQT4LV7BP6GD8NMSaAOa9niIIvucND3"),d("1HtrjxIMWAOrOuZw2xnneR7yjbfqXNWVr"),d("1y9gkp20proJGbfKHemGXluQgi8Z1ahjX"),d("1kbRTeuPEOxpi4e4xga6GuYsUrLkr3YSa"),d("1kj9ELBmk71GgE-oGztyAyXuXZSzAFEIB"),d("1fuybtLeYgF6hC87acm6XLI9V2jD4h94c"),d("1Qa_3bbL6dAK-ErYXiGbbdySSE1Y3LolM"),d("1WcfJhu3lHOeac6qFflWq88Bv2E7DcYa0"),d("1-YQSZZB0foG1G1numyZE275ifmrHTFNM"),d("1ifTQLN48A1lB4DBzV6SbRrj1Xa-CLIaj")],
     polaroids: [], height: "170cm", bust: "80cm", waist: "64cm", hips: "94cm",
     shoes: "39 EUR", shirts: "S EUR", pants: "38 EUR",
-    eyes: "Green", hair: "Brown", nationality: "Brasileira"
-    instagram: "https://www.instagram.com/jullierocha/",
+    eyes: "Green", hair: "Brown", nationality: "Brasileira", instagram: "https://www.instagram.com/jullierocha/",
     portfolio: "https://drive.google.com/drive/folders/1_wrHwfhtrEqQL8LpMbmaIeT5PSb6dnrW",
   },
   {
@@ -169,8 +162,7 @@ export const models: Model[] = [
     images: [d("11DI2vjqPhyiBfhbxRC1YrduFvvwpUEOh"),d("1gZYMiCMzsGIXHK6J6udeFX7YbXFN28tH"),d("1l6qiVdAtu05VkG4WdTfI-NJsX4kfHa-L"),d("13ql8SvbkeXDKcnsm6AdeZ7MZBAYbP-2L"),d("1JpYT7v_8mkd-7U04NBkX4XX-37lo6Wy3"),d("1ccYHf9cDfewjOqQO-Ddm1RTzA2NVa_9A"),d("1Nd4voUcpXmjxlYlXqT4RWKM7CpPhTQC3"),d("1gaeGZ6ewPsz2nZNNaliFQmXmO16ouAxU"),d("1lPyHEv4rojtktwIaPMgOroLQkDHZsiA5"),d("1hmq1D_87yg0AXcDuK-qLdXenfRkldN0N"),d("1tNRYZQ4v5g6rWgwViX78v16TaEsWQ96A"),d("1rFRl9cFMBmpEciRoe181iVcOmS8AgPr-"),d("1FrWHA8eJ-YbG8fGteJPnxFH8g2GJHuwm"),d("1D_5UX3UsmRmr_Hp7nTNwSi4dNhw7_wxF")],
     polaroids: [], height: "185cm", bust: "99cm", waist: "77cm", hips: "96cm",
     shoes: "44/45", shirts: "M/L", pants: "30/32",
-    eyes: "Green", hair: "Brown", nationality: "Egípcio"
-    instagram: "https://www.instagram.com/karemalashry/",
+    eyes: "Green", hair: "Brown", nationality: "Egípcio", instagram: "https://www.instagram.com/karemalashry/",
     portfolio: "https://drive.google.com/drive/folders/1oL9XvmJPdEQiWDPWHX798wYxxHGcZZk4",
   },
   {
@@ -179,8 +171,7 @@ export const models: Model[] = [
     images: [d("19-k9GN4fRLYzXJQBbzyn1t7WbaQSt8Ku"),d("133ZFjfaBhHba664lttLWbCTqjVzIWS6p"),d("1RMtgWqkPoYfHTqham2Y3VwWfdIjqgUZw"),d("11Nu5MYmMrmaP5VCz3tmmCqsChkXHLlqQ"),d("1BFjPtQzYxWHyAs1bXDJYuhDhVOOrkGKA"),d("1kOOrWcGJA9x6UHq7QaTAfNegmO7g4abr"),d("1kslTibmAit2WkFX22dXi6yvKl4QARqwG"),d("185daWdO2Z7LR8OeQCLwFGbHTnQjvZ76E"),d("1yTXPVydNmWA29d1MAoa2qkGVgcGWEIyA"),d("1zv-oZ-0gQRi6BGaGXBGEBo4fw_UA1hyr"),d("19-k9GN4fRLYzXJQBbzyn1t7WbaQSt8Ku"),d("1cd7Y-GNpgHDxqBkdZ33fKSEGpOfQz4qj"),d("1qQxCiPvuGqJHikwlWVvT3bKHXNBhq4rP"),d("1A7SUti7PsXOa8-1R8vnY2w-xqSwookIb"),d("1kLzG519W5eTJX_ZdS0HOtEgWsQIqUq71"),d("1o3VZWqs3iudT92TtkPhg8M7ej8amt_6D"),d("1ShwjAe3rYE8Ykty9H4lojMjky8sU11CO"),d("1E9R-6q7GNsK0j-hHZGjpy_ooCB1YrKna")],
     polaroids: [], height: "1,92m", bust: "98cm", waist: "78cm", hips: "95cm",
     shoes: "44/45", shirts: "M", pants: "32/34",
-    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro"
-    instagram: "https://www.instagram.com/tezezico/",
+    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro", instagram: "https://www.instagram.com/tezezico/",
     portfolio: "https://drive.google.com/drive/folders/1JIOUE9n3oZ6JsoVFmOPbukSN9HWDHT9r",
   },
   {
@@ -189,8 +180,7 @@ export const models: Model[] = [
     images: [d("1rmNK_EQyxWDCtr0_01-3o6YyzOBX50tJ"),d("1S2d3Yr79GX02DRo2wHcskMKCFp060LRJ"),d("1T7lokmC6L1hM-MxP4tUjZhPHQ0yMLGTj"),d("1hIlodbRPuXOFVGi3nZg--hxQu75FIYOb"),d("1DyIGfN3hrUNp_G1M3S4SDDoQqOPgS7rX"),d("1tOL_B5fSeBcc8TruSKvCQDMvMpgJncez"),d("16V3o6dEkfAdCfpL_FPw3_p5cl0GNf7Y7"),d("1gba4MfH6pEqiaqT3lq2cslpfj3VyljFU"),d("1ZfQZFEhl7lBu3wsAg6ZIUcZcuPhc1Fpx"),d("1ma_pVvhJPi1u3-jFihEYI8NsFIgshTw3"),d("1CmpRIeMRad15MbYgm5qFhUWySX8Vihx4"),d("1pc4DOfRBxWlYnVQC6jWxXJs9rY1qLSAx"),d("1eqOrhQQi5oCxoeFsFR8aVvbBcAoX5rvu")],
     polaroids: [], height: "174cm", bust: "78cm", waist: "62cm", hips: "90cm",
     shoes: "39", shirts: "XS", pants: "36",
-    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileira"
-    instagram: "https://www.instagram.com/nanda__feitosa/",
+    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileira", instagram: "https://www.instagram.com/nanda__feitosa/",
     portfolio: "https://drive.google.com/drive/folders/1FJWoKd5LRRpSfquNaW17uqvhUvM-t2bH",
   },
   {
@@ -199,8 +189,7 @@ export const models: Model[] = [
     images: [d("1yAyjIXnrIMQxL7HfU1XpxlTfwANVE0o4"),d("1ADSpnIkW3naEiCPRIgSKQ1ZunroVS-Yl"),d("1ZiKDGKAg5DBTQ3eMSBxeQcpYXrbSSkzc"),d("1aWWEDX2_3wpcM8zfctSWoBHNCI0xWOwH"),d("1YV0CF66emR_6j_DKsUhVNEc0omxDi6Ks"),d("1yPLov7L_YYSv9xBUXK2yhXp9WjRWTbaS"),d("1IjF-yWGq0d76GmMejqEF5hU9W0KDcIKq"),d("1KGIMdLHSDiGx8bGSn7vaSTYRnWqfQwdJ"),d("11KGijYBgOjnbGL7yJujmEzxCvqAhCJiZ"),d("1in_QS0dHNHN7dwfA9G_Gu6l_BgW6wjk6"),d("1s4aC-MrkmwwifSnOpwCgJgCfEshML2pN"),d("1246l1R_94jVekL2Oz9wAZq-hbOQGH60n"),d("1KH5rND8W3XzHzGAfKWDlOUY9-fYwJPkw"),d("16KQGVPV3mcn_PTQWUDKUALV7F6Ia3G_F"),d("1S9cRplvv9gQBRWzpWa6u61axO70MC6ov"),d("1iEw8JiJGnekLWB5j3dA0okSWSx0TXHP7"),d("1BMleWsd4lmvp_JpdqbUOQ3HxLWUNG_wd"),d("1oR5gmhIA3Va6V7z_v00pDnffYrxDSwOQ")],
     polaroids: [], height: "1,73m", bust: "78cm", waist: "61cm", hips: "91cm",
     shoes: "39", shirts: "S", pants: "36",
-    eyes: "Brown", hair: "Brown", nationality: "Brasileira"
-    instagram: "https://www.instagram.com/rmilleer_/",
+    eyes: "Brown", hair: "Brown", nationality: "Brasileira", instagram: "https://www.instagram.com/rmilleer_/",
     portfolio: "https://drive.google.com/drive/folders/1YwquDuStHktcMrEXp5c5orDn7_fyZ6ZX",
     featured: true,
   },
@@ -210,8 +199,7 @@ export const models: Model[] = [
     images: [d("1q7hHDCT8YGPwi9vXp4lbhEFCodOeDVsP"),d("1n53U9Ghm-fAbRkJJQBJ3A9qtRfcWo1VH"),d("1ACfvobQNpC6RVIJxEwidgl_k7wwMd9rN"),d("146Xt8WI1qxhgt0XC6MApJilSUDqt-G3f"),d("1z1TBsK4kNf4uX8gxRSBYnB2pr31CFbao"),d("1rgyTDm-0SDfP544o9NzesEfTc-CtJ-TD"),d("1y9-saC186SAEDOxK3wRa2pdeqWRPMiRG"),d("1Aa5whm4_0xD16N-RneaxZmAapM-uiLl5"),d("1QmQ3PcdVoGUWJvxaL75XiEOTzR5x_Gbh"),d("1CbMo2hC_sJFYevqgMZF57qJ0DchbkwKd"),d("15iJijOJOKUWGyRmS3KrO18lLod1vn0Aj"),d("1rJ4FtoEqE2BzdaqAZlolZroL4SqfC-9M"),d("1SEiBV4H1CtrztUIAs2L7BwsbH_PrbM5h"),d("1J4Js9J9BAlQ74N8DYnS1FNz0NFh_bIBF"),d("1QYJ-uu77Bo5eriVO9712si4v8cNQ7_en")],
     polaroids: [], height: "183cm", bust: "97cm", waist: "79cm", hips: "94cm",
     shoes: "44", shirts: "M", pants: "32",
-    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro"
-    instagram: "https://www.instagram.com/richardcarbonari/",
+    eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro", instagram: "https://www.instagram.com/richardcarbonari/",
     portfolio: "https://drive.google.com/drive/folders/1MVzb35urA1ZTQkiu0y9YoYqDyVQkE6JD",
     featured: true,
   },
