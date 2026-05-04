@@ -89,7 +89,7 @@ export default function ModelBanner({ model }: Props) {
                 Drive
               </a>
             )}
-            <a href={`mailto:surrealmodelsmanagment@gmail.com?subject=Interesse em ${model.name}`}
+            <a href={`mailto:info@surrealmgmt.com.br?subject=Interesse em ${model.name}`}
               className={styles.btnPrimary}>
               Solicitar Modelo
             </a>
