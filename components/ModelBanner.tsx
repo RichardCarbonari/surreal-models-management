@@ -1,3 +1,4 @@
+// ModelBanner v3 — no age field
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -111,4 +112,3 @@ function MeasureItem({ label, value }: { label: string; value: string }) {
     </div>
   );
 }
-
