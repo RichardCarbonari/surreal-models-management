@@ -4,9 +4,9 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   images: {
     remotePatterns: [
-      { protocol: "images.unsplash.com" },
-      { protocol: "lh3.googleusercontent.com" },
-      { protocol: "drive.google.com" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "lh3.googleusercontent.com" },
+      { protocol: "https", hostname: "drive.google.com" },
     ],
   },
 };
