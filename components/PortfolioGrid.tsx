@@ -34,7 +34,7 @@ export default function PortfolioGrid({ models }: Props) {
       </div>
       <div className={styles.grid}>
         {filtered.map((model) => (
-          <Link key={model.id} href={`/portfolio/${model.slug}`} className={styles.card}>
+          <Link key={model.slug} href={`/portfolio/${model.slug}`} className={styles.card}>
             <div className={styles.imgWrap}>
               <img src={model.coverImage} alt={model.name} className={styles.img} loading="lazy" />
               <div className={styles.overlay}>
