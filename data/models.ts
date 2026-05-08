@@ -122,26 +122,10 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1XYjLdyfmGxBv89YQVBc47dDVcIU7bJYb",
   },
   {
-    id: "4", slug: "emad", name: "Emad", category: "masculino",
-    coverImage: d("1QaOhJ2qiBnDNfVGGlaxAsMx16xlz2ZmQ"),
-    images: [d("1A_cyOQj7z42k0ysC1Tr-n_XW5RUF4YrK"),d("1JnP7W0DHeBUeR4jTUBwpeKOEROd6XHJn"),d("1QaOhJ2qiBnDNfVGGlaxAsMx16xlz2ZmQ"),d("1JlCy41O0UkCjahGq4p-GHOnriUPzSJ4K"),d("1GKijZ-fIaSJpiGzPQHxmPMoElamnp6Px"),d("1tLdgLceF4mmbVPGJWIvan1k1oRmkdGB7"),d("1dP5jUjwU7uGenYlOtZ_fGjgUO0kTSEOu"),d("1PV2mfCDs7bm1Rdb9UAzP0gxL4C--Daxb"),d("19K0pY6MF1o_1e6IzKDvV8mfbbt9ITvmM"),d("1Qz_5PRileimilBO17co1S8nLpVxAEfQ-"),d("1jzvVxzWwnwGfuODcjOOz4eYHBkhEmeER"),d("1tzcV9k8zliTeD3lmNaqjWK6ncrrQapSX"),d("1PkX6UAzMsIM3vdceQ-rtP92gkwghjfcG")],
-    polaroids: [], height: "1,85m", bust: "90cm", waist: "75cm", hips: "88cm", shoes: "42", eyes: "Brown", hair: "Black", nationality: "Brasileiro", instagram: "https://www.instagram.com/emad__photography/",
-    portfolio: "https://drive.google.com/drive/folders/1q0zVdrBwEuu3yWQKy4wSChec-ZnhxtRz",
-  },
-  {
     id: "30", slug: "fernando", name: "Fernando", category: "masculino",
     coverImage: d("1q0zVdrBwEuu3yWQKy4wSChec-ZnhxtRz"),
     images: [d("1q0zVdrBwEuu3yWQKy4wSChec-ZnhxtRz"),d("1HQ2YJfRP9Uymgp3qVYuJgq2kU7isH-TO"),d("1PBAiivYOdzh9QYJ08EDqBAUzzIl2-X5m"),d("1SI4NDTVgsD8TiDivWmOgMHJy1PECFsst"),d("17dAaERquRclF9Zg9z8OC7SWjsKSHoUD7"),d("1TYcnj_JsL7olMqL3OMRrePXCq3GD7_5k"),d("12l3ZBp8LvVcTNkgAJbhp9SQNSwL4FTGe"),d("1PfIY3i4VrmLyCfHtdRt19hmp95NRaT4n"),d("1JxAARtnAz56Uavjiih6nKQA3cgAn7Pfk"),d("17xZgoXLONNXi4Ch1LzMRjBIWlytQnjrN"),d("1ANBo1_JT3ZjJRYRiUGcrtfThcHd1ghrN"),d("1AOUlxBxDMDYF6LbZHnlywTB8SZnVJiEg")],
     polaroids: [], height: "1,86m", bust: "90cm", waist: "75cm", hips: "88cm", shoes: "42", eyes: "Verdes", hair: "Castanho", nationality: "Brasileiro", featured: true,
-  },
-  {
-    id: "12", slug: "giovana-peixoto", name: "Giovana Peixoto", category: "feminino",
-    coverImage: d("16-Ed_SXPy9YgLj8SjsokfThpF4G8qQTz"),
-    images: [d("1YIgOBx-qcml5XzDWw-FLp9v4UlerboYA"),d("18jaynPT2zb-BrE0R3E8kGpKI8Z7__9LD"),d("1cuLs5ioHKp8nXG5xQDxhAKp_uYLIU2-z"),d("1wBvH5BUJeKhgERD3yZ3badYESR2I8xy7"),d("1GSRVEr5K3g3zlAGwtL5xuLwQ2JQBNW-I"),d("1PITCbiNuR6izfl0-VzBmf5C1E2q0ITKo"),d("154YpjR9Zdk5ePIijNbDWi5crhQgiQ8cD"),d("1lKyLnF9qTnPEpbbn8Qxb9dyP4Nv0iu_y"),d("1pduPL0i5icQ-_Gfo-HHsB7AVSiRvGUU1"),d("1MyeBKnsfUi82I_-dSXFlR-meFY-zHofn"),d("1sBi3jkIPQLmr-t_CxKQTXe2hOBYYeS8p"),d("14rWqjdk7SGGA7hs0FP-vP62DismJzCk_"),d("167g-fSMJqlbpcYQTnxyoc-ukiwpKzKhy"),d("1wFYkG5jtM4kfFyDaJ-rqEqji9TDef7v1"),d("1-BOJeGU3ek2_iWMQSNzDf7uSi6SpYxdl"),d("1Sx6azXPifP221ogFRjuOA9WlNBjP4cZA"),d("1qzPxo5a_SYnC9cfSOrgfrGnJowUHqzUr")],
-    polaroids: [], height: "1,72m", bust: "80cm", waist: "62cm", hips: "92cm",
-    shoes: "39", shirts: "XS", pants: "30",
-    eyes: "Dark Brown", hair: "Black", nationality: "Brasileira", instagram: "https://www.instagram.com/gio.peixoto/",
-    portfolio: "https://drive.google.com/drive/folders/1s9XZXx3FLtRmBa5IFndAkvA531pHRAsJ",
   },
   {
     id: "31", slug: "iza-mazotti", name: "Iza Mazotti", category: "feminino",
