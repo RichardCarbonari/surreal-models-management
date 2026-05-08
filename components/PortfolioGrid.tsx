@@ -11,9 +11,17 @@ const CATEGORIES: { value: ModelCategory; label: string }[] = [
   { value: "masculino", label: "Masculino" },
 ];
 
+const FEMININO = ["clara-albuquerque","fernanda-faleiro","florencia","giovana-peixoto","helena-weber","iza-mazotti","jullie-rocha","nanda-feitosa","preta-guimaraes","renata-miller","samira-leopoldino","sofia","yasmim-matos"];
+
 export default function PortfolioGrid({ models }: Props) {
   const [active, setActive] = useState<ModelCategory>("feminino");
-  const filtered = models.filter(m => m && m.category === active).sort((a,b) => a.name.localeCompare(b.name));
+  const filtered = models
+    .filter(m => {
+      if (!m) return false;
+      if (active === "feminino") return FEMININO.includes(m.slug);
+      return !FEMININO.includes(m.slug);
+    })
+    .sort((a,b) => a.name.localeCompare(b.name));
   return (
     <div className={styles.wrapper}>
       <div className={styles.filters}>
