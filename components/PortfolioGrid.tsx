@@ -1,27 +1,24 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { models, ModelCategory } from "@/data/models";
+import { Model, ModelCategory } from "@/data/models";
 import styles from "./PortfolioGrid.module.css";
+
+interface Props { models: Model[]; }
 
 const CATEGORIES: { value: ModelCategory; label: string }[] = [
   { value: "feminino", label: "Feminino" },
   { value: "masculino", label: "Masculino" },
 ];
 
-export default function PortfolioGrid() {
+export default function PortfolioGrid({ models }: Props) {
   const [active, setActive] = useState<ModelCategory>("feminino");
-  const allModels = [...models]; const filtered = allModels.filter(m => m && m.category === active).sort((a,b) => a.name.localeCompare(b.name));
-
+  const filtered = models.filter(m => m && m.category === active).sort((a,b) => a.name.localeCompare(b.name));
   return (
     <div className={styles.wrapper}>
       <div className={styles.filters}>
         {CATEGORIES.map(cat => (
-          <button
-            key={cat.value}
-            className={`${styles.filterBtn} ${active === cat.value ? styles.filterActive : ""}`}
-            onClick={() => setActive(cat.value)}
-          >
+          <button key={cat.value} className={`${styles.filterBtn} ${active === cat.value ? styles.filterActive : ""}`} onClick={() => setActive(cat.value)}>
             {cat.label}
           </button>
         ))}
@@ -30,12 +27,7 @@ export default function PortfolioGrid() {
         {filtered.map((model) => (
           <Link key={model.id} href={`/portfolio/${model.slug}`} className={styles.card}>
             <div className={styles.imgWrap}>
-              <img
-                src={model.coverImage}
-                alt={model.name}
-                className={styles.img}
-                loading="lazy"
-              />
+              <img src={model.coverImage} alt={model.name} className={styles.img} loading="lazy" />
               <div className={styles.overlay}>
                 <span className={styles.name}>{model.name}</span>
                 <span className={styles.height}>{model.height}</span>
