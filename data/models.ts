@@ -112,7 +112,7 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1q0zVdrBwEuu3yWQKy4wSChec-ZnhxtRz",
   },
   {
-    id: "5", slug: "fernando", name: "Fernando", category: "masculino",
+    id: "19", slug: "fernando", name: "Fernando", category: "masculino",
     coverImage: d("1q0zVdrBwEuu3yWQKy4wSChec-ZnhxtRz"),
     images: [d("1q0zVdrBwEuu3yWQKy4wSChec-ZnhxtRz"),d("1HQ2YJfRP9Uymgp3qVYuJgq2kU7isH-TO"),d("1PBAiivYOdzh9QYJ08EDqBAUzzIl2-X5m"),d("1SI4NDTVgsD8TiDivWmOgMHJy1PECFsst"),d("17dAaERquRclF9Zg9z8OC7SWjsKSHoUD7"),d("1TYcnj_JsL7olMqL3OMRrePXCq3GD7_5k"),d("12l3ZBp8LvVcTNkgAJbhp9SQNSwL4FTGe"),d("1PfIY3i4VrmLyCfHtdRt19hmp95NRaT4n"),d("1JxAARtnAz56Uavjiih6nKQA3cgAn7Pfk"),d("17xZgoXLONNXi4Ch1LzMRjBIWlytQnjrN"),d("1ANBo1_JT3ZjJRYRiUGcrtfThcHd1ghrN"),d("1AOUlxBxDMDYF6LbZHnlywTB8SZnVJiEg")],
     polaroids: [], height: "1,86m", bust: "90cm", waist: "75cm", hips: "88cm", shoes: "42", eyes: "Verdes", hair: "Castanho", nationality: "Brasileiro", featured: true,
@@ -127,7 +127,7 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1s9XZXx3FLtRmBa5IFndAkvA531pHRAsJ",
   },
   {
-    id: "14", slug: "iza-mazotti", name: "Iza Mazotti", category: "feminino",
+    id: "12", slug: "iza-mazotti", name: "Iza Mazotti", category: "feminino",
     coverImage: d("1yhE3mF4nP7LhsBRV0Mnm8BNAZ4C_VbuI"),
     images: [d("16t4stUrtuHJ12aIvh2kPRkJgq3zoCnW8"),d("1REsEhUSHCb4xR9Ixes8Bx1_IrggCiTgj"),d("1rXy32D2RYSiV1JRzCzImA6i5_S1TYc8E"),d("14IL99hnKKBPi6sDLdxQ3PvKP_FBBmJNJ"),d("1L1Th2qgfomnvrwPi0X7JyXWdiEvpy6mG"),d("1OTbDjJBtTA3yxdX6SF_U4LCRogyYIII4"),d("1wCOOy6T0oLl78J37DB5yQdg_H97VpvZY"),d("1r3keAbbUHW2CAxpCNLUhAI0UBR2HjWtp"),d("1x0Euk604n4v098mpXjcdwWLjPVp-fupl"),d("1swGA9UeSfQIbo-Vqmjka4rQj8oMfzVA5"),d("1diL3vjQJTmrf2fPfgwsBw2BR3SwxjoqQ"),d("1hN2xZOc441-S6bx8AghhszZMdNkqsGNx")],
     polaroids: [], height: "1,78m", bust: "81cm", waist: "60cm", hips: "89cm",
@@ -195,7 +195,7 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1FJWoKd5LRRpSfquNaW17uqvhUvM-t2bH",
   },
   {
-    id: "9", slug: "nanda", name: "Nanda", category: "feminino",
+    id: "17", slug: "nanda", name: "Nanda", category: "feminino",
     coverImage: d("1eqOrhQQi5oCxoeFsFR8aVvbBcAoX5rvu"),
     images: [d("1rmNK_EQyxWDCtr0_01-3o6YyzOBX50tJ"),d("1S2d3Yr79GX02DRo2wHcskMKCFp060LRJ"),d("1T7lokmC6L1hM-MxP4tUjZhPHQ0yMLGTj"),d("1hIlodbRPuXOFVGi3nZg--hxQu75FIYOb"),d("1DyIGfN3hrUNp_G1M3S4SDDoQqOPgS7rX"),d("1tOL_B5fSeBcc8TruSKvCQDMvMpgJncez"),d("16V3o6dEkfAdCfpL_FPw3_p5cl0GNf7Y7"),d("1gba4MfH6pEqiaqT3lq2cslpfj3VyljFU"),d("1ZfQZFEhl7lBu3wsAg6ZIUcZcuPhc1Fpx"),d("1ma_pVvhJPi1u3-jFihEYI8NsFIgshTw3"),d("1CmpRIeMRad15MbYgm5qFhUWySX8Vihx4"),d("1pc4DOfRBxWlYnVQC6jWxXJs9rY1qLSAx"),d("1eqOrhQQi5oCxoeFsFR8aVvbBcAoX5rvu")],
     polaroids: [], height: "174cm", bust: "78cm", waist: "62cm", hips: "90cm",
