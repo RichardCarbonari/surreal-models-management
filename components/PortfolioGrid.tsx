@@ -6,27 +6,28 @@ import styles from "./PortfolioGrid.module.css";
 
 interface Props { models: Model[]; }
 
-const CATEGORIES: { value: ModelCategory; label: string }[] = [
-  { value: "feminino", label: "Feminino" },
-  { value: "masculino", label: "Masculino" },
+const CATEGORIES = [
+  { value: "feminino" as ModelCategory, label: "Feminino" },
+  { value: "masculino" as ModelCategory, label: "Masculino" },
 ];
 
-const FEMININO = ["clara-albuquerque","fernanda-faleiro","florencia","giovana-peixoto","helena-weber","iza-mazotti","jullie-rocha","nanda-feitosa","preta-guimaraes","renata-miller","samira-leopoldino","sofia","yasmim-matos"];
+const FEMININO_SLUGS = ["clara-albuquerque","fernanda-faleiro","florencia","giovana-peixoto","helena-weber","iza-mazotti","jullie-rocha","nanda-feitosa","preta-guimaraes","renata-miller","samira-leopoldino","sofia","yasmim-matos"];
 
 export default function PortfolioGrid({ models }: Props) {
   const [active, setActive] = useState<ModelCategory>("feminino");
+  const isFem = active === "feminino";
   const filtered = models
-    .filter(m => {
-      if (!m) return false;
-      if (active === "feminino") return FEMININO.includes(m.slug);
-      return !FEMININO.includes(m.slug);
-    })
-    .sort((a,b) => a.name.localeCompare(b.name));
+    .filter(m => m && (isFem ? FEMININO_SLUGS.includes(m.slug) : !FEMININO_SLUGS.includes(m.slug)))
+    .sort((a, b) => a.name.localeCompare(b.name));
   return (
     <div className={styles.wrapper}>
       <div className={styles.filters}>
         {CATEGORIES.map(cat => (
-          <button key={cat.value} className={`${styles.filterBtn} ${active === cat.value ? styles.filterActive : ""}`} onClick={() => setActive(cat.value)}>
+          <button
+            key={cat.value}
+            className={`${styles.filterBtn} ${active === cat.value ? styles.filterActive : ""}`}
+            onClick={() => setActive(cat.value)}
+          >
             {cat.label}
           </button>
         ))}
