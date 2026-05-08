@@ -32,6 +32,7 @@ export const models: Model[] = [
     images: [d("1HQ2YJfRP9Uymgp3qVYuJgq2kU7isH-TO"),d("1PBAiivYOdzh9QYJ08EDqBAUzzIl2-X5m"),d("1SI4NDTVgsD8TiDivWmOgMHJy1PECFsst"),d("17dAaERquRclF9Zg9z8OC7SWjsKSHoUD7"),d("1TYcnj_JsL7olMqL3OMRrePXCq3GD7_5k"),d("1q0zVdrBwEuu3yWQKy4wSChec-ZnhxtRz"),d("12l3ZBp8LvVcTNkgAJbhp9SQNSwL4FTGe"),d("1PfIY3i4VrmLyCfHtdRt19hmp95NRaT4n"),d("1JxAARtnAz56Uavjiih6nKQA3cgAn7Pfk"),d("17xZgoXLONNXi4Ch1LzMRjBIWlytQnjrN"),d("1ANBo1_JT3ZjJRYRiUGcrtfThcHd1ghrN"),d("1AOUlxBxDMDYF6LbZHnlywTB8SZnVJiEg")],
     polaroids: [], height: "1,86m", bust: "90cm", waist: "75cm", hips: "88cm", shoes: "42", eyes: "Verdes", hair: "Castanho", nationality: "Brasileiro", featured: true,
   },
+  ,
   {
     id: "10", slug: "clara-albuquerque", name: "Clara Albuquerque", category: "feminino",
     coverImage: d("1YX1Cb7rZgvFksrO4zhvCq_IDmJ1hn0uJ"),
@@ -42,12 +43,14 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1v-kN7Zq9g8-CmBaqzrc6KGNWWeyTWoJu",
     featured: true,
   },
+  ,
   {
     id: "4", slug: "emad", name: "Emad", category: "masculino",
     coverImage: d("1A_cyOQj7z42k0ysC1Tr-n_XW5RUF4YrK"),
     images: [d("1A_cyOQj7z42k0ysC1Tr-n_XW5RUF4YrK"),d("1JnP7W0DHeBUeR4jTUBwpeKOEROd6XHJn"),d("1QaOhJ2qiBnDNfVGGlaxAsMx16xlz2ZmQ"),d("1JlCy41O0UkCjahGq4p-GHOnriUPzSJ4K"),d("1GKijZ-fIaSJpiGzPQHxmPMoElamnp6Px"),d("1tLdgLceF4mmbVPGJWIvan1k1oRmkdGB7"),d("1dP5jUjwU7uGenYlOtZ_fGjgUO0kTSEOu"),d("1PV2mfCDs7bm1Rdb9UAzP0gxL4C--Daxb"),d("19K0pY6MF1o_1e6IzKDvV8mfbbt9ITvmM"),d("1Qz_5PRileimilBO17co1S8nLpVxAEfQ-"),d("1jzvVxzWwnwGfuODcjOOz4eYHBkhEmeER"),d("1tzcV9k8zliTeD3lmNaqjWK6ncrrQapSX"),d("1PkX6UAzMsIM3vdceQ-rtP92gkwghjfcG")],
     polaroids: [], height: "1,85m", bust: "94cm", waist: "75cm", hips: "90cm", shoes: "44", eyes: "Castanhos", hair: "Preto", nationality: "Brasileiro"
   },
+  ,
   {
     id: "14", slug: "fernanda-faleiro", name: "Fernanda Faleiro", category: "feminino",
     coverImage: d("1DLyrt3f0s8Gv0IMOa4X0WpVVH6IMdliV"),
@@ -57,12 +60,14 @@ export const models: Model[] = [
     eyes: "Brown", hair: "Dark Brown", nationality: "Brasileira", instagram: "https://www.instagram.com/fernanda.faleiroo/",
     portfolio: "https://drive.google.com/drive/folders/1OaVR0ooI0sSNizCOlvHc6OEXVxLiknJP",
   },
+  ,
   {
     id: "19", slug: "fernando-nascimento", name: "Fernando Nascimento", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/148yWUmp-09eICHs-K2RdQSoULCOE6t3E",
     images: ["https://lh3.googleusercontent.com/d/148yWUmp-09eICHs-K2RdQSoULCOE6t3E","https://lh3.googleusercontent.com/d/15FnUWiUjZREImn010OWFjgx2LP1LaP5r","https://lh3.googleusercontent.com/d/16IqaSgUJuPAe2HHmTuAJYB4vLqJjDa6y","https://lh3.googleusercontent.com/d/1BBABNo-n2OnxYuMGtYvmLOrYCYpGyuXE","https://lh3.googleusercontent.com/d/1DI2Vj7zT8WRe5Qh2b6ApxfcPG1pXEn9G","https://lh3.googleusercontent.com/d/1ZgxQIhW0cOTZaubCoTGodfdXMwt8SXGA","https://lh3.googleusercontent.com/d/1bUtYRWQcf5xoq5qy45AAglGuj0y8QLo7","https://lh3.googleusercontent.com/d/1dTk6saiTXNJCU8y5uAkZ22nAu1kEV5u7","https://lh3.googleusercontent.com/d/1h2j3AJe62-A_HehA8GWt6MUr6YxVIHVt","https://lh3.googleusercontent.com/d/1pyJWk_eEbwi_Wf8W3aH8nUEbcjVozpfM","https://lh3.googleusercontent.com/d/1qMfiSFpBaDGBGrWD37LK296GKb_EDvdV","https://lh3.googleusercontent.com/d/1rJ38ChPfMW66tzKQlVAQCZM8ZxDvsIMY","https://lh3.googleusercontent.com/d/1ruMN-zuQYor8_UjWdh85nIGmMaPudOCv"],
     polaroids: [], nationality: "Brasileiro",
   },
+  ,
   {
     id: "22", slug: "florencia", name: "Florencia", category: "feminino",
     coverImage: "https://lh3.googleusercontent.com/d/119aclghOTCjx5pdwD1cfg-XzZbfaeniH",
@@ -72,6 +77,7 @@ export const models: Model[] = [
     eyes: "", hair: "", nationality: "Brasileira",
     portfolio: "https://drive.google.com/drive/folders/1vDOTlcrqspH2SHitGOQDZ4bgK_1JJVT4",
   },
+  ,
   {
     id: "16", slug: "giovana-peixoto", name: "Giovana Peixoto", category: "feminino",
     coverImage: d("1YIgOBx-qcml5XzDWw-FLp9v4UlerboYA"),
@@ -81,6 +87,7 @@ export const models: Model[] = [
     eyes: "Dark Brown", hair: "Black", nationality: "Brasileira", instagram: "https://www.instagram.com/gio.peixoto/",
     portfolio: "https://drive.google.com/drive/folders/1s9XZXx3FLtRmBa5IFndAkvA531pHRAsJ",
   },
+  ,
   {
     id: "9", slug: "guilherme-cajaiba", name: "Guilherme Cajaiba", category: "masculino",
     coverImage: d("1UzBwqDxFBX3FZP5fWxb2fBiGQOC4qPeL"),
@@ -90,6 +97,7 @@ export const models: Model[] = [
     eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro", instagram: "https://www.instagram.com/cajjaiba/",
     portfolio: "https://drive.google.com/drive/folders/1i96MK6SFzrUC968iDNQVBw0p5R5qZ8uj",
   },
+  ,
   {
     id: "25", slug: "guilherme-ribeiro", name: "Guilherme Ribeiro", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/10b1eeM-3bC2cfORnDaVXN5DGFd7ciL-Y",
@@ -100,6 +108,7 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/guilher_rp/",
     portfolio: "https://drive.google.com/drive/folders/1XnAhIvyj0y9h592R6pUlD9tE25ri2lpb",
   },
+  ,
   {
     id: "8", slug: "guss-camargo", name: "Guss Camargo", category: "masculino",
     coverImage: d("1w7T0D9ftguujG9klWLWSnvU8fDbG4rG3"),
@@ -109,6 +118,7 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1JIOUE9n3oZ6JsoVFmOPbukSN9HWDHT9r",
     featured: true,
   },
+  ,
   {
     id: "21", slug: "helena-weber", name: "Helena Weber", category: "feminino",
     coverImage: "https://lh3.googleusercontent.com/d/10SKW64UkXddGuqwR6MmHgFkC3v0rCJMq",
@@ -119,6 +129,7 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/_helenaweber/",
     portfolio: "https://drive.google.com/drive/folders/1XYjLdyfmGxBv89YQVBc47dDVcIU7bJYb",
   },
+  ,
   {
     id: "12", slug: "iza-mazotti", name: "Iza Mazotti", category: "feminino",
     coverImage: d("16t4stUrtuHJ12aIvh2kPRkJgq3zoCnW8"),
@@ -129,12 +140,25 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1GFH8AhUnDEG9DJOS2JFosUw7MSVJ8pzK",
     featured: true,
   },
+  ,
   {
     id: "20", slug: "jhonny", name: "Jhonny", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/1-XZZcbvxUagm5VuwxNjrjOH664WisKEt",
     images: ["https://lh3.googleusercontent.com/d/1-XZZcbvxUagm5VuwxNjrjOH664WisKEt","https://lh3.googleusercontent.com/d/1-yA8NRrVSpk6cYZmAFAlFmNhWwUQ1rok","https://lh3.googleusercontent.com/d/1-zb7MbSqGnkPbuyXmAXsmVX4pK_GmuP_","https://lh3.googleusercontent.com/d/11aJF49VShNPu2rjKMmIANHED4HWn0z-G","https://lh3.googleusercontent.com/d/14-bOxfhv6JX7fHInjNBKGpQxdeAE1A30","https://lh3.googleusercontent.com/d/16Qq5qhQtZNeB4Ms4kNphmoSA-8jbQ5GQ","https://lh3.googleusercontent.com/d/16fCgfihQELVECmdzg3eQT41CandYZoML","https://lh3.googleusercontent.com/d/184iQyh6o5u4kfpmOWe7fF_iR0qlBImPY","https://lh3.googleusercontent.com/d/1DLYCvt96VUiosJj2qis2kHVsUFdFG3Eh","https://lh3.googleusercontent.com/d/1EOrm1ea5qEGp0MympIWsd1lSk4nt6os0","https://lh3.googleusercontent.com/d/1SI8dVX7dKM5GuvTZW8YIbNfcygJ2vqH5","https://lh3.googleusercontent.com/d/1X11gbuPD9v5rEuhaEOBY5kTI65My3aHT","https://lh3.googleusercontent.com/d/1X1qi90Mgi0C-NkTHDtcZO10d9n6j7N_X","https://lh3.googleusercontent.com/d/1Ymg29xavDOb_oAD90M7DDXEi7U6ISWUa","https://lh3.googleusercontent.com/d/1bjb7LBXcaPzdLU3ZfaaRtYQQvOgdG9EI","https://lh3.googleusercontent.com/d/1dHM5lg8FNn8Olr0Ej3aef2IjPgnfVamB","https://lh3.googleusercontent.com/d/1e33RH5R_LD8uMIm7DSCKj5BUSaxykzKq","https://lh3.googleusercontent.com/d/1imSC7vRp9Ur9184BagVyJ6XbKDCaZEob","https://lh3.googleusercontent.com/d/1jjK-Ql0yaQnWUNoo0VvQn-TCF855h8id","https://lh3.googleusercontent.com/d/1lmPoObgFTnb3zvCf7IeObtGBxxJkZCv6","https://lh3.googleusercontent.com/d/1r2Lcr0W5s-_iJZmyr_5uMKMS7hdG8mP7","https://lh3.googleusercontent.com/d/1r5S-_3rJmiXvP0XwDF9iQKN0QtYcFryc","https://lh3.googleusercontent.com/d/1rJjQ0szKVRSzzxJskU3NvMtQZseoPmTv","https://lh3.googleusercontent.com/d/1uAWrm86wfy_ylFAvmkpT-vitvCeORMuH","https://lh3.googleusercontent.com/d/1vuVP_awESlH963XgZjGhWIQz6DRhVF34","https://lh3.googleusercontent.com/d/1x3Z4mYxuhXNHz_wI24zDK4G52UiZGkPt","https://lh3.googleusercontent.com/d/1yX0jFInRMbGYeNFFqyf_T6Gt7h9_vDew"],
     polaroids: [], nationality: "Brasileiro",
   },
+  ,
+    {
+    id: "27", slug: "joao-pauda", name: "Joao Pauda", category: "masculino",
+    coverImage: "https://lh3.googleusercontent.com/d/1eJHlG0M7V_2k5Z0fx2gr-txsZcg-d0ca",
+    images: ["https://lh3.googleusercontent.com/d/1DWAXlrrdwyscdYwGoRQpql-6w0RaLIcx","https://lh3.googleusercontent.com/d/1NIbppIq7sjlPv0GYo6V8ZAoKndknHuez","https://lh3.googleusercontent.com/d/1SBBy9Pu4y1bDKUUFbQbz8c2FyDRqc71m","https://lh3.googleusercontent.com/d/1URYy8ezzt4yqR652PyUZLQEvyIdgYePu","https://lh3.googleusercontent.com/d/1VDTPRvz1lmWNtmnLrAplusJ5XEn3o91t","https://lh3.googleusercontent.com/d/1XOVIL4JrBI3EJUGsGiJx9nTqSHygaZBW","https://lh3.googleusercontent.com/d/1XZqWnxCDIVSQ8-dZlOUsggo18bkhhPWZ","https://lh3.googleusercontent.com/d/1eJHlG0M7V_2k5Z0fx2gr-txsZcg-d0ca","https://lh3.googleusercontent.com/d/1sK1mnFm2ofWkRzQxfGEmxFMqZsGB3rxm","https://lh3.googleusercontent.com/d/1vKV_Dhlf6_HiaouDCayjp-QBJU_L5FyP","https://lh3.googleusercontent.com/d/1zHOrxc-iUD6R1_k2jUVH4zWc9lJ6YNzo"],
+    polaroids: [], height: "180cm", bust: "95cm", waist: "77cm", hips: "93cm",
+    shoes: "42", shirts: "S/M", pants: "40",
+    nationality: "Brasileiro",
+    instagram: "https://www.instagram.com/moraispadua/",
+    portfolio: "https://drive.google.com/drive/folders/1QC4MImSkhiVfk4kPh0AW1eAWci-YJm-w",
+  },
+  ,
   {
     id: "15", slug: "jullie-rocha", name: "Jullie Rocha", category: "feminino",
     coverImage: d("1OhZnEla-2Y7yO4l0QhsRiWIKYA88k0Nv"),
@@ -144,12 +168,14 @@ export const models: Model[] = [
     eyes: "Green", hair: "Brown", nationality: "Brasileira", instagram: "https://www.instagram.com/jullierocha/",
     portfolio: "https://drive.google.com/drive/folders/1_wrHwfhtrEqQL8LpMbmaIeT5PSb6dnrW",
   },
+  ,
   {
     id: "2", slug: "junior-benevides", name: "Junior Benevides", category: "masculino",
     coverImage: d("1qNC1XkSPLye8uSPQ-zyZA_a7rkTMq6rj"),
     images: [d("1qNC1XkSPLye8uSPQ-zyZA_a7rkTMq6rj"),d("13a8fpwoD5AzbQPmVgsfnSktvKooHWD--"),d("1CgTpHjxFgmnbo2IaHo00LCOLmt-LbmVF"),d("1GofjHf6f2aaNywMS_rvE2231HO0Yi4ka"),d("19RbUQNwHww8J6n5JcF53mmzfty2xhLC7"),d("1XUc8-OYla1ga4L6opZT-jDdoVwVptE11"),d("1ChAamB9p7bvUOGJiyUXsdxyGkm8c6WrY"),d("1ug_UzwcQJn5tHwV8Nu8tw0-rhuiGVvSb"),d("1gavX3LabcwSzV1dzgKcImMfFC1SlewCm"),d("15hfgTUOj1OYNo-2LAJ3Ckp0PShl1Yyki"),d("1fgrZVFG4maICYyjnTrH1isDkIMY4Io6Q"),d("1AIxsfvbidOhxG_uu9dyU1tL5BG62Jlxh")],
     polaroids: [], height: "1,85m", waist: "78cm", shoes: "42", eyes: "Castanhos", hair: "Preto", nationality: "Brasileiro", featured: true,
   },
+  ,
   {
     id: "5", slug: "kareem", name: "Kareem", category: "masculino",
     coverImage: d("11DI2vjqPhyiBfhbxRC1YrduFvvwpUEOh"),
@@ -159,6 +185,7 @@ export const models: Model[] = [
     eyes: "Green", hair: "Brown", nationality: "Egípcio", instagram: "https://www.instagram.com/karemalashry/",
     portfolio: "https://drive.google.com/drive/folders/1oL9XvmJPdEQiWDPWHX798wYxxHGcZZk4",
   },
+  ,
   {
     id: "7", slug: "matheus-cunha", name: "Mateus Cunha", category: "masculino",
     coverImage: d("19-k9GN4fRLYzXJQBbzyn1t7WbaQSt8Ku"),
@@ -168,6 +195,7 @@ export const models: Model[] = [
     eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro", instagram: "https://www.instagram.com/tezezico/",
     portfolio: "https://drive.google.com/drive/folders/1JIOUE9n3oZ6JsoVFmOPbukSN9HWDHT9r",
   },
+  ,
   {
     id: "17", slug: "nanda-feitosa", name: "Nanda Feitosa", category: "feminino",
     coverImage: d("1rmNK_EQyxWDCtr0_01-3o6YyzOBX50tJ"),
@@ -177,6 +205,7 @@ export const models: Model[] = [
     eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileira", instagram: "https://www.instagram.com/nanda__feitosa/",
     portfolio: "https://drive.google.com/drive/folders/1FJWoKd5LRRpSfquNaW17uqvhUvM-t2bH",
   },
+  ,
   {
     id: "11", slug: "renata-miller", name: "Renata Miller", category: "feminino",
     coverImage: d("1yAyjIXnrIMQxL7HfU1XpxlTfwANVE0o4"),
@@ -187,6 +216,7 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1YwquDuStHktcMrEXp5c5orDn7_fyZ6ZX",
     featured: true,
   },
+  ,
   {
     id: "1", slug: "richard-carbonari", name: "Richard Carbonari", category: "masculino",
     coverImage: d("1q7hHDCT8YGPwi9vXp4lbhEFCodOeDVsP"),
@@ -197,24 +227,28 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1MVzb35urA1ZTQkiu0y9YoYqDyVQkE6JD",
     featured: true,
   },
+  ,
   {
     id: "13", slug: "samira-leopoldino", name: "Samira Leopoldino", category: "feminino",
     coverImage: d("128REp4tgzfvybAtAszt9dQpunGKTZvEx"),
     images: [d("128REp4tgzfvybAtAszt9dQpunGKTZvEx"),d("1-YjnUDgfoiInHuYxfVUPsrdFk8dhqKl-"),d("1tIex6xQsSoz3nht8b0L1ba3w-2C5qsV3"),d("1MrnwZDlJXi_8A49XPnmCKqAz6VEDxy5E"),d("1I1PHO2LgzRAtjMMd6YIWvbEd5VvC6v-G"),d("1_lOL9kTqEtnuPh6YnfbnS4KDCR3bfhI2")],
     polaroids: [], height: "1,77m", bust: "86cm", waist: "65cm", hips: "96cm", shoes: "37", eyes: "Castanhos", hair: "Preto", nationality: "Brasileira"
   },
+  ,
   {
     id: "18", slug: "stevie-jones", name: "Stevie Jones", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/10OS-AKtwvsVEq8RKWCLXG_pM4hw3zfZk",
     images: ["https://lh3.googleusercontent.com/d/10OS-AKtwvsVEq8RKWCLXG_pM4hw3zfZk","https://lh3.googleusercontent.com/d/11M1YTZJUqQWhkXeaw_x_V-vteYDBLy8d","https://lh3.googleusercontent.com/d/12eneG_5t0Z8K9V9-W77J8vCJMp-FXDwk","https://lh3.googleusercontent.com/d/14UKd7lDPbTGgVV3jrUjQTrId7m1KLeim","https://lh3.googleusercontent.com/d/1AstMXBWamwp9qmtt-f7sKbQo4q7ZQMix","https://lh3.googleusercontent.com/d/1Ctz7jvxuCX0P6vMywxFU-u6CajTxLRrW","https://lh3.googleusercontent.com/d/1FR7niwshMT7gTTSKWhBdCAOujUKB6Q1T","https://lh3.googleusercontent.com/d/1G37wqZHsSB5kemNJH_BrssPpyp-PYCG8","https://lh3.googleusercontent.com/d/1MBs1mig9Oiyn2toHEZCKciZp7Ba7hc7K","https://lh3.googleusercontent.com/d/1MrYkR0y_XrNsoGBYanfKwSqaMoO--HJt","https://lh3.googleusercontent.com/d/1S6ExwxzgHf09A3hyWjgOxhT_NkkQn3uS","https://lh3.googleusercontent.com/d/1TY_XT0o0KzV5TakZiW5YxcKaDX5xcYaV","https://lh3.googleusercontent.com/d/1Zvztz-wXt1peOpQJnm7lf7xl8t7fI0jR","https://lh3.googleusercontent.com/d/1_23oOgRttOfhQ2ykpQQTQ5b30oZAK4FW","https://lh3.googleusercontent.com/d/1bcNmgIORij3lTjaoPljizpLVgc40SIGd","https://lh3.googleusercontent.com/d/1gLm9u3pOuVvErNQY_-MW_CcCVAa9pMjM","https://lh3.googleusercontent.com/d/1jUowa95YdZDevQytoybwSJizk3sB-7ty","https://lh3.googleusercontent.com/d/1lPhVDTyrT-AA4zD5n9-nv0-_AtpMD8iQ","https://lh3.googleusercontent.com/d/1nrUfBSh_aHhxWA_RLsqvX8Zr-rUjsswd","https://lh3.googleusercontent.com/d/1o47odPYijVZjz8qaavbwKYivV9d98frM","https://lh3.googleusercontent.com/d/1qH92Uh_q8OXA8MetZMJRP-FXuhPdX6Ix"],
     polaroids: [], nationality: "Brasileiro",
   },
+  ,
   {
     id: "6", slug: "wagner-piazzoh", name: "Wagner Piazzoh", category: "masculino",
     coverImage: d("1xcfkrcUkZKNXXdW20WEyqD4eGM9GVLK6"),
     images: [d("1xcfkrcUkZKNXXdW20WEyqD4eGM9GVLK6"),d("1hzpPlUUfrWNasMYqGHsuT4MyliNY1BnO"),d("1dwagOoslkufMBxVv67-VFuBgGrGxDwha"),d("1pDSb-fXjjgXJD9iY7Tu6tTlvVhtLh3pJ"),d("10mdUdbNqDgo3VdhTtTY6UXcE6gq_mIXe"),d("1IR0MEhNLIaR6b05UNlDrFevs-VMG9CqX"),d("1QJCx-dQfXAnQQM1bTvHrxUIMtfNf3439"),d("1xIoTkhlaskrw7R3oXhhUxmiZK6fSGsOs"),d("1d6w9WnkQ64j0WS0Oic0Qf5JUWUxb2cRO"),d("1u2NfLAbBL0X-HAoWbGMv8YBwQ0wipD-7"),d("1ivl9tuAwMhAeuuZjNW8lTCNZuluyGfhR"),d("1_vxHw8PTaz5KPpChtjDv9dOid3TCqU5a")],
     polaroids: [], height: "1,88m", bust: "85cm", waist: "64cm", hips: "87cm", shoes: "43", eyes: "Castanhos", hair: "Castanho", nationality: "Brasileiro"
   },
+  ,
   {
     id: "23", slug: "yasmim-matos", name: "Yasmim Matos", category: "feminino",
     coverImage: "https://lh3.googleusercontent.com/d/10CxmJyocCoDX8DJErMGiXhVe63kCsR9K",
@@ -225,6 +259,7 @@ export const models: Model[] = [
     instagram: "https://www.instagram.com/yaas.matos_/",
     portfolio: "https://drive.google.com/drive/folders/1mKyXJbIdDzDtdlI1XVUrisEnrphJoLyu",
   },
+  ,
   {
     id: "26", slug: "yassir", name: "Yassir", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/1-2XAZgAMv3V78am5kjXNc7EQTarxdihy",
@@ -234,12 +269,6 @@ export const models: Model[] = [
     eyes: "Hazel", hair: "Black", nationality: "Brasileiro",
     instagram: "https://www.instagram.com/jassikamuzu/",
     portfolio: "https://drive.google.com/drive/folders/1qjtQXY1czSPN3UdW9Rhq1pu8-Qs842nx",
-  },
-  {
-    id: "27", slug: "joao-pauda", name: "Joao Pauda", category: "masculino",
-    coverImage: "https://lh3.googleusercontent.com/d/1eJHlG0M7V_2k5Z0fx2gr-txsZcg-d0ca",
-    images: ["https://lh3.googleusercontent.com/d/1DWAXlrrdwyscdYwGoRQpql-6w0RaLIcx","https://lh3.googleusercontent.com/d/1NIbppIq7sjlPv0GYo6V8ZAoKndknHuez","https://lh3.googleusercontent.com/d/1SBBy9Pu4y1bDKUUFbQbz8c2FyDRqc71m","https://lh3.googleusercontent.com/d/1URYy8ezzt4yqR652PyUZLQEvyIdgYePu","https://lh3.googleusercontent.com/d/1VDTPRvz1lmWNtmnLrAplusJ5XEn3o91t","https://lh3.googleusercontent.com/d/1XOVIL4JrBI3EJUGsGiJx9nTqSHygaZBW","https://lh3.googleusercontent.com/d/1XZqWnxCDIVSQ8-dZlOUsggo18bkhhPWZ","https://lh3.googleusercontent.com/d/1eJHlG0M7V_2k5Z0fx2gr-txsZcg-d0ca","https://lh3.googleusercontent.com/d/1sK1mnFm2ofWkRzQxfGEmxFMqZsGB3rxm","https://lh3.googleusercontent.com/d/1vKV_Dhlf6_HiaouDCayjp-QBJU_L5FyP","https://lh3.googleusercontent.com/d/1zHOrxc-iUD6R1_k2jUVH4zWc9lJ6YNzo"],
-    polaroids: [], nationality: "Brasileiro",
   },
 ];
 

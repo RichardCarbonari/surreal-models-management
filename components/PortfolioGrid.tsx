@@ -7,7 +7,6 @@ import styles from "./PortfolioGrid.module.css";
 const CATEGORIES: { value: ModelCategory; label: string }[] = [
   { value: "feminino", label: "Feminino" },
   { value: "masculino", label: "Masculino" },
-  { value: "desenvolvimento", label: "Em Desenvolvimento" },
 ];
 
 export default function PortfolioGrid() {
