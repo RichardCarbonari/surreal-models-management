@@ -11,7 +11,7 @@ const CATEGORIES: { value: ModelCategory; label: string }[] = [
 
 export default function PortfolioGrid() {
   const [active, setActive] = useState<ModelCategory>("feminino");
-  const filtered = models.filter(m => m.category === active);
+  const filtered = models.filter(m => m && m.category === active).sort((a,b) => a.name.localeCompare(b.name));
 
   return (
     <div className={styles.wrapper}>
