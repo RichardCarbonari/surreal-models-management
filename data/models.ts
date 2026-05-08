@@ -157,7 +157,7 @@ export const models: Model[] = [
   },
   ,
   {
-    id: "27", slug: "joao-pauda", name: "Joao Pauda", category: "masculino",
+    id: "27", slug: "joao-padua", name: "Joao Padua", category: "masculino",
     coverImage: "https://lh3.googleusercontent.com/d/1eJHlG0M7V_2k5Z0fx2gr-txsZcg-d0ca",
     images: ["https://lh3.googleusercontent.com/d/1DWAXlrrdwyscdYwGoRQpql-6w0RaLIcx","https://lh3.googleusercontent.com/d/1NIbppIq7sjlPv0GYoV8ZAoKndknHuez","https://lh3.googleusercontent.com/d/1SBBy9Pu4y1bDKUUFbQbz8c2FyDRqc71m","https://lh3.googleusercontent.com/d/1URYy8ezzt4yqR652PyUZLQEvyIdgYePu","https://lh3.googleusercontent.com/d/1VDTPRvz1lmWNtmnLrAplusJ5XEn3o91t","https://lh3.googleusercontent.com/d/1XOVIL4JrBI3EJUGsGiJx9nTqSHygaZBW","https://lh3.googleusercontent.com/d/1XZqWnxCDIVSQ8-dZlOUsggo18bkhhPWZ","https://lh3.googleusercontent.com/d/1eJHlG0M7V_2k5Z0fx2gr-txsZcg-d0ca","https://lh3.googleusercontent.com/d/1sK1mnFm2ofWkRzQxfGEmxFMqZsGB3rxm","https://lh3.googleusercontent.com/d/1vKV_Dhlf6_HiaouDCayjp-QBJU_L5FyP","https://lh3.googleusercontent.com/d/1zHOrxc-iUD6R1_k2jUVH4zWc9lJ6YNzo"],
     polaroids: [], height: "180cm", bust: "95cm", waist: "77cm", hips: "93cm",
