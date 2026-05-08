@@ -35,7 +35,7 @@ export const models: Model[] = [
   ,
   {
     id: "10", slug: "clara-albuquerque", name: "Clara Albuquerque", category: "feminino",
-    coverImage: d("1YX1Cb7rZgvFksrO4zhvCq_IDmJ1hn0uJ"),
+    coverImage: d("1GSfhVilmxnvpu7fkqtGQKNwSwWWuC4DF"),
     images: [d("1YX1Cb7rZgvFksrO4zhvCq_IDmJ1hn0uJ"),d("1mvb1PuXbFMxZPmaCUv1T2Td0kbz0Qwd_"),d("1fCgnE9W-kjMBtuOvM8k2OGlazd3yWByY"),d("1gcbm56ispFFFmkQmLlid1NbJjM_NbXQw"),d("1erBiKRO45zn5HRlc7qfSFNDGyIMEr3JS"),d("1078nkZvNagrwrYRag7whs6f1oxB-EJP4"),d("1BLMzQCn20sFpwzfQMYacVL-YQ2zkqWot"),d("18cVpaBZ5kmw5CGMSoyFP9zrLtSpslilk"),d("1n8LIjoHpyLTI6KXL2U79BVSRImWobq-6"),d("1T3BZ_bzC2mncDLP9zVx0qi8f8k-wvPt1"),d("1X85m4srtMKfdrpeLspfVP4Tixb9jeTRP"),d("1-zysPf02YBDBwXeNc_DMjLwsWtxL6tdp"),d("1bsLsQae8c3je293L_Wzpy5uCVX5_1nq4"),d("1nkS1ZY3cjPOlQ9fPZhy_pd5F1rjeW7O5"),d("1qUJpq7kaO5fDqZQNQkmSfepJEJ_aP56V"),d("1KxdVCn0iURp66h2sJqTKst7z1Hnblj61"),d("1eY1lEIC8YzckLYGoZbNk8Nd1fKdoN52o")],
     polaroids: [], height: "175cm", bust: "78cm", waist: "62cm", hips: "89cm",
     shoes: "40", shirts: "XS", pants: "30",
@@ -80,7 +80,7 @@ export const models: Model[] = [
   ,
   {
     id: "16", slug: "giovana-peixoto", name: "Giovana Peixoto", category: "feminino",
-    coverImage: d("1YIgOBx-qcml5XzDWw-FLp9v4UlerboYA"),
+    coverImage: d("16-Ed_SXPy9YgLj8SjsokfThpF4G8qQTz"),
     images: [d("1YIgOBx-qcml5XzDWw-FLp9v4UlerboYA"),d("18jaynPT2zb-BrE0R3E8kGpKI8Z7__9LD"),d("1cuLs5ioHKp8nXG5xQDxhAKp_uYLIU2-z"),d("1wBvH5BUJeKhgERD3yZ3badYESR2I8xy7"),d("1GSRVEr5K3g3zlAGwtL5xuLwQ2JQBNW-I"),d("1PITCbiNuR6izfl0-VzBmf5C1E2q0ITKo"),d("154YpjR9Zdk5ePIijNbDWi5crhQgiQ8cD"),d("1lKyLnF9qTnPEpbbn8Qxb9dyP4Nv0iu_y"),d("1pduPL0i5icQ-_Gfo-HHsB7AVSiRvGUU1"),d("1MyeBKnsfUi82I_-dSXFlR-meFY-zHofn"),d("1sBi3jkIPQLmr-t_CxKQTXe2hOBYYeS8p"),d("14rWqjdk7SGGA7hs0FP-vP62DismJzCk_"),d("167g-fSMJqlbpcYQTnxyoc-ukiwpKzKhy"),d("1wFYkG5jtM4kfFyDaJ-rqEqji9TDef7v1"),d("1-BOJeGU3ek2_iWMQSNzDf7uSi6SpYxdl"),d("1Sx6azXPifP221ogFRjuOA9WlNBjP4cZA"),d("1qzPxo5a_SYnC9cfSOrgfrGnJowUHqzUr")],
     polaroids: [], height: "1,72m", bust: "80cm", waist: "62cm", hips: "92cm",
     shoes: "39", shirts: "XS", pants: "30",
@@ -198,7 +198,7 @@ export const models: Model[] = [
   ,
   {
     id: "17", slug: "nanda-feitosa", name: "Nanda Feitosa", category: "feminino",
-    coverImage: d("1rmNK_EQyxWDCtr0_01-3o6YyzOBX50tJ"),
+    coverImage: d("1eqOrhQQi5oCxoeFsFR8aVvbBcAoX5rvu"),
     images: [d("1rmNK_EQyxWDCtr0_01-3o6YyzOBX50tJ"),d("1S2d3Yr79GX02DRo2wHcskMKCFp060LRJ"),d("1T7lokmC6L1hM-MxP4tUjZhPHQ0yMLGTj"),d("1hIlodbRPuXOFVGi3nZg--hxQu75FIYOb"),d("1DyIGfN3hrUNp_G1M3S4SDDoQqOPgS7rX"),d("1tOL_B5fSeBcc8TruSKvCQDMvMpgJncez"),d("16V3o6dEkfAdCfpL_FPw3_p5cl0GNf7Y7"),d("1gba4MfH6pEqiaqT3lq2cslpfj3VyljFU"),d("1ZfQZFEhl7lBu3wsAg6ZIUcZcuPhc1Fpx"),d("1ma_pVvhJPi1u3-jFihEYI8NsFIgshTw3"),d("1CmpRIeMRad15MbYgm5qFhUWySX8Vihx4"),d("1pc4DOfRBxWlYnVQC6jWxXJs9rY1qLSAx"),d("1eqOrhQQi5oCxoeFsFR8aVvbBcAoX5rvu")],
     polaroids: [], height: "174cm", bust: "78cm", waist: "62cm", hips: "90cm",
     shoes: "39", shirts: "XS", pants: "36",
