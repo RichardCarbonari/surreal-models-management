@@ -88,12 +88,14 @@
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .thumb {
   position: relative;
-  width: 64px;
-  height: 88px;
+  width: 56px;
+  height: 78px;
   overflow: hidden;
   background: var(--gray-100);
   cursor: pointer;
