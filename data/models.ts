@@ -59,11 +59,14 @@ export const models: Model[] = [
     portfolio: "https://drive.google.com/drive/folders/1OaVR0ooI0sSNizCOlvHc6OEXVxLiknJP",
   },
 
-  {
+    {
     id: "19", slug: "fernando-nascimento", name: "Fernando Nascimento", category: "masculino",
-    coverImage: "https://lh3.googleusercontent.com/d/1qMJ8VCmosJhogYnH7QDyIzQE5b0ZklG4",
-    images: ["https://lh3.googleusercontent.com/d/148yWUmp-09eICHs-K2RdQSoULCOE6t3E","https://lh3.googleusercontent.com/d/15FnUWiUjZREImn010OWFjgx2LP1LaP5r","https://lh3.googleusercontent.com/d/16IqaSgUJuPAe2HHmTuAJYB4vLqJjDa6y","https://lh3.googleusercontent.com/d/1BBABNo-n2OnxYuMGtYvmLOrYCYpGyuXE","https://lh3.googleusercontent.com/d/1DI2Vj7zT8WRe5Qh2b6ApxfcPG1pXEn9G","https://lh3.googleusercontent.com/d/1ZgxQIhW0cOTZaubCoTGodfdXMwt8SXGA","https://lh3.googleusercontent.com/d/1bUtYRWQcf5xoq5qy45AAglGuj0y8QLo7","https://lh3.googleusercontent.com/d/1dTk6saiTXNJCU8y5uAkZ22nAu1kEV5u7","https://lh3.googleusercontent.com/d/1h2j3AJe62-A_HehA8GWt6MUr6YxVIHVt","https://lh3.googleusercontent.com/d/1pyJWk_eEbwi_Wf8W3aH8nUEbcjVozpfM","https://lh3.googleusercontent.com/d/1qMfiSFpBaDGBGrWD37LK296GKb_EDvdV","https://lh3.googleusercontent.com/d/1rJ38ChPfMW66tzKQlVAQCZM8ZxDvsIMY","https://lh3.googleusercontent.com/d/1ruMN-zuQYor8_UjWdh85nIGmMaPudOCv"],
-    polaroids: [], nationality: "Brasileiro",
+    coverImage: "https://lh3.googleusercontent.com/d/148yWUmp-09eICHs-K2RdQSoULCOE6t3E",
+    images: ["https://lh3.googleusercontent.com/d/148yWUmp-09eICHs-K2RdQSoULCOE6t3E"],
+    polaroids: [], height: "182cm", bust: "96cm", waist: "78cm", hips: "94cm",
+    nationality: "Brasileiro",
+    instagram: "https://www.instagram.com/fernandonascimento____/",
+    portfolio: "https://drive.google.com/drive/folders/1NV1agOCTVXz0XNOrdfqbHKqeC2Nfc1ys",
   },
   {
     id: "22", slug: "florencia", name: "Florencia", category: "feminino",
