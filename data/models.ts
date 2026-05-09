@@ -217,7 +217,7 @@ export const models: Model[] = [
     coverImage: d("1WdW9-TfGm0Ry2h2ovaWj48VnnPW2qlbk"),
     images: [d("1q7hHDCT8YGPwi9vXp4lbhEFCodOeDVsP"),d("1n53U9Ghm-fAbRkJJQBJ3A9qtRfcWo1VH"),d("1ACfvobQNpC6RVIJxEwidgl_k7wwMd9rN"),d("146Xt8WI1qxhgt0XC6MApJilSUDqt-G3f"),d("1z1TBsK4kNf4uX8gxRSBYnB2pr31CFbao"),d("1rgyTDm-0SDfP544o9NzesEfTc-CtJ-TD"),d("1y9-saC186SAEDOxK3wRa2pdeqWRPMiRG"),d("1Aa5whm4_0xD16N-RneaxZmAapM-uiLl5"),d("1QmQ3PcdVoGUWJvxaL75XiEOTzR5x_Gbh"),d("1CbMo2hC_sJFYevqgMZF57qJ0DchbkwKd"),d("15iJijOJOKUWGyRmS3KrO18lLod1vn0Aj"),d("1rJ4FtoEqE2BzdaqAZlolZroL4SqfC-9M"),d("1SEiBV4H1CtrztUIAs2L7BwsbH_PrbM5h"),d("1J4Js9J9BAlQ74N8DYnS1FNz0NFh_bIBF"),d("1QYJ-uu77Bo5eriVO9712si4v8cNQ7_en")],
     polaroids: [], height: "183cm", bust: "97cm", waist: "79cm", hips: "94cm",
-    shoes: "44", shirts: "M", pants: "32",
+    shoes: "44", shirts: "M", pants: "44",
     eyes: "Dark Brown", hair: "Dark Brown", nationality: "Brasileiro", instagram: "https://www.instagram.com/richardcarbonari/",
     portfolio: "https://drive.google.com/drive/folders/1MVzb35urA1ZTQkiu0y9YoYqDyVQkE6JD",
     featured: true,
