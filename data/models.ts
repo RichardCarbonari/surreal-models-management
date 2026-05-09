@@ -160,7 +160,7 @@ export const models: Model[] = [
   },
     {
     id: "17", slug: "junior-benevides", name: "Junior Benevides", category: "masculino",
-    coverImage: "",
+    coverImage: "https://lh3.googleusercontent.com/d/1qNC1XkSPLye8uSPQ-zyZA_a7rkTMq6rj",
     images: [d("1qNC1XkSPLye8uSPQ-zyZA_a7rkTMq6rj"),d("13a8fpwoD5AzbQPmVgsfnSktvKooHWD--"),d("1CgTpHjxFgmnbo2IaHo00LCOLmt-LbmVF"),d("1GofjHf6f2aaNywMS_rvE2231HO0Yi4ka"),d("19RbUQNwHww8J6n5JcF53mmzfty2xhLC7"),d("1XUc8-OYla1ga4L6opZT-jDdoVwVptE11"),d("1ChAamB9p7bvUOGJiyUXsdxyGkm8c6WrY"),d("1ug_UzwcQJn5tHwV8Nu8tw0-rhuiGVvSb"),d("1gavX3LabcwSzV1dzgKcImMfFC1SlewCm"),d("15hfgTUOj1OYNo-2LAJ3Ckp0PShl1Yyki"),d("1fgrZVFG4maICYyjnTrH1isDkIMY4Io6Q"),d("1AIxsfvbidOhxG_uu9dyU1tL5BG62Jlxh")],
     polaroids: [], height: "182cm", bust: "101cm", waist: "77cm", hips: "92cm",
     shoes: "44", shirts: "S/M",
