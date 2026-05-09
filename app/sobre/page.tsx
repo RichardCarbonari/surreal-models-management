@@ -35,11 +35,11 @@ export default function SobrePage() {
 
           <div className={styles.stats}>
             <div className={styles.stat}>
-              <span className={styles.statNum}>17+</span>
+              <span className={styles.statNum}>28</span>
               <span className={styles.statLabel}>Modelos</span>
             </div>
             <div className={styles.stat}>
-              <span className={styles.statNum}>2016</span>
+              <span className={styles.statNum}>2022</span>
               <span className={styles.statLabel}>Fundação</span>
             </div>
             <div className={styles.stat}>
