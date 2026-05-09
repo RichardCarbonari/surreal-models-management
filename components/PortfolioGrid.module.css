@@ -1,4 +1,7 @@
-.wrapper { width: 100%; }
+.wrapper {
+  padding: 0 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto; width: 100%; }
 
 .filters {
   display: flex; gap: 0.5rem; margin-bottom: 2.5rem;
@@ -18,7 +21,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .card {
