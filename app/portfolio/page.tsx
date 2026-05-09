@@ -9,7 +9,7 @@ export default function PortfolioPage() {
     <>
       <div className={styles.page}>
         <div className={styles.header}>
-          <h1 className={styles.title}>Talentos</h1>
+          <h1 className={styles.title}>Models</h1>
         </div>
         <PortfolioGrid models={models} />
       </div>
