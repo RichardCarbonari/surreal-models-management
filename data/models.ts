@@ -61,7 +61,7 @@ export const models: Model[] = [
 
     {
     id: "19", slug: "fernando-nascimento", name: "Fernando Nascimento", category: "masculino",
-    coverImage: "https://lh3.googleusercontent.com/d/129xx13XxpuGh6UN_BHSy8xBdqGcOp2vi",
+    coverImage: "https://lh3.googleusercontent.com/d/1qMJ8VCmosJhogYnH7QDyIzQE5b0ZklG4",
     images: ["https://lh3.googleusercontent.com/d/129xx13XxpuGh6UN_BHSy8xBdqGcOp2vi","https://lh3.googleusercontent.com/d/19P8YDtSNVbFhM_9NUjBdpPOFEm99CO9a","https://lh3.googleusercontent.com/d/19lhnUAlgeimSANacOJ8Vvz7A5PGmaYQc","https://lh3.googleusercontent.com/d/1E_c84CnBG2Y9KTAM2J_8FBIvZ6Tql6aj","https://lh3.googleusercontent.com/d/1KuwWelyZas-PorEqm_F74rMK6sthlnWQ","https://lh3.googleusercontent.com/d/1QHO2yeAUs0sKxrKWGL3EGsd4YacTP2aE","https://lh3.googleusercontent.com/d/1W_q-0XpuytbJEjNFpQfTlGYeFbOpHtp9","https://lh3.googleusercontent.com/d/1fY4f8sIcsMn3wp_wMyHtL3Hy5xR4LzS5","https://lh3.googleusercontent.com/d/1iywGX0suPAOimG3hjes8VpruFw48JCNb","https://lh3.googleusercontent.com/d/1lucJPQcVIpU8VU_1GpWfCYOKRkWKn3Wg","https://lh3.googleusercontent.com/d/1qMJ8VCmosJhogYnH7QDyIzQE5b0ZklG4","https://lh3.googleusercontent.com/d/1uwN_xSPDs8Md8yJG-BI-YXcJqFlngvJb"],
     polaroids: [], height: "182cm", bust: "96cm", waist: "78cm", hips: "94cm",
     nationality: "Brasileiro",
