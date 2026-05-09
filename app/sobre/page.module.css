@@ -227,3 +227,13 @@
   transition: color 0.3s;
 }
 .contactIgLink:hover { color: var(--black); }
+
+.bodyHighlight {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-top: 2rem;
+}

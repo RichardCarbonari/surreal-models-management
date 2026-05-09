@@ -10,20 +10,26 @@ export default function SobrePage() {
           <span className={styles.label}>Surreal Models Management</span>
           <h1 className={styles.title}>About</h1>
           <p className={styles.heroText}>
-            Uma agência fundada na crença de que moda e arte são inseparáveis.
+            A agência que gostaríamos de ter tido.
           </p>
         </div>
 
         <div className={styles.content}>
           <div>
             <p className={styles.body}>
-              A Surreal Models Management nasceu da crença de que moda e arte são inseparáveis. Fundada em São Paulo, representamos talentos que definem tendências e transformam campanhas em obras.
+              A Surreal nasceu em 2022 com um propósito claro: ser a agência que gostaríamos de ter tido.
             </p>
             <p className={styles.body}>
-              Trabalhamos com marcas nacionais e internacionais, conectando nossos modelos às maiores oportunidades do mundo da moda e publicidade. Cada contrato é pensado para construir carreiras duradouras.
+              Construída por pessoas que viveram o mercado dos dois lados — como modelos, entendendo de perto os desafios, as inseguranças e as demandas dessa carreira, e como agência, com conexões sólidas com o mercado nacional e internacional — a Surreal existe para fazer diferente.
             </p>
             <p className={styles.body}>
-              Nossa abordagem é direta, transparente e focada no desenvolvimento humano de cada talento. Acreditamos que por trás de cada rosto há uma história única — e é essa história que nos inspira.
+              Aqui, cada talento é tratado como único. Nosso foco não é apenas abrir portas, mas caminhar junto, desenvolvendo cada modelo com atenção, respeito e estratégia. Sabemos o que é começar, e por isso nos dedicamos a tornar essa jornada mais humana e mais justa.
+            </p>
+            <p className={styles.body}>
+              Com uma rede de contatos que se estende a agências parceiras ao redor do mundo, oferecemos oportunidades reais para quem está pronto para crescer — sem abrir mão do cuidado que cada pessoa merece.
+            </p>
+            <p className={styles.bodyHighlight}>
+              Surreal. Porque talento precisa de suporte para brilhar.
             </p>
           </div>
 
