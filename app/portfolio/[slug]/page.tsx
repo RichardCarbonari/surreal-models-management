@@ -1,17 +1,20 @@
-export const dynamic = "force-dynamic";
-
 import { notFound } from "next/navigation";
 import ModelBanner from "@/components/ModelBanner";
 import Footer from "@/components/Footer";
-import { getModelBySlug } from "@/data/models";
+import { models, getModelBySlug } from "@/data/models";
 import styles from "./page.module.css";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function ModelPage({ params }: Props) {
-  const model = getModelBySlug(params.slug);
+export function generateStaticParams() {
+  return models.map((m) => ({ slug: m.slug }));
+}
+
+export default async function ModelPage({ params }: Props) {
+  const { slug } = await params;
+  const model = getModelBySlug(slug);
   if (!model) return notFound();
   return (
     <>

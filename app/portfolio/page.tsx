@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 import { models } from "@/data/models";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import Footer from "@/components/Footer";

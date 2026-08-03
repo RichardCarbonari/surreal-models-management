@@ -108,7 +108,7 @@
   animation: fadeUp 1s ease forwards; animation-delay: 0.5s; opacity: 0;
 }
 .heroLogo {
-  font-family: "Cormorant SC", serif;
+  font-family: var(--font-logo);
   font-size: clamp(5rem, 13vw, 11rem);
   font-weight: 700; color: #fff;
   letter-spacing: 0.05em; line-height: 0.9;

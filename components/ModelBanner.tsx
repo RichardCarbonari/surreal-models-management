@@ -2,6 +2,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Model } from "@/data/models";
 import styles from "./ModelBanner.module.css";
 
@@ -32,7 +33,14 @@ export default function ModelBanner({ model }: Props) {
           </div>
           <div className={styles.mainImage}>
             {currentImages && currentImages.length > 0 ? (
-              <img src={currentImages[activeImg]} alt={model.name} className={styles.mainImg} />
+              <Image
+                src={currentImages[activeImg]}
+                alt={model.name}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+                className={styles.mainImg}
+              />
             ) : (
               <div className={styles.noImage}>Sem imagens</div>
             )}
@@ -42,7 +50,7 @@ export default function ModelBanner({ model }: Props) {
               {currentImages.map((img, i) => (
                 <button key={i} className={`${styles.thumb} ${i === activeImg ? styles.thumbActive : ""}`}
                   onClick={() => setActiveImg(i)}>
-                  <img src={img} alt={model.name} className={styles.thumbImg} />
+                  <Image src={img} alt={model.name} fill sizes="51px" className={styles.thumbImg} />
                 </button>
               ))}
             </div>

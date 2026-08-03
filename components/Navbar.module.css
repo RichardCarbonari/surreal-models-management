@@ -24,7 +24,7 @@
 }
 
 .logoMain {
-  font-family: "Cormorant SC", serif;
+  font-family: var(--font-logo);
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--black);

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Model, ModelCategory } from "@/data/models";
 import styles from "./PortfolioGrid.module.css";
 
@@ -36,7 +37,13 @@ export default function PortfolioGrid({ models }: Props) {
         {filtered.map((model) => (
           <Link key={model.slug} href={`/portfolio/${model.slug}`} className={styles.card}>
             <div className={styles.imgWrap}>
-              <img src={model.coverImage} alt={model.name} className={styles.img} loading="lazy" />
+              <Image
+                src={model.coverImage}
+                alt={model.name}
+                fill
+                sizes="(max-width: 1024px) 50vw, 33vw"
+                className={styles.img}
+              />
               <div className={styles.overlay}>
                 <span className={styles.name}>{model.name}</span>
                 <span className={styles.height}>{model.height}</span>
