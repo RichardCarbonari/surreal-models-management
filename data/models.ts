@@ -747,7 +747,7 @@ export const models: Model[] = [
     ],
     polaroids: [],
     height: "179cm",
-    bust: "84cm",
+    bust: "82cm",
     waist: "64cm",
     hips: "88cm",
     eyes: "Dark Brown",
