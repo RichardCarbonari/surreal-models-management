@@ -873,7 +873,7 @@ export const models: Model[] = [
       "/models/renata-miller/018.jpg",
     ],
     polaroids: [],
-    height: "1,73m",
+    height: "1,75m",
     bust: "78cm",
     waist: "61cm",
     hips: "91cm",
